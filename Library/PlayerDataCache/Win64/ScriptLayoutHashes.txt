@@ -1,0 +1,6 @@
+Win64
+PlayerPath?
+C:/Users/jiaoshouma/Desktop/ProjectT2018/Product/Bundles/Windows/scene/scene1002/scene1002.unity.k
+SceneListBegin?
+Assets/BundleResources/Scene/Scene1002/Scene1002.unity
+SceneListEnd?
