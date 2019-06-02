@@ -286,7 +286,7 @@ namespace KSFramework
 
         public UnityEngine.Object GetControl(string typeName, string uri, Transform findTrans)
         {
-            return GetControl(typeName, uri, findTrans);
+            return GetControl(typeName, uri, findTrans,false);
         }
 
         public UnityEngine.Object GetControl(string typeName, string uri)
@@ -295,7 +295,10 @@ namespace KSFramework
         }
 
         public UnityEngine.Object GetControl(string typeName, string uri, Transform findTrans, bool isLog)
-        {
+        {   
+            if (uri == ""){
+                return findTrans.GetComponent(typeName);
+            }
             if (findTrans == null)
                 findTrans = transform;
 

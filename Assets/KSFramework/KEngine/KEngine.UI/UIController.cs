@@ -37,7 +37,7 @@ namespace KEngine.UI
     public class UIController : KBehaviour
     {
         /// <summary>
-        /// Set from KUIModule, Resource Name
+        /// Set from KUIModule, Resource Name 
         /// </summary>
         public string UITemplateName = "";
 

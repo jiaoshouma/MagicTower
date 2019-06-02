@@ -1,0 +1,8 @@
+开发日志（THREE KINGDOMS CARD GAME :REMAKE）--使用KSFramework+UGUI
+6.3
+modify：
+修改了UIController的bug，并使之直接接收transform忽略uri直接取当前trans的Component（方便开发时根据层级依次取的组件的引用）
+抛弃框架自带的extend，自定义class实现，以支持更多的面向对象特性（super），同时修改了KEngine->UI->Audo Make UI LUA Scripts中默认生成的代码，添加ctor方法以便初始化自定义数据
+添加全局表sun
+question remain：UIOutLet在添加对应需要自动取得引用的组件后，运行时未遍历到先前添加的outletinfo，修改样例原有的也没有，但是查看序列化数据确实已修改成功，很奇怪。
+对于UI拖拽，点击等事件（OnPointerEnter/Click等）的响应，目前写在CS上才比较方便，考虑添加Lua端的支持

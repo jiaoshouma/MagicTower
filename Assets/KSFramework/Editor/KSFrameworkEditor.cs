@@ -139,14 +139,17 @@ Shorcuts:
         private static string LuaUITempalteCode = @"
 local UIBase = import('KSFramework/UIBase')
 
-local $UI_NAME = {}
-extends($UI_NAME, UIBase)
+local $UI_NAME = class(""$UI_NAME"", UIBase)
 
 -- create a ui instance
 function $UI_NAME.New(controller)
     local newUI = new($UI_NAME)
     newUI.Controller = controller
     return newUI
+end
+
+function $UI_NAME:ctor(...)
+    --init params here.
 end
 
 function $UI_NAME:OnInit(controller)
@@ -166,14 +169,17 @@ return $UI_NAME
         private static string LuaUITempalteCode = @"
 local UIBase = import('UI/UIBase')
 
-local $UI_NAME = {}
-extends($UI_NAME, UIBase)
+local $UI_NAME = class(""$UI_NAME"", UIBase)
 
 -- create a ui instance
 function $UI_NAME.New(controller)
     local newUI = new($UI_NAME)
     newUI.Controller = controller
     return newUI
+end
+
+function $UI_NAME:ctor(...)
+    --init params here.
 end
 
 function $UI_NAME:OnInit(controller)

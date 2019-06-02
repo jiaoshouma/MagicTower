@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4948AF0F-AAA3-F504-0DD4-868B42321B84}</ProjectGuid>
+    <ProjectGuid>{0C614966-3817-29A6-D9EA-DAB3C7FA513F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -122,6 +122,7 @@
      <Compile Include="Assets\KSFramework\Modules\UI\UGUISLuaBridge.cs" />
      <Compile Include="Assets\KSFramework\Modules\UI\UILuaOutlet.cs" />
      <Compile Include="Assets\KSFramework\Modules\UI\UILuaOutletCollection.cs" />
+     <Compile Include="Assets\Scripts\Runtime\ForeSceneEdit.cs" />
      <Compile Include="Assets\XLua\Gen\DelegatesGensBridge.cs" />
      <Compile Include="Assets\XLua\Gen\EnumWrap.cs" />
      <Compile Include="Assets\XLua\Gen\KBehaviourWrap.cs" />
@@ -248,21 +249,22 @@
      <None Include="Assets\XLua\Resources\perf\profiler.lua.txt" />
      <None Include="Assets\KSFramework\KEngine\Resources\AppConfigs.txt" />
      <None Include="Assets\XLua\Resources\perf\memory.lua.txt" />
+     <None Include="Assets\BundleResources\UIAtlas_sp\InstructionFile.txt" />
      <None Include="Assets\XLua\Resources\tdr\tdr.lua.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/U3D2018/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -466,37 +468,37 @@
  <HintPath>D:/U3D2018/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="INIFileParser">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Assets/KSFramework/KEngine/KEngine.Lib/INIFileParser.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Assets/KSFramework/KEngine/KEngine.Lib/INIFileParser.dll</HintPath>
  </Reference>
  <Reference Include="TableML">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Assets/KSFramework/KEngine/KEngine.Lib/TableML/TableML.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Assets/KSFramework/KEngine/KEngine.Lib/TableML/TableML.dll</HintPath>
  </Reference>
  <Reference Include="DotLiquid">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/DotLiquid.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/DotLiquid.dll</HintPath>
  </Reference>
  <Reference Include="NPOI">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/NPOI.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/NPOI.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OOXML">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/NPOI.OOXML.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/NPOI.OOXML.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OpenXml4Net">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/NPOI.OpenXml4Net.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/NPOI.OpenXml4Net.dll</HintPath>
  </Reference>
  <Reference Include="NPOI.OpenXmlFormats">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/NPOI.OpenXmlFormats.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/NPOI.OpenXmlFormats.dll</HintPath>
  </Reference>
  <Reference Include="TableMLCompiler">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/TableMLCompiler.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Assets/KSFramework/KEngine/KEngine.Lib/TableMLCompiler/TableMLCompiler.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>C:/Users/jiaoshouma/Desktop/ProjectT2018/MagicTower/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>D:/U3D2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
