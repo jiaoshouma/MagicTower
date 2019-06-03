@@ -3,8 +3,7 @@
 local UIBase = import('UI/UIBase')
 
 ---@type UINavbar
-local UINavbar = {}
-extends(UINavbar, UIBase)
+local UINavbar = class("UINavbar", UIBase)
 
 -- create a ui instance
 function UINavbar.New(controller)

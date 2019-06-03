@@ -94,7 +94,7 @@ Shorcuts:
 #endif
         }
 
-        [MenuItem("KEngine/UI(UGUI)/Auto Make UI Lua Scripts(Current Scene)")]
+        [MenuItem("KEngine/UI(UGUI)/Auto Make UI Lua Scripts(Current Scene) %&l")]
         public static void AutoMakeUILuaScripts()
         {
             var luaPath = AppEngine.GetConfig("KSFramework.Lua", "LuaPath");

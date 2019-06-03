@@ -6,3 +6,9 @@ modify：
 添加全局表sun
 question remain：UIOutLet在添加对应需要自动取得引用的组件后，运行时未遍历到先前添加的outletinfo，修改样例原有的也没有，但是查看序列化数据确实已修改成功，很奇怪。
 对于UI拖拽，点击等事件（OnPointerEnter/Click等）的响应，目前写在CS上才比较方便，考虑添加Lua端的支持
+
+6.4
+发现昨天UI的问题是其实改动的prefab都没有反映到游戏上。经过一番查找，发现默认加载的是Product下的prefab（build后的资源），因此它的流程是新建一个Scene来单独制作一个UI，然后再从Scene中导出UI成Prefab到BundleResource和StAs下，随后使用命令或自己生成Lua脚本。
+UI加载模块的代码还需要再仔细看一下。。
+为生成Lua脚本搞了个Ctrl+Alt+L快捷键（有必要么，，）。
+还有个比较重要的Excel配置需要再看一下。

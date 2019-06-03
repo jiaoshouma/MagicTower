@@ -6,7 +6,34 @@ function import(filename)
 
 end
 
+--also can use this to extends instead
+function class(classname,super)
+    local superType = type(super)
+    local cls
+    if superType ~= "table" then
+        superType = nil
+        super = nil
+    end
 
+    if super then
+        cls = {}
+        setmetatable(cls,{__index = super})
+        cls.super = super
+    else
+        cls = {ctor = function() end}       
+    end
+    cls.__cname = classname
+    cls.__index = cls
+
+    function cls.new(...)
+        local instance = setmetatable({},cls)
+        instance.class = cls
+        instance:ctor(...)
+        return instance
+    end
+
+    return cls
+end
 
 -- simple class extends
 function extends(class, base)
@@ -48,6 +75,9 @@ GameConfigSettings = CS.AppSettings.GameConfigSettings
 ---@type AppSettings.TestSettings
 TestSettings = CS.AppSettings.TestSettings
 
+Enums = import("Enums")
+Const = import("Const")
+Utils = import("Utils")
 UIBase = import("UI/UIBase")
 Tools 		= import("Tools")
 import("CSharpBinding")

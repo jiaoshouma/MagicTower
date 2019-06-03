@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: c77526c25706c5f40bc78da175bdb567
-NativeFormatImporter:
+guid: 1b69c23560702bf4fa162082f51e2608
+PrefabImporter:
   externalObjects: {}
-  mainObjectFileID: 100100000
   userData: 
   assetBundleName: ui/testui.prefab.k
   assetBundleVariant: 
