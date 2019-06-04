@@ -1,6 +1,5 @@
 ---@type UILogin
-local UILogin = {}
-extends(UILogin, UIBase)
+local UILogin = class("UILogin", UIBase)
 
 -- Maybe you have many `UILogin` instance? create a new function!
 -- Always write a New function is best practices
@@ -40,11 +39,20 @@ function UILogin:OnInit(controller)
         UIModule.Instance:CloseWindow("Login")
         UIModule.Instance:OpenWindow("Main", "user1")
     end)
+
     Tools.SetButton(self.btnLoadSprite, function()
         --UIModule.Instance:CloseWindow("Login")
         UIModule.Instance:OpenWindow("LoadUISprite")
     end)
     UIModule.Instance:OpenWindow("Navbar")
+
+    self.imgSwithUI = self:GetControl("UnityEngine.UI.Image",nil,self.btnSwithUI.transform)
+    local path = "uiatlas/button/button_red.png"
+    CS.KEngine.SpriteLoader.Load(path,function(isOK,sprite)
+        self.imgSwithUI.sprite = sprite
+    end)
+
+    UIModule.Instance:OpenWindow("TestUI")
 end
 
 function UILogin:OnOpen(num1)

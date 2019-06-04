@@ -1,6 +1,5 @@
 ---@type UIBillboard
-local UIBillboard = {}
-extends(UIBillboard, UIBase)
+local UIBillboard = class("UIBillboard", UIBase)
 
 function UIBillboard:OnInit(controller)
     self.Controller = controller

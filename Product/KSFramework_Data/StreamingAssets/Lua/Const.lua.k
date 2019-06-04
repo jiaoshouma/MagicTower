@@ -1,0 +1,1 @@
+sun = sun or {}

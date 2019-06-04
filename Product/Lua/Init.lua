@@ -1,6 +1,5 @@
 
 -- global variables / functions
-
 function import(filename)
     return CS.KSFramework.LuaModule.Instance:Import(filename)
 
@@ -81,4 +80,5 @@ Utils = import("Utils")
 UIBase = import("UI/UIBase")
 Tools 		= import("Tools")
 import("CSharpBinding")
-print("Init.lua script finish!")
+print("Init.lua script finish!Start lua logic----")
+import("Game")

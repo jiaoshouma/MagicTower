@@ -2,7 +2,7 @@
 AssetBundleExt = .k	
 AssetBundleBuildRelPath	= ./Product/Bundles	
 StreamingBundlesFolderName = Bundles	
-IsEditorLoadAsset = 0
+IsEditorLoadAsset = 1
 SettingExt = .bytes
 
 ; Override default "UGUIBridge"

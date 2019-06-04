@@ -1,6 +1,5 @@
 ---@type UIMain
-local UIMain = {}
-extends(UIMain, UIBase)
+local UIMain = class("UIMain", UIBase)
 
 -- Maybe you have many `UIMain` instance? create a new function!
 -- Always write a New function is best practices

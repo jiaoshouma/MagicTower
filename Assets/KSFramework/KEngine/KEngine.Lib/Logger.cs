@@ -140,7 +140,7 @@ namespace KEngine
 #endif
 
 #if UNITY_EDITOR
-            InitLogUtility();
+            // InitLogUtility();
 #endif
         }
 

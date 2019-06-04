@@ -75,12 +75,7 @@ public class Game : KSGame
 
         yield return null;
 
-        Log.Info("======================================= Open 'TitleWindow' =================================");
-        UIModule.Instance.OpenWindow("TitleWindow");
-
-        // Test Load a scene in asset bundle
-        SceneLoader.Load("Scene/Scene1001/Scene1001.unity");
-
+        //初始化交给Init.lua
 
   //       // 测试Collect函数，立即回收所有资源
   //       var path = "ui/billboard.prefab";

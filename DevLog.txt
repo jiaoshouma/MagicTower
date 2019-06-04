@@ -12,3 +12,13 @@ question remain£ºUIOutLetÔÚÌí¼Ó¶ÔÓ¦ÐèÒª×Ô¶¯È¡µÃÒýÓÃµÄ×é¼þºó£¬ÔËÐÐÊ±Î´±éÀúµ½ÏÈÇ°Ì
 UI¼ÓÔØÄ£¿éµÄ´úÂë»¹ÐèÒªÔÙ×ÐÏ¸¿´Ò»ÏÂ¡£¡£
 ÎªÉú³ÉLua½Å±¾¸ãÁË¸öCtrl+Alt+L¿ì½Ý¼ü£¨ÓÐ±ØÒªÃ´£¬£¬£©¡£
 »¹ÓÐ¸ö±È½ÏÖØÒªµÄExcelÅäÖÃÐèÒªÔÙ¿´Ò»ÏÂ¡£
+
+6.5 ÖÜÈý
+KEngineÏÂAppConfigÖÐIsEditorLoadAsset¸ÄÎª1£¬ÔÙEditorÏÂ²»ÔÙÍ¨¹ýab·½Ê½¼ÓÔØ×ÊÔ´£¬Ê¡È¥·´¸´buildÀË·ÑµÄÊÂ¼þ¡£
+×¢ÊÍÁËKEngineÏÂLogger  InitLogUtility·½·¨£¬Õâ¸ö·½·¨ËÆºõÒªÇó¿ªÆôÓÎÏ·Ê±±ØÐë¿ª×Åconsole´°¿Ú£¬µ¼ÖÂ²»¿ªconsoleÆô¶¯ÓÎÏ·±¨´í£¬¸üÔã¸âµÄÊÇBuildÍêµÄexe¶¼±»ÕâÕûµÄ¿ª²»ÆðÀ´¡£¡£²»¹ýÕâÈ·Êµ#if UNITY_EDITORÁË¡£±È½ÏÆæ¹Ö¡£·´ÕýÕâº¯Êý¾ÍÓÃÀ´ Ë«»÷consoleÌøµ½¶ÔÓ¦luaÐÐ£¬Ã»É¶ÓÃ¡£
+È»ºóKSFrameworkÕâ¸öexcelµÄ¹¤×÷·½Ê½¾ÓÈ»ÊÇÉú³ÉÁËC#-LuaµÄ°ó¶¨´úÂë£¬µ¼ÖÂÃ»·¨ÈÈ¸üÐÂÐÂµÄÅäÖÃ±í£¬²»ÊÇºÜÊµÓÃ¡£¿¼ÂÇÖ»ÓÃÕâ¸öÄ£Ê½×öºËÐÄÄ£¿é£¬ºóÐøµÄÅäÖÃ¾Í»¹ÊÇ²ÉÓÃexcel2lua£¬luaÖ±¶ÁµÄÐÎÊ½°É¡£¡£
+¹ØÓÚÍ¼¼¯µÄÊ¹ÓÃ£¬¿´ÁËÏÂ2017ºóÒýÇæ×Ô´øµÄSpriteAtlasÀàÐÍ×ÊÔ´£¬³¢ÊÔÓÃÓÃÕâ¸ö×öÍ¼¼¯£¬£¨»òÐí£©¿ÉÒÔÊ¡È¥TexturePackerµÄ¿àÄÕ¡£
+³¢ÊÔÁËÒÔÏÂ²»ÖØÐÂBuildµÄ¸üÐÂ£¬ÔËÐÐÊ±±Ø±¸Appname_Data,KSFramework.ext UnityPlayer.dll ÒÔ¼° Mono,¿ª·¢Ö÷¹¦ÄÜºóÍê³ÉºóÍ¨¹ý¸üÐÂAppname_DataÄÚStreamAssetsÄÚ×ÊÔ´£¨Bundle×ÊÔ´/lua´úÂë/±íÅäÖÃ£©¿ÉÒÔÍê³É´ó²¿·Ö¹¦ÄÜÈÈ¸üÓëbugÐÞ¸´¡£
+°ÑGame.csµÄ³õÊ¼»¯³ýµ½ÁËInit.lua×÷ÎªÓÎÏ·Ö÷Âß¼­µÄÈë¿Ú£¬¾¡Á¿°ÑÂß¼­Ð´ÔÚluaÉÏ·½±ã¸Ä¶¯¡£
+»¹ÐèÒª¿¼ÂÇÖ§³Ö´¥¿ØÖ§³Ö¡£¡£
+Ã÷£¨ºó£©ÌìÖØµã¸ãÏÂexcel2luaµÄÊÂ£¬È»ºóÓ¦¸Ã¿ÉÒÔ¿ªÊ¼ÕýÊ½RemakeÁË¡£

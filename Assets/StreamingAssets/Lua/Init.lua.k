@@ -1,6 +1,5 @@
 
 -- global variables / functions
-
 function import(filename)
     return CS.KSFramework.LuaModule.Instance:Import(filename)
 
@@ -82,3 +81,6 @@ UIBase = import("UI/UIBase")
 Tools 		= import("Tools")
 import("CSharpBinding")
 print("Init.lua script finish!")
+
+UIModule.Instance:OpenWindow("TitleWindow")
+SceneLoader.Load("Scene/Scene1001/Scene1001.unity");

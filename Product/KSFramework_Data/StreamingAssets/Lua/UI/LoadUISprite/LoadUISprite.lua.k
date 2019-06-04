@@ -1,6 +1,5 @@
 ---@type UILoadUISprite
-local UILoadUISprite = {}
-extends(UILoadUISprite, UIBase)
+local UILoadUISprite = class("UILoadUISprite", UIBase)
 
 -- create a ui instance
 function UILoadUISprite.New(controller)

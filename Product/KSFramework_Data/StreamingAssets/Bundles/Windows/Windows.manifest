@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2250849945
+CRC: 2448303649
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -57,4 +57,15 @@ AssetBundleManifest:
       Dependencies: {}
     Info_17:
       Name: ui/testui.prefab.k
+      Dependencies:
+        Dependency_0: uiatlas/button/button_yellow.png.k
+    Info_18:
+      Name: ui/test2.prefab.k
       Dependencies: {}
+    Info_19:
+      Name: uiatlas_sp/instructionfile.txt.k
+      Dependencies: {}
+    Info_20:
+      Name: ui/titlewindow.prefab.k
+      Dependencies:
+        Dependency_0: uiatlas/button/button_yellow.png.k
