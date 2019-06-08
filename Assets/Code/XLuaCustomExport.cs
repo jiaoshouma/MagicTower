@@ -181,6 +181,7 @@ public static class XLuaCustomExport
         typeof(KSFramework.Cookie),
         typeof(KEngine.UI.UIModule),
         typeof(UnityEngine.Physics),
+        typeof(CoroutineRunner),
 #if UNITY_2018_1_OR_NEWER
         typeof(UnityEngine.Profiling.Profiler),
 #else

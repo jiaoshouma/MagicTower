@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2965572050
+CRC: 1143230862
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ae5c2b17d6924020ee096e4a70dd73c1
+    Hash: 99ee15f4551d031e88f4d5979577d366
   TypeTreeHash:
     serializedVersion: 2
     Hash: 46d352f12e5a68628e16f085a4c78232
@@ -34,4 +34,4 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/UI/TestUI.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/button/button_yellow.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/button_yellow.png.k

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2743214928
+CRC: 1435511366
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c82a37e8c96a1390e57b1ac18e610b79
+    Hash: d6cd8ee83bb4c3d2ce036b44d6fcc11f
   TypeTreeHash:
     serializedVersion: 2
     Hash: 7f943cf9119928354f72b1e05947105c
@@ -60,5 +60,5 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/UI/Login.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/button/button_green.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/anim1/0004.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/animation/0004.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/button_green.png.k

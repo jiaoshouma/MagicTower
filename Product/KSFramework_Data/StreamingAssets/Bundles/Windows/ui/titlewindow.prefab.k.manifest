@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2078388016
+CRC: 3837498947
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4e369a26f08f38628aed22863975309b
+    Hash: 58dca45b00212fa92c402e4947b78b14
   TypeTreeHash:
     serializedVersion: 2
     Hash: d8a4b1855a4815e6111c108c8db77713
@@ -44,4 +44,7 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/UI/TitleWindow.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/button/button_yellow.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/button_green.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/button_green_border.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/button_red.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/button_yellow.png.k
