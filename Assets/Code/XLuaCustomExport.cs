@@ -21,7 +21,7 @@ public static class XLuaCustomExport
     /// <summary>
     /// dotween的扩展方法在lua中调用
     /// </summary>
-	  /*
+	  
 	[LuaCallCSharp]
     [ReflectionUse]
     public static List<Type> dotween_lua_call_cs_list = new List<Type>()
@@ -53,15 +53,14 @@ public static class XLuaCustomExport
         typeof(DG.Tweening.TweenExtensions),
         typeof(DG.Tweening.TweenSettingsExtensions),
         typeof(DG.Tweening.ShortcutExtensions),
-        typeof(DG.Tweening.ShortcutExtensions43),
-        typeof(DG.Tweening.ShortcutExtensions46),
-        typeof(DG.Tweening.ShortcutExtensions50),
+        // typeof(DG.Tweening.ShortcutExtensions43),
+        // typeof(DG.Tweening.ShortcutExtensions46),
+        // typeof(DG.Tweening.ShortcutExtensions50),
        
         //在生成xlua的代码时以下会报错
         //typeof(DG.Tweening.DOTweenPath),
         //typeof(DG.Tweening.DOTweenVisualManager),
-    }
-	**/
+    };
 
 
     [LuaCallCSharp]
@@ -182,6 +181,7 @@ public static class XLuaCustomExport
         typeof(KEngine.UI.UIModule),
         typeof(UnityEngine.Physics),
         typeof(CoroutineRunner),
+        typeof(UIEventListener),
 #if UNITY_2018_1_OR_NEWER
         typeof(UnityEngine.Profiling.Profiler),
 #else

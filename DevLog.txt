@@ -28,3 +28,10 @@ KEngine下AppConfig中IsEditorLoadAsset改为1，再Editor下不再通过ab方式加载资源，省
 今天决定了使用spritepacker作为图集方案。貌似使用这个方案，最好不要把来自同一个图集的图打到不同bundle，不然会造成合图在各个bundle中的冗余。
 UGUI还不太熟悉。。。同一个canvas下的组件层级居然是根据hireachy层级来决定的。。。
 折腾了一下lua coroutine，lua原生的协程感觉不方便做计时之类的，还是调用u3d的协程更舒服些吧。
+
+6.10
+Xlua好像没有类似ToLua的UpdateBeat功能（反正没找到），自己加了个。
+新增一些常用的handler安全封装，没有了ToLua的isnull方法不过好像可以用obj：Equals（nil）来判断
+实现了一下Timer，毕竟计时器应该蛮常用的。
+实现了类似NGUI UIEventLitener的类，方便快速统一添加UI事件响应
+

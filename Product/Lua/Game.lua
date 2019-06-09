@@ -16,7 +16,11 @@ function Game:startGame()
 	--determin open which window / scene
 	UIModule.Instance:OpenWindow("TitleWindow")
 	SceneLoader.Load("Scene/SceneTitle/scene_title.unity")
-	
+
+end
+
+function Game:OnBeat()
+
 end
 
 return Game

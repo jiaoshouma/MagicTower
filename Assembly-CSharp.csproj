@@ -57,6 +57,13 @@
      <Compile Include="Assets\Code\Game.cs" />
      <Compile Include="Assets\Code\LoadSpriteDemo.cs" />
      <Compile Include="Assets\Code\XLuaCustomExport.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\KSFramework\KEngine\KEngine.Lib\AppVersion.cs" />
      <Compile Include="Assets\KSFramework\KEngine\KEngine.Lib\Debuger.cs" />
      <Compile Include="Assets\KSFramework\KEngine\KEngine.Lib\EngineConfigs.cs" />
@@ -123,8 +130,23 @@
      <Compile Include="Assets\KSFramework\Modules\UI\UILuaOutlet.cs" />
      <Compile Include="Assets\KSFramework\Modules\UI\UILuaOutletCollection.cs" />
      <Compile Include="Assets\Scripts\Core\CoroutineRunner.cs" />
+     <Compile Include="Assets\Scripts\Core\UIEventListener.cs" />
+     <Compile Include="Assets\Scripts\Core\UpdateRunner.cs" />
      <Compile Include="Assets\Scripts\Runtime\ForeSceneEdit.cs" />
+     <Compile Include="Assets\XLua\Gen\CoroutineRunnerWrap.cs" />
      <Compile Include="Assets\XLua\Gen\DelegatesGensBridge.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningCoreABSSequentiableWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningCoreTweenerCore3UnityEngineVector3UnityEngineVector3DGTweeningPluginsOptionsVectorOptionsWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningDOTweenWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningDOVirtualWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningEaseFactoryWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningSequenceWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningShortcutExtensionsWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningTweenerWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningTweenExtensionsWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningTweenParamsWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningTweenSettingsExtensionsWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\DGTweeningTweenWrap.cs" />
      <Compile Include="Assets\XLua\Gen\EnumWrap.cs" />
      <Compile Include="Assets\XLua\Gen\KBehaviourWrap.cs" />
      <Compile Include="Assets\XLua\Gen\KEngineAssetBundleLoaderWrap.cs" />
@@ -143,6 +165,7 @@
      <Compile Include="Assets\XLua\Gen\KSFrameworkLuaUIControllerWrap.cs" />
      <Compile Include="Assets\XLua\Gen\PackUnpack.cs" />
      <Compile Include="Assets\XLua\Gen\SystemCollectionsIEnumeratorBridge.cs" />
+     <Compile Include="Assets\XLua\Gen\UIEventListenerWrap.cs" />
      <Compile Include="Assets\XLua\Gen\UnityEngineAINavMeshAgentWrap.cs" />
      <Compile Include="Assets\XLua\Gen\UnityEngineAINavMeshPathWrap.cs" />
      <Compile Include="Assets\XLua\Gen\UnityEngineAINavMeshWrap.cs" />
@@ -245,6 +268,7 @@
      <None Include="Assets\XLua\Resources\xlua\util.lua.txt" />
      <None Include="Assets\StreamingAssets\Setting\Tmp\JustCopy.txt" />
      <None Include="Assets\StreamingAssets\Setting\GameConfig\JustCopy.txt" />
+     <None Include="Assets\Demigiant\DOTween\readme.txt" />
      <None Include="Assets\KSFramework\KEngine\KEngine.Lib\TableMLCompiler\NPOI.xml" />
      <None Include="Assets\XLua\Resources\perf\profiler.lua.txt" />
      <None Include="Assets\KSFramework\KEngine\Resources\AppConfigs.txt" />
@@ -500,6 +524,9 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>C:/Users/jiaoshouma/Desktop/MagicTower/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>C:/Users/jiaoshouma/Desktop/MagicTower/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>D:/U3D2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
