@@ -1,4 +1,4 @@
-
+sun = sun or {}
 -- global variables / functions
 function import(filename)
     return CS.KSFramework.LuaModule.Instance:Import(filename)
@@ -100,5 +100,9 @@ import("UpdateBeat")
 import("Timer")
 import("CSharpBinding")
 print("Init.lua script finish!Start lua logic----")
+--set lang here
+sun.lang = PlayerPrefs.GetString("GameLang","zh_CN")
+CS.KSFramework.I18NModule.SetLang(sun.lang)
+print("RunForLang:"..sun.lang)
 sun.Game = import("Game")
 sun.Game.get():startGame()

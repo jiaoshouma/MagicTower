@@ -492,6 +492,9 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>D:/U3D2018/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>C:/Users/jiaoshouma/Desktop/MagicTower/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
  <Reference Include="INIFileParser">
  <HintPath>C:/Users/jiaoshouma/Desktop/MagicTower/Assets/KSFramework/KEngine/KEngine.Lib/INIFileParser.dll</HintPath>
  </Reference>
@@ -524,9 +527,6 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>C:/Users/jiaoshouma/Desktop/MagicTower/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="DOTween">
- <HintPath>C:/Users/jiaoshouma/Desktop/MagicTower/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>D:/U3D2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>

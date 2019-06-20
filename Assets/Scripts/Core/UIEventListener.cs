@@ -90,4 +90,18 @@ public class UIEventListener:EventTrigger
         if(listener==null) listener=go.AddComponent<UIEventListener>();
         return listener;
     }
+
+    public void OnDestroy(){
+    	onSubmit = null;
+    	onHover = null;
+    	onClick = null;
+    	onToggleChanged = null;
+    	onDragStart = null;
+    	onDragEnd = null;
+    	onSliderChanged = null;
+    	onScrollbarChanged = null;
+    	onDrag = null;
+    	onDrapDownChanged = null;
+    	onInputFieldChanged = null;
+    }
 }

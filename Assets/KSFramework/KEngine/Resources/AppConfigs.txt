@@ -16,7 +16,7 @@ UIResolution = 1280,720
 I18NLanguages = zh_CN,en_US
 
 ; current language
-I18N = en_US
+I18N = zh_CN
 
 
 [KSFramework.Lua]

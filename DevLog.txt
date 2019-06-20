@@ -34,4 +34,10 @@ Xlua好像没有类似ToLua的UpdateBeat功能（反正没找到），自己加了个。
 新增一些常用的handler安全封装，没有了ToLua的isnull方法不过好像可以用obj：Equals（nil）来判断
 实现了一下Timer，毕竟计时器应该蛮常用的。
 实现了类似NGUI UIEventLitener的类，方便快速统一添加UI事件响应
+UGUI还是没有Tween系列组建，只能选择导入DoTween来做简单的动画了。
 
+6.21 
+一摸就是10天哈哈哈哈哈、、、、
+调试了多语言逻辑 允许启动设置不同语言
+搞了一套简单的UI 
+新增批量设置图片参数 与 新增图片批量自动设置的 jio本

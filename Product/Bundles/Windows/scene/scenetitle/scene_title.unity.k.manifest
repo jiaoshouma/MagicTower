@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1092654297
+CRC: 2593157813
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1fb46db45e3d8b36a66f15d39aa393d6
+    Hash: 55ece7fe599181db7b7abd65c13a0b72
   TypeTreeHash:
     serializedVersion: 2
-    Hash: fc58fec9b783eed52fcb59badd676da7
+    Hash: c854dd64389fe43be9ec469c912f2add
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,19 +17,11 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
-- Class: 23
-  Script: {instanceID: 0}
 - Class: 28
-  Script: {instanceID: 0}
-- Class: 33
-  Script: {instanceID: 0}
-- Class: 43
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
 - Class: 92
-  Script: {instanceID: 0}
-- Class: 102
   Script: {instanceID: 0}
 - Class: 104
   Script: {instanceID: 0}
@@ -37,12 +29,13 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 124
   Script: {instanceID: 0}
-- Class: 128
-  Script: {instanceID: 0}
-- Class: 135
-  Script: {instanceID: 0}
 - Class: 157
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
   Script: {instanceID: 0}
 Assets:
 - Assets/BundleResources/Scene/SceneTitle/scene_title.unity
-Dependencies: []
+Dependencies:
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/title_background.jpg.k

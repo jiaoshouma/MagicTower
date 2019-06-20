@@ -105,6 +105,7 @@ Cookie          = CS.KSFramework.Cookie
 UIModule        = CS.KEngine.UI.UIModule
 ---@type KEngine.AssetBundleLoader
 AssetBundleLoader = CS.KEngine.AssetBundleLoader
+UIEventListener = CS.UIEventListener
 -- Log             = CS.KEngine.Log
 -- print("Lua Init time(step1):"..os.clock()-_startTime)
 

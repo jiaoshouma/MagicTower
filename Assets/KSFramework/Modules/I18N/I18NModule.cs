@@ -141,6 +141,13 @@ namespace KSFramework
             return new I18N(str);
         }
 
+        //惰式初始化，这个基本没用
+        public static void SetLangThenReload(string lang)
+        {
+            SetLang(lang);
+            _isInited = false;
+            Init();
+        }
 
     }
 

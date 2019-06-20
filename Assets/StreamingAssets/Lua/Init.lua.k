@@ -34,6 +34,22 @@ function class(classname,super)
     return cls
 end
 
+function IsNil(obj)
+    if type(obj) ~= "userdata" then
+        return obj == nil 
+    else
+        return obj:Equals(nil)
+    end
+end
+
+function handler(obj,func)
+    return function()
+        if not IsNil(obj) then
+            func(obj)
+        end 
+    end
+end
+
 -- simple class extends
 function extends(class, base)
     base.__index = base
@@ -79,6 +95,10 @@ Const = import("Const")
 Utils = import("Utils")
 UIBase = import("UI/UIBase")
 Tools 		= import("Tools")
+import("Coroutine")
+import("UpdateBeat")
+import("Timer")
 import("CSharpBinding")
 print("Init.lua script finish!Start lua logic----")
-import("Game")
+sun.Game = import("Game")
+sun.Game.get():startGame()

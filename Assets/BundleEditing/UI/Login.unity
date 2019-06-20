@@ -467,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 297401222, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000016323467
+      value: -0.000048051523
       objectReference: {fileID: 0}
     - target: {fileID: 297401222, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
       propertyPath: m_SizeDelta.y
@@ -487,6 +487,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 996391015, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
       propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 996391015, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
+      propertyPath: m_Size
+      value: 0.9999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155933768, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7b82d53dd06a3784dbd3bdc506167539,
+        type: 3}
+    - target: {fileID: 1155933768, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921882338, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7b82d53dd06a3784dbd3bdc506167539,
+        type: 3}
+    - target: {fileID: 1921882338, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046653640, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7b82d53dd06a3784dbd3bdc506167539,
+        type: 3}
+    - target: {fileID: 2046653640, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124485066, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7b82d53dd06a3784dbd3bdc506167539,
+        type: 3}
+    - target: {fileID: 2124485066, guid: 5ac626607f7db7447bb046f85cd59e4b, type: 3}
+      propertyPath: m_Type
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

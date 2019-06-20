@@ -1,74 +1,83 @@
 ManifestFileVersion: 0
-CRC: 3983534602
+CRC: 1334420296
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: images/red.png.k
-      Dependencies: {}
+      Name: scene/scenetitle/scene_title.unity.k
+      Dependencies:
+        Dependency_0: images/title_background.jpg.k
     Info_1:
-      Name: ui/loaduisprite.prefab.k
+      Name: scene/scenegame/scene_game.unity.k
       Dependencies: {}
     Info_2:
-      Name: ui/login.prefab.k
-      Dependencies:
-        Dependency_0: uiatlas/animation/0004.png.k
-        Dependency_1: uiatlas/commonui/button_green.png.k
+      Name: uiatlas/animation/0002.png.k
+      Dependencies: {}
     Info_3:
-      Name: ui/navbar.prefab.k
+      Name: uiatlas/animation/0003.png.k
       Dependencies: {}
     Info_4:
-      Name: ui/main.prefab.k
+      Name: uiatlas/animation/0001.png.k
       Dependencies: {}
     Info_5:
-      Name: ui/billboard.prefab.k
+      Name: uiatlas/commonui/button_green.png.k
       Dependencies: {}
     Info_6:
+      Name: uiatlas/commonui/button_yellow.png.k
+      Dependencies: {}
+    Info_7:
+      Name: uiatlas/animation/0004.png.k
+      Dependencies: {}
+    Info_8:
+      Name: uiatlas/commonui/button_red.png.k
+      Dependencies: {}
+    Info_9:
+      Name: uiatlas/animation/0005.png.k
+      Dependencies: {}
+    Info_10:
+      Name: uiatlas_sp/instructionfile.txt.k
+      Dependencies: {}
+    Info_11:
+      Name: ui/loaduisprite.prefab.k
+      Dependencies: {}
+    Info_12:
       Name: ui/testui.prefab.k
       Dependencies:
         Dependency_0: uiatlas/commonui/button_yellow.png.k
-    Info_7:
+    Info_13:
       Name: ui/test2.prefab.k
       Dependencies: {}
-    Info_8:
-      Name: uiatlas_sp/instructionfile.txt.k
-      Dependencies: {}
-    Info_9:
-      Name: ui/titlewindow.prefab.k
+    Info_14:
+      Name: ui/login.prefab.k
       Dependencies:
         Dependency_0: uiatlas/commonui/button_green.png.k
-        Dependency_1: uiatlas/commonui/button_green_border.png.k
-        Dependency_2: uiatlas/commonui/button_red.png.k
-        Dependency_3: uiatlas/commonui/button_yellow.png.k
-    Info_10:
-      Name: scene/scenegame/scene_game.unity.k
-      Dependencies: {}
-    Info_11:
-      Name: scene/scenetitle/scene_title.unity.k
-      Dependencies: {}
-    Info_12:
-      Name: uiatlas/animation/0001.png.k
-      Dependencies: {}
-    Info_13:
-      Name: uiatlas/animation/0002.png.k
-      Dependencies: {}
-    Info_14:
-      Name: uiatlas/animation/0003.png.k
-      Dependencies: {}
+        Dependency_1: uiatlas/animation/0004.png.k
     Info_15:
-      Name: uiatlas/animation/0004.png.k
-      Dependencies: {}
+      Name: ui/titlewindow.prefab.k
+      Dependencies:
+        Dependency_0: images/logo.png.k
+        Dependency_1: images/logo_rin.png.k
+        Dependency_2: images/logo_rin_2.png.k
     Info_16:
-      Name: uiatlas/animation/0005.png.k
+      Name: ui/navbar.prefab.k
       Dependencies: {}
     Info_17:
-      Name: uiatlas/commonui/button_green.png.k
+      Name: ui/main.prefab.k
       Dependencies: {}
     Info_18:
-      Name: uiatlas/commonui/button_green_border.png.k
+      Name: ui/billboard.prefab.k
       Dependencies: {}
     Info_19:
-      Name: uiatlas/commonui/button_red.png.k
+      Name: images/logo.png.k
       Dependencies: {}
     Info_20:
-      Name: uiatlas/commonui/button_yellow.png.k
+      Name: images/logo_rin.png.k
+      Dependencies: {}
+    Info_21:
+      Name: images/logo_rin_2.png.k
+      Dependencies: {}
+    Info_22:
+      Name: images/title_background.jpg.k
+      Dependencies: {}
+    Info_23:
+      Name: uiatlas/commonui/white.png.k
       Dependencies: {}

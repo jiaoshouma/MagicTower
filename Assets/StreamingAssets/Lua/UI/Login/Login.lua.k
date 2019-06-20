@@ -45,14 +45,6 @@ function UILogin:OnInit(controller)
         UIModule.Instance:OpenWindow("LoadUISprite")
     end)
     UIModule.Instance:OpenWindow("Navbar")
-
-    self.imgSwithUI = self:GetControl("UnityEngine.UI.Image",nil,self.btnSwithUI.transform)
-    local path = "uiatlas/button/button_red.png"
-    CS.KEngine.SpriteLoader.Load(path,function(isOK,sprite)
-        self.imgSwithUI.sprite = sprite
-    end)
-
-    UIModule.Instance:OpenWindow("TestUI")
 end
 
 function UILogin:OnOpen(num1)
@@ -82,6 +74,7 @@ end
 function UILogin:OnClose()
     print(self.btnTest)
     print(self.sceneIndex)
+    print("OnClose------------------------")
 end
 
 return UILogin
