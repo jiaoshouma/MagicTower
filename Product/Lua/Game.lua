@@ -16,7 +16,7 @@ function Game:startGame()
 	--determin open which window / scene
 	UIModule.Instance:OpenWindow("TitleWindow")
 	SceneLoader.Load("Scene/SceneTitle/scene_title.unity")
-	print("this is branch dev")
+	print("this is branch master")
 end
 
 function Game:OnBeat()
