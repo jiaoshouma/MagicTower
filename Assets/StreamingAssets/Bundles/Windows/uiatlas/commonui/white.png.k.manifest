@@ -1,15 +1,17 @@
 ManifestFileVersion: 0
-CRC: 520795812
+CRC: 3609528362
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6aedc3f7788941a7781a8d4c90464de4
+    Hash: 1a4f7f40b2bb678837d55823641f2b3d
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
 HashAppended: 0
 ClassTypes:
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 213
   Script: {instanceID: 0}
 Assets:
 - Assets/BundleResources/UIAtlas/CommonUI/white.png

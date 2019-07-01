@@ -1,0 +1,41 @@
+ManifestFileVersion: 0
+CRC: 2405794926
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 90f1f67bca0abc8292831b268245942a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c854dd64389fe43be9ec469c912f2add
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 92
+  Script: {instanceID: 0}
+- Class: 104
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 124
+  Script: {instanceID: 0}
+- Class: 157
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/Scene/SceneBattle/scene_battle.unity
+Dependencies:
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/white.png.k

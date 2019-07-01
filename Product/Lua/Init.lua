@@ -115,6 +115,10 @@ function print_r ( t )
     print(printStr)
 end
 
+function __(str)
+    return I18N.Str(str)
+end
+
 ---@type KSFramework.Cookie
 Cookie = CS.KSFramework.Cookie
 ---@type KEngine.Log
@@ -129,6 +133,8 @@ SceneLoader = CS.KEngine.SceneLoader
 LoaderMode = CS.KEngine.LoaderMode
 ---@type AppSettings.BillboardSettings
 BillboardSettings = CS.AppSettings.BillboardSettings
+
+RoleCardSettings = CS.AppSettings.RoleCardSettings
 ---@type AppSettings.GameConfigSettings
 GameConfigSettings = CS.AppSettings.GameConfigSettings
 ---@type AppSettings.TestSettings

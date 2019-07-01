@@ -38,6 +38,7 @@ function Game:startGame()
 	UIModule.Instance:OpenWindow("TitleWindow")
 
 	self:enterScene(sun.SceneType.TITLE)
+
 end
 
 function Game:enterScene(sceneType)
@@ -46,8 +47,6 @@ function Game:enterScene(sceneType)
 		debug.trace("No such scene!")
 		return
 	end
-	__TRACE(conf,"sss","=================")
-	print_r(SceneConf)
 	SceneLoader.Load(conf.res,function()
 		local sceneClass = import(conf.class)
 		self.openingScene_ = sceneClass.new()

@@ -1,11 +1,11 @@
 ManifestFileVersion: 0
-CRC: 1334420296
+CRC: 2936428739
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: scene/scenetitle/scene_title.unity.k
       Dependencies:
-        Dependency_0: images/title_background.jpg.k
+        Dependency_0: images/title/title_background.jpg.k
     Info_1:
       Name: scene/scenegame/scene_game.unity.k
       Dependencies: {}
@@ -40,44 +40,82 @@ AssetBundleManifest:
       Name: ui/loaduisprite.prefab.k
       Dependencies: {}
     Info_12:
-      Name: ui/testui.prefab.k
-      Dependencies:
-        Dependency_0: uiatlas/commonui/button_yellow.png.k
-    Info_13:
-      Name: ui/test2.prefab.k
-      Dependencies: {}
-    Info_14:
       Name: ui/login.prefab.k
       Dependencies:
-        Dependency_0: uiatlas/commonui/button_green.png.k
-        Dependency_1: uiatlas/animation/0004.png.k
-    Info_15:
+        Dependency_0: uiatlas/animation/0004.png.k
+        Dependency_1: uiatlas/commonui/btn_bg.png.k
+    Info_13:
       Name: ui/titlewindow.prefab.k
       Dependencies:
-        Dependency_0: images/logo.png.k
-        Dependency_1: images/logo_rin.png.k
-        Dependency_2: images/logo_rin_2.png.k
-    Info_16:
+        Dependency_0: images/title/logo.png.k
+        Dependency_1: images/title/logo_rin.png.k
+        Dependency_2: images/title/logo_rin_2.png.k
+    Info_14:
       Name: ui/navbar.prefab.k
       Dependencies: {}
-    Info_17:
+    Info_15:
       Name: ui/main.prefab.k
       Dependencies: {}
-    Info_18:
+    Info_16:
       Name: ui/billboard.prefab.k
+      Dependencies:
+        Dependency_0: uiatlas/commonui/board_1.png.k
+        Dependency_1: uiatlas/commonui/close.png.k
+    Info_17:
+      Name: uiatlas/commonui/white.png.k
+      Dependencies: {}
+    Info_18:
+      Name: images/title/logo.png.k
       Dependencies: {}
     Info_19:
-      Name: images/logo.png.k
+      Name: images/title/logo_rin.png.k
       Dependencies: {}
     Info_20:
-      Name: images/logo_rin.png.k
+      Name: images/title/logo_rin_2.png.k
       Dependencies: {}
     Info_21:
-      Name: images/logo_rin_2.png.k
+      Name: images/title/title_background.jpg.k
       Dependencies: {}
     Info_22:
-      Name: images/title_background.jpg.k
-      Dependencies: {}
+      Name: scene/scenebattle/scene_battle.unity.k
+      Dependencies:
+        Dependency_0: uiatlas/commonui/white.png.k
     Info_23:
-      Name: uiatlas/commonui/white.png.k
+      Name: uiatlas/commonui/board_1.png.k
+      Dependencies: {}
+    Info_24:
+      Name: uiatlas/commonui/board_2.png.k
+      Dependencies: {}
+    Info_25:
+      Name: uiatlas/commonui/board_3.png.k
+      Dependencies: {}
+    Info_26:
+      Name: uiatlas/commonui/btn_bg.png.k
+      Dependencies: {}
+    Info_27:
+      Name: uiatlas/commonui/btn_bg_press.png.k
+      Dependencies: {}
+    Info_28:
+      Name: uiatlas/commonui/btn_red.png.k
+      Dependencies: {}
+    Info_29:
+      Name: uiatlas/commonui/btn_red_press.png.k
+      Dependencies: {}
+    Info_30:
+      Name: uiatlas/commonui/caution_danger.png.k
+      Dependencies: {}
+    Info_31:
+      Name: uiatlas/commonui/caution_info.png.k
+      Dependencies: {}
+    Info_32:
+      Name: uiatlas/commonui/caution_mind.png.k
+      Dependencies: {}
+    Info_33:
+      Name: uiatlas/commonui/close.png.k
+      Dependencies: {}
+    Info_34:
+      Name: uiatlas/commonui/division line.png.k
+      Dependencies: {}
+    Info_35:
+      Name: uiatlas/commonui/title_bg.png.k
       Dependencies: {}
