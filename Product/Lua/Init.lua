@@ -137,6 +137,8 @@ BillboardSettings = CS.AppSettings.BillboardSettings
 RoleCardSettings = CS.AppSettings.RoleCardSettings
 ---@type AppSettings.GameConfigSettings
 GameConfigSettings = CS.AppSettings.GameConfigSettings
+
+SunUtils = CS.SunUtils
 ---@type AppSettings.TestSettings
 TestSettings = CS.AppSettings.TestSettings
 
@@ -153,6 +155,7 @@ print("Init.lua script finish!Start lua logic----")
 --set lang here
 sun.lang = PlayerPrefs.GetString("GameLang","zh_CN")
 CS.KSFramework.I18NModule.SetLang(sun.lang)
+sun.AssetsLoader = import("AssetsLoader")
 print("RunForLang:"..sun.lang)
 sun.Game = import("Game")
 sun.Game.get():startGame()

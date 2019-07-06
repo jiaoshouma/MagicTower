@@ -17,5 +17,11 @@ public class AutoProcessEditor : AssetPostprocessor
             string folderStr = Path.GetFileName(dirName);
             textureImporter.spritePackingTag = folderStr;
         }
+        else if (dirName.Contains("Images")) 
+        {
+            //自动设置类型;  
+            TextureImporter textureImporter = (TextureImporter)assetImporter;
+            textureImporter.textureType = TextureImporterType.Sprite;
+        }
     }
 }

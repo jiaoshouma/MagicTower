@@ -82,6 +82,8 @@
 		<type fullname="KEngine.UI.UIModule" preserve="all"/>
 		<type fullname="CoroutineRunner" preserve="all"/>
 		<type fullname="UIEventListener" preserve="all"/>
+		<type fullname="KEngine.LoaderMode" preserve="all"/>
+		<type fullname="SunUtils" preserve="all"/>
 		<type fullname="KSFramework.LuaModule" preserve="all"/>
 		
 	</assembly>

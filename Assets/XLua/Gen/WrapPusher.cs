@@ -45,6 +45,7 @@ namespace XLua
 				translator.RegisterPushAndGetAndUpdate<DG.Tweening.ScrambleMode>(translator.PushDGTweeningScrambleMode, translator.Get, translator.UpdateDGTweeningScrambleMode);
 				translator.RegisterPushAndGetAndUpdate<DG.Tweening.TweenType>(translator.PushDGTweeningTweenType, translator.Get, translator.UpdateDGTweeningTweenType);
 				translator.RegisterPushAndGetAndUpdate<DG.Tweening.UpdateType>(translator.PushDGTweeningUpdateType, translator.Get, translator.UpdateDGTweeningUpdateType);
+				translator.RegisterPushAndGetAndUpdate<KEngine.LoaderMode>(translator.PushKEngineLoaderMode, translator.Get, translator.UpdateKEngineLoaderMode);
 				translator.RegisterPushAndGetAndUpdate<UnityEngine.KeyCode>(translator.PushUnityEngineKeyCode, translator.Get, translator.UpdateUnityEngineKeyCode);
 				translator.RegisterPushAndGetAndUpdate<UnityEngine.RuntimePlatform>(translator.PushUnityEngineRuntimePlatform, translator.Get, translator.UpdateUnityEngineRuntimePlatform);
 				translator.RegisterPushAndGetAndUpdate<UnityEngine.FogMode>(translator.PushUnityEngineFogMode, translator.Get, translator.UpdateUnityEngineFogMode);
@@ -1513,6 +1514,90 @@ namespace XLua
             }
         }
         
+        int KEngineLoaderMode_TypeID = -1;
+		int KEngineLoaderMode_EnumRef = -1;
+        
+        public void PushKEngineLoaderMode(RealStatePtr L, KEngine.LoaderMode val)
+        {
+            if (KEngineLoaderMode_TypeID == -1)
+            {
+			    bool is_first;
+                KEngineLoaderMode_TypeID = getTypeId(L, typeof(KEngine.LoaderMode), out is_first);
+				
+				if (KEngineLoaderMode_EnumRef == -1)
+				{
+				    Utils.LoadCSTable(L, typeof(KEngine.LoaderMode));
+				    KEngineLoaderMode_EnumRef = LuaAPI.luaL_ref(L, LuaIndexes.LUA_REGISTRYINDEX);
+				}
+				
+            }
+			
+			if (LuaAPI.xlua_tryget_cachedud(L, (int)val, KEngineLoaderMode_EnumRef) == 1)
+            {
+			    return;
+			}
+			
+            IntPtr buff = LuaAPI.xlua_pushstruct(L, 4, KEngineLoaderMode_TypeID);
+            if (!CopyByValue.Pack(buff, 0, (int)val))
+            {
+                throw new Exception("pack fail fail for KEngine.LoaderMode ,value="+val);
+            }
+			
+			LuaAPI.lua_getref(L, KEngineLoaderMode_EnumRef);
+			LuaAPI.lua_pushvalue(L, -2);
+			LuaAPI.xlua_rawseti(L, -2, (int)val);
+			LuaAPI.lua_pop(L, 1);
+			
+        }
+		
+        public void Get(RealStatePtr L, int index, out KEngine.LoaderMode val)
+        {
+		    LuaTypes type = LuaAPI.lua_type(L, index);
+            if (type == LuaTypes.LUA_TUSERDATA )
+            {
+			    if (LuaAPI.xlua_gettypeid(L, index) != KEngineLoaderMode_TypeID)
+				{
+				    throw new Exception("invalid userdata for KEngine.LoaderMode");
+				}
+				
+                IntPtr buff = LuaAPI.lua_touserdata(L, index);
+				int e;
+                if (!CopyByValue.UnPack(buff, 0, out e))
+                {
+                    throw new Exception("unpack fail for KEngine.LoaderMode");
+                }
+				val = (KEngine.LoaderMode)e;
+                
+            }
+            else
+            {
+                val = (KEngine.LoaderMode)objectCasters.GetCaster(typeof(KEngine.LoaderMode))(L, index, null);
+            }
+        }
+		
+        public void UpdateKEngineLoaderMode(RealStatePtr L, int index, KEngine.LoaderMode val)
+        {
+		    
+            if (LuaAPI.lua_type(L, index) == LuaTypes.LUA_TUSERDATA)
+            {
+			    if (LuaAPI.xlua_gettypeid(L, index) != KEngineLoaderMode_TypeID)
+				{
+				    throw new Exception("invalid userdata for KEngine.LoaderMode");
+				}
+				
+                IntPtr buff = LuaAPI.lua_touserdata(L, index);
+                if (!CopyByValue.Pack(buff, 0,  (int)val))
+                {
+                    throw new Exception("pack fail for KEngine.LoaderMode ,value="+val);
+                }
+            }
+			
+            else
+            {
+                throw new Exception("try to update a data with lua type:" + LuaAPI.lua_type(L, index));
+            }
+        }
+        
         int UnityEngineKeyCode_TypeID = -1;
 		int UnityEngineKeyCode_EnumRef = -1;
         
@@ -2310,6 +2395,12 @@ namespace XLua
 				translator.PushDGTweeningUpdateType(L, array[index]);
 				return true;
 			}
+			else if (type == typeof(KEngine.LoaderMode[]))
+			{
+			    KEngine.LoaderMode[] array = obj as KEngine.LoaderMode[];
+				translator.PushKEngineLoaderMode(L, array[index]);
+				return true;
+			}
 			else if (type == typeof(UnityEngine.KeyCode[]))
 			{
 			    UnityEngine.KeyCode[] array = obj as UnityEngine.KeyCode[];
@@ -2475,6 +2566,12 @@ namespace XLua
 			else if (type == typeof(DG.Tweening.UpdateType[]))
 			{
 			    DG.Tweening.UpdateType[] array = obj as DG.Tweening.UpdateType[];
+				translator.Get(L, obj_idx, out array[array_idx]);
+				return true;
+			}
+			else if (type == typeof(KEngine.LoaderMode[]))
+			{
+			    KEngine.LoaderMode[] array = obj as KEngine.LoaderMode[];
 				translator.Get(L, obj_idx, out array[array_idx]);
 				return true;
 			}

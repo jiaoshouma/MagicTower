@@ -130,6 +130,8 @@
      <Compile Include="Assets\KSFramework\Modules\UI\UILuaOutlet.cs" />
      <Compile Include="Assets\KSFramework\Modules\UI\UILuaOutletCollection.cs" />
      <Compile Include="Assets\Scripts\Core\CoroutineRunner.cs" />
+     <Compile Include="Assets\Scripts\Core\ShrinkText.cs" />
+     <Compile Include="Assets\Scripts\Core\SunUtils.cs" />
      <Compile Include="Assets\Scripts\Core\UIEventListener.cs" />
      <Compile Include="Assets\Scripts\Core\UpdateRunner.cs" />
      <Compile Include="Assets\Scripts\Runtime\ForeSceneEdit.cs" />
@@ -164,6 +166,7 @@
      <Compile Include="Assets\XLua\Gen\KSFrameworkLuaModuleWrap.cs" />
      <Compile Include="Assets\XLua\Gen\KSFrameworkLuaUIControllerWrap.cs" />
      <Compile Include="Assets\XLua\Gen\PackUnpack.cs" />
+     <Compile Include="Assets\XLua\Gen\SunUtilsWrap.cs" />
      <Compile Include="Assets\XLua\Gen\SystemCollectionsIEnumeratorBridge.cs" />
      <Compile Include="Assets\XLua\Gen\UIEventListenerWrap.cs" />
      <Compile Include="Assets\XLua\Gen\UnityEngineAINavMeshAgentWrap.cs" />
