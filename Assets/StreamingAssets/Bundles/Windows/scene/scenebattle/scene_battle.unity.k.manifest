@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2405794926
+CRC: 1117430349
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 90f1f67bca0abc8292831b268245942a
+    Hash: dda87828d46130c995c98dad190e28ca
   TypeTreeHash:
     serializedVersion: 2
-    Hash: c854dd64389fe43be9ec469c912f2add
+    Hash: 02d1034a0203dcf52c174b431a50701d
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -27,6 +27,16 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 108
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 124
   Script: {instanceID: 0}
 - Class: 157
@@ -34,6 +44,10 @@ ClassTypes:
 - Class: 212
   Script: {instanceID: 0}
 - Class: 213
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
   Script: {instanceID: 0}
 Assets:
 - Assets/BundleResources/Scene/SceneBattle/scene_battle.unity

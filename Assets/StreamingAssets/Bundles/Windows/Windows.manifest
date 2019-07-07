@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2936428739
+CRC: 853462854
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -118,4 +118,57 @@ AssetBundleManifest:
       Dependencies: {}
     Info_35:
       Name: uiatlas/commonui/title_bg.png.k
+      Dependencies: {}
+    Info_36:
+      Name: images/cards/foodcards/base.png.k
+      Dependencies: {}
+    Info_37:
+      Name: images/cards/rolecards/base.png.k
+      Dependencies: {}
+    Info_38:
+      Name: images/cards/rolecards/caocao.png.k
+      Dependencies: {}
+    Info_39:
+      Name: images/cards/soldiercards/base.png.k
+      Dependencies: {}
+    Info_40:
+      Name: images/cards/stgcards/base.png.k
+      Dependencies: {}
+    Info_41:
+      Name: images/cards/stgcards/beishui.png.k
+      Dependencies: {}
+    Info_42:
+      Name: prefabs/cards/base_role_card.prefab.k
+      Dependencies:
+        Dependency_0: images/cards/rolecards/caocao.png.k
+        Dependency_1: uiatlas/cardcommonui/ball_4.png.k
+    Info_43:
+      Name: uiatlas/cardcommonui/ball_1.png.k
+      Dependencies: {}
+    Info_44:
+      Name: uiatlas/cardcommonui/ball_2.png.k
+      Dependencies: {}
+    Info_45:
+      Name: uiatlas/cardcommonui/ball_3.png.k
+      Dependencies: {}
+    Info_46:
+      Name: uiatlas/cardcommonui/ball_4.png.k
+      Dependencies: {}
+    Info_47:
+      Name: uiatlas/cardcommonui/base_simple_food.png.k
+      Dependencies: {}
+    Info_48:
+      Name: uiatlas/cardcommonui/base_simple_role.png.k
+      Dependencies: {}
+    Info_49:
+      Name: uiatlas/cardcommonui/base_simple_soldier.png.k
+      Dependencies: {}
+    Info_50:
+      Name: uiatlas/cardcommonui/base_simple_stg.png.k
+      Dependencies: {}
+    Info_51:
+      Name: uiatlas/cardcommonui/heart.png.k
+      Dependencies: {}
+    Info_52:
+      Name: uiatlas/cardcommonui/heart_bg.png.k
       Dependencies: {}

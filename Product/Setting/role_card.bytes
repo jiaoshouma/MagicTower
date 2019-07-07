@@ -1,15 +1,15 @@
-id	name	belong	force	command	moral	logic_res	tex
-int	string	int	int	int	int	string	string
-1	ZHAOYUN	2	7	4	5		
-2	LVBU	4					
-3	DIAOCHAN	4					
-4	GUANYU	2					
-5	ZHANGFEI	2					
-6	LIUBEI	2					
-7	CAOCAO	1	5	6	5		caocao
-8	XIAOHOUDUN	1					
-9	GUOJIA	1					
-10	ZHUGELIANG	2					
-11	SUNCE	3					
-12	SHANGXIANG	3					
-13	HUANGGAI	3					
+id	name	belong	force	command	moral	logic_res	tex	model_res
+int	string	int	int	int	int	string	string	string
+1	ZHAOYUN	2	7	4	5			
+2	LVBU	4						
+3	DIAOCHAN	4						
+4	GUANYU	2						
+5	ZHANGFEI	2						
+6	LIUBEI	2						
+7	CAOCAO	1	5	6	5		caocao	
+8	XIAOHOUDUN	1						
+9	GUOJIA	1						
+10	ZHUGELIANG	2						
+11	SUNCE	3						
+12	SHANGXIANG	3						
+13	HUANGGAI	3						

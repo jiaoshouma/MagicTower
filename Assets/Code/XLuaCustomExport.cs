@@ -188,8 +188,10 @@ public static class XLuaCustomExport
 #else
         typeof(UnityEngine.Profiler),
 #endif 
+        typeof(KEngineExtensions),
         // mine
         typeof(SunUtils),
+        typeof(SunExtensions),
     };
 
     [LuaCallCSharp]

@@ -55,3 +55,9 @@ UGUI还是没有Tween系列组建，只能选择导入DoTween来做简单的动画了。
 7.7
 新增了AssetsLoader模块
 制作了简单的卡片样式 并测试了加载逻辑。
+UGUI的Text很烂，感觉没有NGUI好用，抄了个ShrinkText的子类勉强着用吧。
+
+7.8
+新增事件收发机制 EventDispatcher/EventProxy 以对象为单位响应事件
+新增几个Transform的Extension（以及绑定） 写的方便些
+继续深化卡片base逻辑

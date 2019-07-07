@@ -12,3 +12,8 @@ sun.CardType = {
 	FOOD = 3,
 	SOLDIER = 4,
 }
+
+sun.CardShowForm = {
+	SIMPLE = 1,
+	SPECIFIC = 2,
+}

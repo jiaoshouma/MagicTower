@@ -38,6 +38,7 @@ function Game:startGame()
 	UIModule.Instance:OpenWindow("TitleWindow")
 
 	self:enterScene(sun.SceneType.TITLE)
+
 end
 
 function Game:enterScene(sceneType)

@@ -43,9 +43,13 @@ function IsNil(obj)
 end
 
 function handler(obj,func)
-    return function()
+    if not func then
+        error("handler:arg error,no func!")
+        return
+    end
+    return function(...)
         if not IsNil(obj) then
-            func(obj)
+            func(obj,...)
         end 
     end
 end
@@ -115,6 +119,10 @@ function print_r ( t )
     print(printStr)
 end
 
+function __(str)
+    return I18N.Str(str)
+end
+
 ---@type KSFramework.Cookie
 Cookie = CS.KSFramework.Cookie
 ---@type KEngine.Log
@@ -129,14 +137,22 @@ SceneLoader = CS.KEngine.SceneLoader
 LoaderMode = CS.KEngine.LoaderMode
 ---@type AppSettings.BillboardSettings
 BillboardSettings = CS.AppSettings.BillboardSettings
+
+RoleCardSettings = CS.AppSettings.RoleCardSettings
+StgCardSettings = CS.AppSettings.StgCardSettings
+FoodCardSettings = CS.AppSettings.FoodCardSettings
+SoldierCardSettings = CS.AppSettings.SoldierCardSettings
 ---@type AppSettings.GameConfigSettings
 GameConfigSettings = CS.AppSettings.GameConfigSettings
+
+SunUtils = CS.SunUtils
 ---@type AppSettings.TestSettings
 TestSettings = CS.AppSettings.TestSettings
 
-Enums = import("Enums")
-Const = import("Const")
-Utils = import("Utils")
+import("Enums")
+import("Const")
+import("Event")
+import("Utils")
 UIBase = import("UI/UIBase")
 Tools 		= import("Tools")
 import("Coroutine")
@@ -145,8 +161,19 @@ import("Timer")
 import("CSharpBinding")
 print("Init.lua script finish!Start lua logic----")
 --set lang here
+--Tools model:
 sun.lang = PlayerPrefs.GetString("GameLang","zh_CN")
 CS.KSFramework.I18NModule.SetLang(sun.lang)
+sun.AssetsLoader = import("AssetsLoader")
+sun.EventDispatcher = import("EventDispatcher")
+
 print("RunForLang:"..sun.lang)
+
+-------------------------------------------
+--Logic model:
+sun.CardManager = import("Cards/CardManager")
+
+-------------------------------------------
+
 sun.Game = import("Game")
 sun.Game.get():startGame()

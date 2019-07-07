@@ -131,6 +131,7 @@
      <Compile Include="Assets\KSFramework\Modules\UI\UILuaOutletCollection.cs" />
      <Compile Include="Assets\Scripts\Core\CoroutineRunner.cs" />
      <Compile Include="Assets\Scripts\Core\ShrinkText.cs" />
+     <Compile Include="Assets\Scripts\Core\SunExtensions.cs" />
      <Compile Include="Assets\Scripts\Core\SunUtils.cs" />
      <Compile Include="Assets\Scripts\Core\UIEventListener.cs" />
      <Compile Include="Assets\Scripts\Core\UpdateRunner.cs" />
@@ -154,6 +155,7 @@
      <Compile Include="Assets\XLua\Gen\KEngineAssetBundleLoaderWrap.cs" />
      <Compile Include="Assets\XLua\Gen\KEngineAssetFileLoaderWrap.cs" />
      <Compile Include="Assets\XLua\Gen\KEngineCCoroutineStateWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\KEngineExtensionsWrap.cs" />
      <Compile Include="Assets\XLua\Gen\KEngineInstanceAssetLoaderWrap.cs" />
      <Compile Include="Assets\XLua\Gen\KEngineKAsyncWrap.cs" />
      <Compile Include="Assets\XLua\Gen\KEngineKToolWrap.cs" />
@@ -166,6 +168,7 @@
      <Compile Include="Assets\XLua\Gen\KSFrameworkLuaModuleWrap.cs" />
      <Compile Include="Assets\XLua\Gen\KSFrameworkLuaUIControllerWrap.cs" />
      <Compile Include="Assets\XLua\Gen\PackUnpack.cs" />
+     <Compile Include="Assets\XLua\Gen\SunExtensionsWrap.cs" />
      <Compile Include="Assets\XLua\Gen\SunUtilsWrap.cs" />
      <Compile Include="Assets\XLua\Gen\SystemCollectionsIEnumeratorBridge.cs" />
      <Compile Include="Assets\XLua\Gen\UIEventListenerWrap.cs" />
