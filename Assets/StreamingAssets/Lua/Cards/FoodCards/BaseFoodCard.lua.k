@@ -1,7 +1,7 @@
 local BaseFoodCard = class("BaseFoodCard",import("Cards/BaseCard"))
 
-function BaseFoodCard:ctor(cardNumber,cardType)
-	BaseFoodCard.super.ctor(self,cardNumber,cardType)
+function BaseFoodCard:ctor(cardNumber,cardType,idx)
+	BaseFoodCard.super.ctor(self,cardNumber,cardType,idx)
 	
 end
 

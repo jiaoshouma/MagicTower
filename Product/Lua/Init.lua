@@ -119,8 +119,39 @@ function print_r ( t )
     print(printStr)
 end
 
+-- >>summary------------------------------------
+-- This iter function is used to ipair array in C#(userdata).
+-- Sending other type of value for arg[1] will cause error!!!.
+function arrayIter(t, i)
+    if type(t) == "userdata" then
+        if i >= t.Length then
+            return nil,nil
+        end
+    end
+    local v = t[i]
+    i = i + 1
+    if v then
+        return i, v
+    else
+        return nil, nil
+    end
+end
+
+function ipairsArray(t)
+    return arrayIter,t,0
+end
+--<<summary------------------------------------
+
 function __(str)
-    return I18N.Str(str)
+    if not str or str == "" then
+        return ""
+    end
+    local resultStr = I18N.Str(str)
+    if not resultStr or resultStr == "" then
+        return str
+    else
+        return resultStr
+    end
 end
 
 ---@type KSFramework.Cookie

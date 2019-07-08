@@ -23,6 +23,13 @@ function CardManager:loadCard(cardType,path)
 	return cardPrefab
 end
 
+-- recommand use setting like below:
+-- local instance = RoleCardSettings.GetInstance()
+-- print(instance.Count,"====Count==========")
+-- local keys = instance:GetKeys()
+-- for i,v in ipairsArray(keys) do
+-- 	print(i,v,"=========key=========")
+-- end
 function CardManager:getCardsSetting(cardType)
 	if cardType == sun.CardType.ROLE then
 		return RoleCardSettings

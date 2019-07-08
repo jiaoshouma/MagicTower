@@ -1,7 +1,7 @@
 local BaseSoldierCard = class("BaseSoldierCard",import("Cards/BaseCard"))
 
-function BaseSoldierCard:ctor(cardNumber,cardType)
-	BaseSoldierCard.super.ctor(self,cardNumber,cardType)
+function BaseSoldierCard:ctor(cardNumber,cardType,idx)
+	BaseSoldierCard.super.ctor(self,cardNumber,cardType,idx)
 	
 end
 

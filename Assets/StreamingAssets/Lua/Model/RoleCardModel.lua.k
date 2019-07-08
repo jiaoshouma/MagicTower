@@ -14,10 +14,6 @@ function RoleCardModel:initAttributes()
 	self.moral_ = setting.moral
 end
 
-function RoleCardModel:getMainTexPrefix()
-	return "Images/cards/RoleCards/"
-end
-
 function RoleCardModel:getBelong()
 	return self.belong_ or 4
 end

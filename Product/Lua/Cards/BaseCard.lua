@@ -12,7 +12,11 @@ function BaseCard:ctor(cardNumber,cardType,idx)
 end
 
 function BaseCard:getSetting()
-	return sun.CardManager.get():getCardsSetting(self.cardType_)
+	if not self.setting_ then
+		local typeSettings = sun.CardManager.get():getCardsSetting(self.cardType_)
+		self.setting_ = typeSettings.Get(self.cardID_)
+	end
+	return self.setting_
 end
 
 function BaseCard:getName()
@@ -78,12 +82,22 @@ end
 function BaseCard:initSpecific()
 	local content = self.cardContents_[sun.CardShowForm.SPECIFIC]
 	local base = content:Find("base")
-	self.specificBaseImg_ = content:ComponentByName("base","UnityEngine.UI.Image")
-	sun.AssetsLoader.get():loadSprite(self:getCardBaseImg(false),function(isOK,sp)
-		print(sp,self.specificBaseImg_,"=========================")
-		self.specificBaseImg_.sprite = sp
-	end)
+	local specificBaseImg = content:ComponentByName("base","UnityEngine.UI.Image")
+	sun.setSprite(specificBaseImg,self:getCardBaseImg(false))
+	-- sun.AssetsLoader.get():loadSprite(self:getCardBaseImg(false),function(isOK,sp)
+	-- 	if isOK and not IsNil(specificBaseImg) then
+	-- 		specificBaseImg.sprite = sp
+	-- 	end
+	-- end)
 
+	self.mainTex_ = content:ComponentByName("main_tex","UnityEngine.UI.Image")
+	sun.setSprite(self.mainTex_,self.info_:getTexRes())
+
+	local name = content:ComponentByName("name","UnityEngine.UI.Text")
+	name.text = __(self.info_:getNameKey())
+
+	local desc = content:ComponentByName("desc","UnityEngine.UI.Text")
+	desc.text = __(self.info_:getDescKey())
 end
 
 function BaseCard:switchShow(showForm)

@@ -19,7 +19,6 @@ end
 function BattleScene:initScene()
 	local card = sun.CardManager.get():createCard(7,sun.CardType.ROLE)
 	SunUtils.AddChild(self.battleCanvasGo_,card.go_)
-	UIModule.Instance:OpenWindow("LoadUISprite")
 end
 
 return BattleScene

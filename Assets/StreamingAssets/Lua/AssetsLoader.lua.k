@@ -13,7 +13,7 @@ function AssetsLoader.get()
 end
 
 function AssetsLoader:loadAsset(path)
-	return ResLoader.Load(path).Asset
+	return ResLoader.Load(path,nil,CS.KEngine.LoaderMode.Sync).Asset
 end
 
 function AssetsLoader:loadAssetAsync(path,callback)
@@ -22,8 +22,8 @@ function AssetsLoader:loadAssetAsync(path,callback)
 	end,CS.KEngine.LoaderMode.Async)
 end
 
-function AssetsLoader:loadSprite(path)
-	return CS.KEngine.SpriteLoader.Load(path).Asset
+function AssetsLoader:loadSprite(path,callback)
+	return CS.KEngine.SpriteLoader.Load(path,callback)
 end
 
 return AssetsLoader

@@ -146,6 +146,27 @@ namespace AppSettings
 
 	        return _instance;
 	    }
+
+        public Dictionary<string, BillboardSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public string[] GetKeys()
+        {
+            var keys = DictKeys;
+            string[] result = new string[Count];
+            int count = 0;
+            foreach(string key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
         
         public int Count
         {
@@ -363,6 +384,27 @@ namespace AppSettings
 
 	        return _instance;
 	    }
+
+        public Dictionary<int, FoodCardSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public int[] GetKeys()
+        {
+            var keys = DictKeys;
+            int[] result = new int[Count];
+            int count = 0;
+            foreach(int key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
         
         public int Count
         {
@@ -497,6 +539,11 @@ namespace AppSettings
         /// </summary>
         public int heal { get; private set;}
         
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string desc { get; private set;}
+        
 
         internal FoodCardSetting(TableFileRow row)
         {
@@ -510,6 +557,7 @@ namespace AppSettings
             logic_res = row.Get_string(row.Values[2], ""); 
             tex = row.Get_string(row.Values[3], ""); 
             heal = row.Get_int(row.Values[4], ""); 
+            desc = row.Get_string(row.Values[5], ""); 
         }
 
         /// <summary>
@@ -586,6 +634,27 @@ namespace AppSettings
 
 	        return _instance;
 	    }
+
+        public Dictionary<int, RoleCardSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public int[] GetKeys()
+        {
+            var keys = DictKeys;
+            int[] result = new int[Count];
+            int count = 0;
+            foreach(int key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
         
         public int Count
         {
@@ -735,6 +804,16 @@ namespace AppSettings
         /// </summary>
         public string tex { get; private set;}
         
+        /// <summary>
+        /// model逻辑
+        /// </summary>
+        public string model_res { get; private set;}
+        
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string desc { get; private set;}
+        
 
         internal RoleCardSetting(TableFileRow row)
         {
@@ -751,6 +830,8 @@ namespace AppSettings
             moral = row.Get_int(row.Values[5], ""); 
             logic_res = row.Get_string(row.Values[6], ""); 
             tex = row.Get_string(row.Values[7], ""); 
+            model_res = row.Get_string(row.Values[8], ""); 
+            desc = row.Get_string(row.Values[9], ""); 
         }
 
         /// <summary>
@@ -827,6 +908,27 @@ namespace AppSettings
 
 	        return _instance;
 	    }
+
+        public Dictionary<int, SoldierCardSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public int[] GetKeys()
+        {
+            var keys = DictKeys;
+            int[] result = new int[Count];
+            int count = 0;
+            foreach(int key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
         
         public int Count
         {
@@ -961,6 +1063,11 @@ namespace AppSettings
         /// </summary>
         public int heal { get; private set;}
         
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string desc { get; private set;}
+        
 
         internal SoldierCardSetting(TableFileRow row)
         {
@@ -974,6 +1081,7 @@ namespace AppSettings
             logic_res = row.Get_string(row.Values[2], ""); 
             tex = row.Get_string(row.Values[3], ""); 
             heal = row.Get_int(row.Values[4], ""); 
+            desc = row.Get_string(row.Values[5], ""); 
         }
 
         /// <summary>
@@ -1050,6 +1158,27 @@ namespace AppSettings
 
 	        return _instance;
 	    }
+
+        public Dictionary<int, StgCardSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public int[] GetKeys()
+        {
+            var keys = DictKeys;
+            int[] result = new int[Count];
+            int count = 0;
+            foreach(int key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
         
         public int Count
         {
@@ -1184,6 +1313,16 @@ namespace AppSettings
         /// </summary>
         public int cost { get; private set;}
         
+        /// <summary>
+        /// model逻辑
+        /// </summary>
+        public string model_res { get; private set;}
+        
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string desc { get; private set;}
+        
 
         internal StgCardSetting(TableFileRow row)
         {
@@ -1197,6 +1336,8 @@ namespace AppSettings
             logic_res = row.Get_string(row.Values[2], ""); 
             tex = row.Get_string(row.Values[3], ""); 
             cost = row.Get_int(row.Values[4], ""); 
+            model_res = row.Get_string(row.Values[5], ""); 
+            desc = row.Get_string(row.Values[6], ""); 
         }
 
         /// <summary>
@@ -1273,6 +1414,27 @@ namespace AppSettings
 
 	        return _instance;
 	    }
+
+        public Dictionary<string, TestSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public string[] GetKeys()
+        {
+            var keys = DictKeys;
+            string[] result = new string[Count];
+            int count = 0;
+            foreach(string key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
         
         public int Count
         {
@@ -1478,6 +1640,27 @@ namespace AppSettings
 
 	        return _instance;
 	    }
+
+        public Dictionary<string, GameConfigSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public string[] GetKeys()
+        {
+            var keys = DictKeys;
+            string[] result = new string[Count];
+            int count = 0;
+            foreach(string key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
         
         public int Count
         {
