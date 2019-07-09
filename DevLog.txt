@@ -67,3 +67,6 @@ UGUI的Text很烂，感觉没有NGUI好用，抄了个ShrinkText的子类勉强着用吧。
 于是在git下了TableML工程重新编译了一个TableMLComplier，改了一下模板DefaultTemplate，新增一个返回Keys数组的方法。
 同时新增泛型for ipairsArray方式方便遍历C#中的Array.
 完成了一张武将卡的加载。
+
+7.10
+搞了一下UI适配，决定在battlescene中搞个节点用来放战场元素，暂且定为横屏适配。
