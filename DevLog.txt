@@ -66,3 +66,4 @@ UGUI的Text很烂，感觉没有NGUI好用，抄了个ShrinkText的子类勉强着用吧。
 这个xls配置方式虽然方便，但是太死板，生成的cs类甚至没有返回所有主键的方法，只有一个public count（这是默认id规律连续了吗...）
 于是在git下了TableML工程重新编译了一个TableMLComplier，改了一下模板DefaultTemplate，新增一个返回Keys数组的方法。
 同时新增泛型for ipairsArray方式方便遍历C#中的Array.
+完成了一张武将卡的加载。
