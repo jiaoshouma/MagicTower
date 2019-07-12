@@ -49,10 +49,17 @@ function Game:enterScene(sceneType)
 	end
 	SceneLoader.Load(conf.res,function()
 		local sceneClass = import(conf.class)
-		self.openingScene_ = sceneClass.new()
+		if self.openingScene_ then
+			self.openingScene_:dispose()
+		end
+		self.openingScene_ = sceneClass.new(sceneType)
 		self.openingSceneType_ = sceneType
 	end)
 
+end
+
+function Game:getOpeningScene()
+	return self.openingScene_
 end
 
 return Game

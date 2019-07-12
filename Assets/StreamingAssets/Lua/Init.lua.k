@@ -143,7 +143,15 @@ end
 --<<summary------------------------------------
 
 function __(str)
-    return I18N.Str(str)
+    if not str or str == "" then
+        return ""
+    end
+    local resultStr = I18N.Str(str)
+    if not resultStr or resultStr == "" then
+        return str
+    else
+        return resultStr
+    end
 end
 
 ---@type KSFramework.Cookie

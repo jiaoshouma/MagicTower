@@ -14,14 +14,31 @@ public static class SunExtensions
     	return trans.GetComponent(type);
     }
 
+    public static object ComponentByName(this GameObject g, string relaPath, string type)
+    {
+    	Transform trans = g.transform.Find(relaPath);
+    	return trans.GetComponent(type);
+    }
+
     public static void SetActive(this Transform t, bool show)
     {
     	t.gameObject.SetActive(show);
     }
 
+     public static void SetActive(this Component c, bool show)
+    {
+    	c.gameObject.SetActive(show);
+    }
+
     public static object NodeByName(this Transform t,string relaPath)
     {
     	Transform trans = t.Find(relaPath);
+    	return trans.gameObject;
+    }
+
+    public static object NodeByName(this GameObject g,string relaPath)
+    {
+    	Transform trans = g.transform.Find(relaPath);
     	return trans.gameObject;
     }
 

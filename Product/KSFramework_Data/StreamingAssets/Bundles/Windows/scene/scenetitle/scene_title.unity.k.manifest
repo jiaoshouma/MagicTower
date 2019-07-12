@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2593157813
+CRC: 750675956
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 55ece7fe599181db7b7abd65c13a0b72
+    Hash: f31b0b582d154fa5a9a2a5b15b10cc7f
   TypeTreeHash:
     serializedVersion: 2
     Hash: c854dd64389fe43be9ec469c912f2add
@@ -38,4 +38,4 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/Scene/SceneTitle/scene_title.unity
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/title_background.jpg.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/title/title_background.jpg.k

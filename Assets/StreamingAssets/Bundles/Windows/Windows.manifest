@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 853462854
+CRC: 2497481247
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -140,8 +140,11 @@ AssetBundleManifest:
     Info_42:
       Name: prefabs/cards/base_role_card.prefab.k
       Dependencies:
-        Dependency_0: images/cards/rolecards/caocao.png.k
-        Dependency_1: uiatlas/cardcommonui/ball_4.png.k
+        Dependency_0: images/cards/rolecards/base.png.k
+        Dependency_1: images/cards/stgcards/beishui.png.k
+        Dependency_2: uiatlas/cardcommonui/ball_4.png.k
+        Dependency_3: uiatlas/cardcommonui/heart.png.k
+        Dependency_4: uiatlas/cardcommonui/heart_bg.png.k
     Info_43:
       Name: uiatlas/cardcommonui/ball_1.png.k
       Dependencies: {}
@@ -172,3 +175,7 @@ AssetBundleManifest:
     Info_52:
       Name: uiatlas/cardcommonui/heart_bg.png.k
       Dependencies: {}
+    Info_53:
+      Name: prefabs/battle/battlefield.prefab.k
+      Dependencies:
+        Dependency_0: uiatlas/commonui/board_1.png.k

@@ -1,2 +1,13 @@
 Id	Value
 string/int/pk	string
+START_GAME	开始游戏
+ZHAOYUN	赵云
+CAOCAO	曹操
+CAOCAO_DESC	曹操的技能描述
+BELONG_1	魏
+BELONG_2	蜀
+BELONG_3	吴
+BELONG_4	它
+FORCE	武力
+COMMAND	统帅
+MORAL	德行

@@ -39,22 +39,30 @@ function EventDispatcher:newProxy(name)
 	return p
 end
 
+-- function EventDispatcher:diposeProxy(para)
+-- 	if type(para) == "string" then
+-- 		local p = self.eventProxy_[para]
+-- 		if p then
+-- 			p:dispose()
+-- 		end
+-- 		self.eventProxy_[name] = nil
+-- 	elseif type(para) == "table" then
+-- 		for name,p in pairs(self.eventProxy_) do
+-- 			if p == para then
+-- 				p:dispose()
+-- 				self.eventProxy_[name] = nil
+-- 				break
+-- 			end
+-- 		end
+-- 	end
+-- end
+
 function EventDispatcher:diposeProxy(para)
-	if type(para) == "string" then
-		local p = self.eventProxy_[para]
-		if p then
-			p:dispose()
-		end
-		self.eventProxy_[name] = nil
-	elseif type(para) == "table" then
-		for name,p in pairs(self.eventProxy_) do
-			if p == para then
-				p:dispose()
-				self.eventProxy_[name] = nil
-				break
-			end
-		end
+	local p = self.eventProxy_[para]
+	if p then
+		p:dispose()
 	end
+	self.eventProxy_[para] = nil
 end
 
 return EventDispatcher

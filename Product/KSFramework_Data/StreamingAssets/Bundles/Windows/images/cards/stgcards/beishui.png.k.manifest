@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3052633455
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b31f47a8fca58f1a8560de40c69447d6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/Images/cards/StgCards/beishui.png
+Dependencies: []
