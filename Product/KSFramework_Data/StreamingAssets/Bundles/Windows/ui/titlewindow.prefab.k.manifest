@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 4278384981
+CRC: 3101190109
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e41ef9633042554e88b22df75cb3446e
+    Hash: 435f121363078ad5a7953a81451c5eb3
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2b13a8aefeeb2fdf302bce907d7e844f
+    Hash: d8a4b1855a4815e6111c108c8db77713
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -18,6 +18,8 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 - Class: 114
+  Script: {fileID: 11500000, guid: 0c01f3f0b88b4448ab1ccfa117a1d57e, type: 3}
+- Class: 114
   Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
   Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -25,8 +27,6 @@ ClassTypes:
   Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
   Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 0c01f3f0b88b4448ab1ccfa117a1d57e, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 938311ed4b5a34590af2bad889d53090, type: 3}
 - Class: 115
@@ -44,6 +44,6 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/UI/TitleWindow.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/logo.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/logo_rin.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/logo_rin_2.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/title/logo.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/title/logo_rin.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/title/logo_rin_2.png.k

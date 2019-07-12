@@ -39,6 +39,7 @@ function Game:startGame()
 	SceneLoader.Load("Scene/SceneTitle/scene_title.unity")
 
 	self:enterScene(sun.SceneType.TITLE)
+
 end
 
 function Game:enterScene(sceneType)
@@ -47,14 +48,19 @@ function Game:enterScene(sceneType)
 		debug.trace("No such scene!")
 		return
 	end
-	__TRACE(conf,"sss","=================")
-	print_r(SceneConf)
 	SceneLoader.Load(conf.res,function()
 		local sceneClass = import(conf.class)
-		self.openingScene_ = sceneClass.new()
+		if self.openingScene_ then
+			self.openingScene_:dispose()
+		end
+		self.openingScene_ = sceneClass.new(sceneType)
 		self.openingSceneType_ = sceneType
 	end)
 
+end
+
+function Game:getOpeningScene()
+	return self.openingScene_
 end
 
 return Game

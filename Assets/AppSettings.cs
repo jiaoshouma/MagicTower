@@ -49,6 +49,10 @@ namespace AppSettings
                     _settingsList = new IReloadableSettings[]
                     { 
                         BillboardSettings._instance,
+                        FoodCardSettings._instance,
+                        RoleCardSettings._instance,
+                        SoldierCardSettings._instance,
+                        StgCardSettings._instance,
                         TestSettings._instance,
                         GameConfigSettings._instance,
                     };
@@ -142,6 +146,27 @@ namespace AppSettings
 
 	        return _instance;
 	    }
+
+        public Dictionary<string, BillboardSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public string[] GetKeys()
+        {
+            var keys = DictKeys;
+            string[] result = new string[Count];
+            int count = 0;
+            foreach(string key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
         
         public int Count
         {
@@ -298,6 +323,1036 @@ namespace AppSettings
 	}
 
 	/// <summary>
+	/// Auto Generate for Tab File: "food_card.bytes"
+    /// No use of generic and reflection, for better performance,  less IL code generating
+	/// </summary>>
+    public partial class FoodCardSettings : IReloadableSettings
+    {
+        /// <summary>
+        /// How many reload function load?
+        /// </summary>>
+        public static int ReloadCount { get; private set; }
+
+		public static readonly string[] TabFilePaths = 
+        {
+            "food_card.bytes"
+        };
+        internal static FoodCardSettings _instance = new FoodCardSettings();
+        Dictionary<int, FoodCardSetting> _dict = new Dictionary<int, FoodCardSetting>();
+
+        /// <summary>
+        /// Trigger delegate when reload the Settings
+        /// </summary>>
+	    public static System.Action OnReload;
+
+        /// <summary>
+        /// Constructor, just reload(init)
+        /// When Unity Editor mode, will watch the file modification and auto reload
+        /// </summary>
+	    private FoodCardSettings()
+	    {
+        }
+
+        /// <summary>
+        /// Get the singleton
+        /// </summary>
+        /// <returns></returns>
+	    public static FoodCardSettings GetInstance()
+	    {
+            if (ReloadCount == 0)
+            {
+                _instance._ReloadAll(true);
+    #if UNITY_EDITOR
+                if (SettingModule.IsFileSystemMode)
+                {
+                    for (var j = 0; j < TabFilePaths.Length; j++)
+                    {
+                        var tabFilePath = TabFilePaths[j];
+                        SettingModule.WatchSetting(tabFilePath, (path) =>
+                        {
+                            if (path.Replace("\\", "/").EndsWith(path))
+                            {
+                                _instance.ReloadAll();
+                                Log.LogConsole_MultiThread("File Watcher! Reload success! -> " + path);
+                            }
+                        });
+                    }
+
+                }
+    #endif
+            }
+
+	        return _instance;
+	    }
+
+        public Dictionary<int, FoodCardSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public int[] GetKeys()
+        {
+            var keys = DictKeys;
+            int[] result = new int[Count];
+            int count = 0;
+            foreach(int key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
+        
+        public int Count
+        {
+            get
+            {
+                return _dict.Count;
+            }
+        }
+
+        /// <summary>
+        /// Do reload the setting file: FoodCard, no exception when duplicate primary key
+        /// </summary>
+        public void ReloadAll()
+        {
+            _ReloadAll(false);
+        }
+
+        /// <summary>
+        /// Do reload the setting class : FoodCard, no exception when duplicate primary key, use custom string content
+        /// </summary>
+        public void ReloadAllWithString(string context)
+        {
+            _ReloadAll(false, context);
+        }
+
+        /// <summary>
+        /// Do reload the setting file: FoodCard
+        /// </summary>
+	    void _ReloadAll(bool throwWhenDuplicatePrimaryKey, string customContent = null)
+        {
+            for (var j = 0; j < TabFilePaths.Length; j++)
+            {
+                var tabFilePath = TabFilePaths[j];
+                TableFile tableFile;
+                if (customContent == null)
+                    tableFile = SettingModule.Get(tabFilePath, false);
+                else
+                    tableFile = TableFile.LoadFromString(customContent);
+
+                using (tableFile)
+                {
+                    foreach (var row in tableFile)
+                    {
+                        var pk = FoodCardSetting.ParsePrimaryKey(row);
+                        FoodCardSetting setting;
+                        if (!_dict.TryGetValue(pk, out setting))
+                        {
+                            setting = new FoodCardSetting(row);
+                            _dict[setting.id] = setting;
+                        }
+                        else 
+                        {
+                            if (throwWhenDuplicatePrimaryKey) throw new System.Exception(string.Format("DuplicateKey, Class: {0}, File: {1}, Key: {2}", this.GetType().Name, tabFilePath, pk));
+                            else setting.Reload(row);
+                        }
+                    }
+                }
+            }
+
+	        if (OnReload != null)
+	        {
+	            OnReload();
+	        }
+
+            ReloadCount++;
+            Log.Info("Reload settings: {0}, Row Count: {1}, Reload Count: {2}", GetType(), Count, ReloadCount);
+        }
+
+	    /// <summary>
+        /// foreachable enumerable: FoodCard
+        /// </summary>
+        public static IEnumerable GetAll()
+        {
+            foreach (var row in GetInstance()._dict.Values)
+            {
+                yield return row;
+            }
+        }
+
+        /// <summary>
+        /// GetEnumerator for `MoveNext`: FoodCard
+        /// </summary> 
+	    public static IEnumerator GetEnumerator()
+	    {
+	        return GetInstance()._dict.Values.GetEnumerator();
+	    }
+         
+	    /// <summary>
+        /// Get class by primary key: FoodCard
+        /// </summary>
+        public static FoodCardSetting Get(int primaryKey)
+        {
+            FoodCardSetting setting;
+            if (GetInstance()._dict.TryGetValue(primaryKey, out setting)) return setting;
+            return null;
+        }
+
+        // ========= CustomExtraString begin ===========
+        
+        // ========= CustomExtraString end ===========
+    }
+
+	/// <summary>
+	/// Auto Generate for Tab File: "food_card.bytes"
+    /// Singleton class for less memory use
+	/// </summary>
+	public partial class FoodCardSetting : TableRowFieldParser
+	{
+		
+        /// <summary>
+        /// id
+        /// </summary>
+        public int id { get; private set;}
+        
+        /// <summary>
+        /// 名
+        /// </summary>
+        public string name { get; private set;}
+        
+        /// <summary>
+        /// 独特逻辑
+        /// </summary>
+        public string logic_res { get; private set;}
+        
+        /// <summary>
+        /// 贴图
+        /// </summary>
+        public string tex { get; private set;}
+        
+        /// <summary>
+        /// 补充
+        /// </summary>
+        public int heal { get; private set;}
+        
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string desc { get; private set;}
+        
+
+        internal FoodCardSetting(TableFileRow row)
+        {
+            Reload(row);
+        }
+
+        internal void Reload(TableFileRow row)
+        { 
+            id = row.Get_int(row.Values[0], ""); 
+            name = row.Get_string(row.Values[1], ""); 
+            logic_res = row.Get_string(row.Values[2], ""); 
+            tex = row.Get_string(row.Values[3], ""); 
+            heal = row.Get_int(row.Values[4], ""); 
+            desc = row.Get_string(row.Values[5], ""); 
+        }
+
+        /// <summary>
+        /// Get PrimaryKey from a table row
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
+        public static int ParsePrimaryKey(TableFileRow row)
+        {
+            var primaryKey = row.Get_int(row.Values[0], "");
+            return primaryKey;
+        }
+	}
+
+	/// <summary>
+	/// Auto Generate for Tab File: "role_card.bytes"
+    /// No use of generic and reflection, for better performance,  less IL code generating
+	/// </summary>>
+    public partial class RoleCardSettings : IReloadableSettings
+    {
+        /// <summary>
+        /// How many reload function load?
+        /// </summary>>
+        public static int ReloadCount { get; private set; }
+
+		public static readonly string[] TabFilePaths = 
+        {
+            "role_card.bytes"
+        };
+        internal static RoleCardSettings _instance = new RoleCardSettings();
+        Dictionary<int, RoleCardSetting> _dict = new Dictionary<int, RoleCardSetting>();
+
+        /// <summary>
+        /// Trigger delegate when reload the Settings
+        /// </summary>>
+	    public static System.Action OnReload;
+
+        /// <summary>
+        /// Constructor, just reload(init)
+        /// When Unity Editor mode, will watch the file modification and auto reload
+        /// </summary>
+	    private RoleCardSettings()
+	    {
+        }
+
+        /// <summary>
+        /// Get the singleton
+        /// </summary>
+        /// <returns></returns>
+	    public static RoleCardSettings GetInstance()
+	    {
+            if (ReloadCount == 0)
+            {
+                _instance._ReloadAll(true);
+    #if UNITY_EDITOR
+                if (SettingModule.IsFileSystemMode)
+                {
+                    for (var j = 0; j < TabFilePaths.Length; j++)
+                    {
+                        var tabFilePath = TabFilePaths[j];
+                        SettingModule.WatchSetting(tabFilePath, (path) =>
+                        {
+                            if (path.Replace("\\", "/").EndsWith(path))
+                            {
+                                _instance.ReloadAll();
+                                Log.LogConsole_MultiThread("File Watcher! Reload success! -> " + path);
+                            }
+                        });
+                    }
+
+                }
+    #endif
+            }
+
+	        return _instance;
+	    }
+
+        public Dictionary<int, RoleCardSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public int[] GetKeys()
+        {
+            var keys = DictKeys;
+            int[] result = new int[Count];
+            int count = 0;
+            foreach(int key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
+        
+        public int Count
+        {
+            get
+            {
+                return _dict.Count;
+            }
+        }
+
+        /// <summary>
+        /// Do reload the setting file: RoleCard, no exception when duplicate primary key
+        /// </summary>
+        public void ReloadAll()
+        {
+            _ReloadAll(false);
+        }
+
+        /// <summary>
+        /// Do reload the setting class : RoleCard, no exception when duplicate primary key, use custom string content
+        /// </summary>
+        public void ReloadAllWithString(string context)
+        {
+            _ReloadAll(false, context);
+        }
+
+        /// <summary>
+        /// Do reload the setting file: RoleCard
+        /// </summary>
+	    void _ReloadAll(bool throwWhenDuplicatePrimaryKey, string customContent = null)
+        {
+            for (var j = 0; j < TabFilePaths.Length; j++)
+            {
+                var tabFilePath = TabFilePaths[j];
+                TableFile tableFile;
+                if (customContent == null)
+                    tableFile = SettingModule.Get(tabFilePath, false);
+                else
+                    tableFile = TableFile.LoadFromString(customContent);
+
+                using (tableFile)
+                {
+                    foreach (var row in tableFile)
+                    {
+                        var pk = RoleCardSetting.ParsePrimaryKey(row);
+                        RoleCardSetting setting;
+                        if (!_dict.TryGetValue(pk, out setting))
+                        {
+                            setting = new RoleCardSetting(row);
+                            _dict[setting.id] = setting;
+                        }
+                        else 
+                        {
+                            if (throwWhenDuplicatePrimaryKey) throw new System.Exception(string.Format("DuplicateKey, Class: {0}, File: {1}, Key: {2}", this.GetType().Name, tabFilePath, pk));
+                            else setting.Reload(row);
+                        }
+                    }
+                }
+            }
+
+	        if (OnReload != null)
+	        {
+	            OnReload();
+	        }
+
+            ReloadCount++;
+            Log.Info("Reload settings: {0}, Row Count: {1}, Reload Count: {2}", GetType(), Count, ReloadCount);
+        }
+
+	    /// <summary>
+        /// foreachable enumerable: RoleCard
+        /// </summary>
+        public static IEnumerable GetAll()
+        {
+            foreach (var row in GetInstance()._dict.Values)
+            {
+                yield return row;
+            }
+        }
+
+        /// <summary>
+        /// GetEnumerator for `MoveNext`: RoleCard
+        /// </summary> 
+	    public static IEnumerator GetEnumerator()
+	    {
+	        return GetInstance()._dict.Values.GetEnumerator();
+	    }
+         
+	    /// <summary>
+        /// Get class by primary key: RoleCard
+        /// </summary>
+        public static RoleCardSetting Get(int primaryKey)
+        {
+            RoleCardSetting setting;
+            if (GetInstance()._dict.TryGetValue(primaryKey, out setting)) return setting;
+            return null;
+        }
+
+        // ========= CustomExtraString begin ===========
+        
+        // ========= CustomExtraString end ===========
+    }
+
+	/// <summary>
+	/// Auto Generate for Tab File: "role_card.bytes"
+    /// Singleton class for less memory use
+	/// </summary>
+	public partial class RoleCardSetting : TableRowFieldParser
+	{
+		
+        /// <summary>
+        /// id
+        /// </summary>
+        public int id { get; private set;}
+        
+        /// <summary>
+        /// 名
+        /// </summary>
+        public string name { get; private set;}
+        
+        /// <summary>
+        /// 所属
+        /// </summary>
+        public int belong { get; private set;}
+        
+        /// <summary>
+        /// 武力
+        /// </summary>
+        public int force { get; private set;}
+        
+        /// <summary>
+        /// 统帅
+        /// </summary>
+        public int command { get; private set;}
+        
+        /// <summary>
+        /// 德行
+        /// </summary>
+        public int moral { get; private set;}
+        
+        /// <summary>
+        /// 独特逻辑
+        /// </summary>
+        public string logic_res { get; private set;}
+        
+        /// <summary>
+        /// 贴图
+        /// </summary>
+        public string tex { get; private set;}
+        
+        /// <summary>
+        /// model逻辑
+        /// </summary>
+        public string model_res { get; private set;}
+        
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string desc { get; private set;}
+        
+
+        internal RoleCardSetting(TableFileRow row)
+        {
+            Reload(row);
+        }
+
+        internal void Reload(TableFileRow row)
+        { 
+            id = row.Get_int(row.Values[0], ""); 
+            name = row.Get_string(row.Values[1], ""); 
+            belong = row.Get_int(row.Values[2], ""); 
+            force = row.Get_int(row.Values[3], ""); 
+            command = row.Get_int(row.Values[4], ""); 
+            moral = row.Get_int(row.Values[5], ""); 
+            logic_res = row.Get_string(row.Values[6], ""); 
+            tex = row.Get_string(row.Values[7], ""); 
+            model_res = row.Get_string(row.Values[8], ""); 
+            desc = row.Get_string(row.Values[9], ""); 
+        }
+
+        /// <summary>
+        /// Get PrimaryKey from a table row
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
+        public static int ParsePrimaryKey(TableFileRow row)
+        {
+            var primaryKey = row.Get_int(row.Values[0], "");
+            return primaryKey;
+        }
+	}
+
+	/// <summary>
+	/// Auto Generate for Tab File: "soldier_card.bytes"
+    /// No use of generic and reflection, for better performance,  less IL code generating
+	/// </summary>>
+    public partial class SoldierCardSettings : IReloadableSettings
+    {
+        /// <summary>
+        /// How many reload function load?
+        /// </summary>>
+        public static int ReloadCount { get; private set; }
+
+		public static readonly string[] TabFilePaths = 
+        {
+            "soldier_card.bytes"
+        };
+        internal static SoldierCardSettings _instance = new SoldierCardSettings();
+        Dictionary<int, SoldierCardSetting> _dict = new Dictionary<int, SoldierCardSetting>();
+
+        /// <summary>
+        /// Trigger delegate when reload the Settings
+        /// </summary>>
+	    public static System.Action OnReload;
+
+        /// <summary>
+        /// Constructor, just reload(init)
+        /// When Unity Editor mode, will watch the file modification and auto reload
+        /// </summary>
+	    private SoldierCardSettings()
+	    {
+        }
+
+        /// <summary>
+        /// Get the singleton
+        /// </summary>
+        /// <returns></returns>
+	    public static SoldierCardSettings GetInstance()
+	    {
+            if (ReloadCount == 0)
+            {
+                _instance._ReloadAll(true);
+    #if UNITY_EDITOR
+                if (SettingModule.IsFileSystemMode)
+                {
+                    for (var j = 0; j < TabFilePaths.Length; j++)
+                    {
+                        var tabFilePath = TabFilePaths[j];
+                        SettingModule.WatchSetting(tabFilePath, (path) =>
+                        {
+                            if (path.Replace("\\", "/").EndsWith(path))
+                            {
+                                _instance.ReloadAll();
+                                Log.LogConsole_MultiThread("File Watcher! Reload success! -> " + path);
+                            }
+                        });
+                    }
+
+                }
+    #endif
+            }
+
+	        return _instance;
+	    }
+
+        public Dictionary<int, SoldierCardSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public int[] GetKeys()
+        {
+            var keys = DictKeys;
+            int[] result = new int[Count];
+            int count = 0;
+            foreach(int key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
+        
+        public int Count
+        {
+            get
+            {
+                return _dict.Count;
+            }
+        }
+
+        /// <summary>
+        /// Do reload the setting file: SoldierCard, no exception when duplicate primary key
+        /// </summary>
+        public void ReloadAll()
+        {
+            _ReloadAll(false);
+        }
+
+        /// <summary>
+        /// Do reload the setting class : SoldierCard, no exception when duplicate primary key, use custom string content
+        /// </summary>
+        public void ReloadAllWithString(string context)
+        {
+            _ReloadAll(false, context);
+        }
+
+        /// <summary>
+        /// Do reload the setting file: SoldierCard
+        /// </summary>
+	    void _ReloadAll(bool throwWhenDuplicatePrimaryKey, string customContent = null)
+        {
+            for (var j = 0; j < TabFilePaths.Length; j++)
+            {
+                var tabFilePath = TabFilePaths[j];
+                TableFile tableFile;
+                if (customContent == null)
+                    tableFile = SettingModule.Get(tabFilePath, false);
+                else
+                    tableFile = TableFile.LoadFromString(customContent);
+
+                using (tableFile)
+                {
+                    foreach (var row in tableFile)
+                    {
+                        var pk = SoldierCardSetting.ParsePrimaryKey(row);
+                        SoldierCardSetting setting;
+                        if (!_dict.TryGetValue(pk, out setting))
+                        {
+                            setting = new SoldierCardSetting(row);
+                            _dict[setting.id] = setting;
+                        }
+                        else 
+                        {
+                            if (throwWhenDuplicatePrimaryKey) throw new System.Exception(string.Format("DuplicateKey, Class: {0}, File: {1}, Key: {2}", this.GetType().Name, tabFilePath, pk));
+                            else setting.Reload(row);
+                        }
+                    }
+                }
+            }
+
+	        if (OnReload != null)
+	        {
+	            OnReload();
+	        }
+
+            ReloadCount++;
+            Log.Info("Reload settings: {0}, Row Count: {1}, Reload Count: {2}", GetType(), Count, ReloadCount);
+        }
+
+	    /// <summary>
+        /// foreachable enumerable: SoldierCard
+        /// </summary>
+        public static IEnumerable GetAll()
+        {
+            foreach (var row in GetInstance()._dict.Values)
+            {
+                yield return row;
+            }
+        }
+
+        /// <summary>
+        /// GetEnumerator for `MoveNext`: SoldierCard
+        /// </summary> 
+	    public static IEnumerator GetEnumerator()
+	    {
+	        return GetInstance()._dict.Values.GetEnumerator();
+	    }
+         
+	    /// <summary>
+        /// Get class by primary key: SoldierCard
+        /// </summary>
+        public static SoldierCardSetting Get(int primaryKey)
+        {
+            SoldierCardSetting setting;
+            if (GetInstance()._dict.TryGetValue(primaryKey, out setting)) return setting;
+            return null;
+        }
+
+        // ========= CustomExtraString begin ===========
+        
+        // ========= CustomExtraString end ===========
+    }
+
+	/// <summary>
+	/// Auto Generate for Tab File: "soldier_card.bytes"
+    /// Singleton class for less memory use
+	/// </summary>
+	public partial class SoldierCardSetting : TableRowFieldParser
+	{
+		
+        /// <summary>
+        /// id
+        /// </summary>
+        public int id { get; private set;}
+        
+        /// <summary>
+        /// 名
+        /// </summary>
+        public string name { get; private set;}
+        
+        /// <summary>
+        /// 独特逻辑
+        /// </summary>
+        public string logic_res { get; private set;}
+        
+        /// <summary>
+        /// 贴图
+        /// </summary>
+        public string tex { get; private set;}
+        
+        /// <summary>
+        /// 补充
+        /// </summary>
+        public int heal { get; private set;}
+        
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string desc { get; private set;}
+        
+
+        internal SoldierCardSetting(TableFileRow row)
+        {
+            Reload(row);
+        }
+
+        internal void Reload(TableFileRow row)
+        { 
+            id = row.Get_int(row.Values[0], ""); 
+            name = row.Get_string(row.Values[1], ""); 
+            logic_res = row.Get_string(row.Values[2], ""); 
+            tex = row.Get_string(row.Values[3], ""); 
+            heal = row.Get_int(row.Values[4], ""); 
+            desc = row.Get_string(row.Values[5], ""); 
+        }
+
+        /// <summary>
+        /// Get PrimaryKey from a table row
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
+        public static int ParsePrimaryKey(TableFileRow row)
+        {
+            var primaryKey = row.Get_int(row.Values[0], "");
+            return primaryKey;
+        }
+	}
+
+	/// <summary>
+	/// Auto Generate for Tab File: "stg_card.bytes"
+    /// No use of generic and reflection, for better performance,  less IL code generating
+	/// </summary>>
+    public partial class StgCardSettings : IReloadableSettings
+    {
+        /// <summary>
+        /// How many reload function load?
+        /// </summary>>
+        public static int ReloadCount { get; private set; }
+
+		public static readonly string[] TabFilePaths = 
+        {
+            "stg_card.bytes"
+        };
+        internal static StgCardSettings _instance = new StgCardSettings();
+        Dictionary<int, StgCardSetting> _dict = new Dictionary<int, StgCardSetting>();
+
+        /// <summary>
+        /// Trigger delegate when reload the Settings
+        /// </summary>>
+	    public static System.Action OnReload;
+
+        /// <summary>
+        /// Constructor, just reload(init)
+        /// When Unity Editor mode, will watch the file modification and auto reload
+        /// </summary>
+	    private StgCardSettings()
+	    {
+        }
+
+        /// <summary>
+        /// Get the singleton
+        /// </summary>
+        /// <returns></returns>
+	    public static StgCardSettings GetInstance()
+	    {
+            if (ReloadCount == 0)
+            {
+                _instance._ReloadAll(true);
+    #if UNITY_EDITOR
+                if (SettingModule.IsFileSystemMode)
+                {
+                    for (var j = 0; j < TabFilePaths.Length; j++)
+                    {
+                        var tabFilePath = TabFilePaths[j];
+                        SettingModule.WatchSetting(tabFilePath, (path) =>
+                        {
+                            if (path.Replace("\\", "/").EndsWith(path))
+                            {
+                                _instance.ReloadAll();
+                                Log.LogConsole_MultiThread("File Watcher! Reload success! -> " + path);
+                            }
+                        });
+                    }
+
+                }
+    #endif
+            }
+
+	        return _instance;
+	    }
+
+        public Dictionary<int, StgCardSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public int[] GetKeys()
+        {
+            var keys = DictKeys;
+            int[] result = new int[Count];
+            int count = 0;
+            foreach(int key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
+        
+        public int Count
+        {
+            get
+            {
+                return _dict.Count;
+            }
+        }
+
+        /// <summary>
+        /// Do reload the setting file: StgCard, no exception when duplicate primary key
+        /// </summary>
+        public void ReloadAll()
+        {
+            _ReloadAll(false);
+        }
+
+        /// <summary>
+        /// Do reload the setting class : StgCard, no exception when duplicate primary key, use custom string content
+        /// </summary>
+        public void ReloadAllWithString(string context)
+        {
+            _ReloadAll(false, context);
+        }
+
+        /// <summary>
+        /// Do reload the setting file: StgCard
+        /// </summary>
+	    void _ReloadAll(bool throwWhenDuplicatePrimaryKey, string customContent = null)
+        {
+            for (var j = 0; j < TabFilePaths.Length; j++)
+            {
+                var tabFilePath = TabFilePaths[j];
+                TableFile tableFile;
+                if (customContent == null)
+                    tableFile = SettingModule.Get(tabFilePath, false);
+                else
+                    tableFile = TableFile.LoadFromString(customContent);
+
+                using (tableFile)
+                {
+                    foreach (var row in tableFile)
+                    {
+                        var pk = StgCardSetting.ParsePrimaryKey(row);
+                        StgCardSetting setting;
+                        if (!_dict.TryGetValue(pk, out setting))
+                        {
+                            setting = new StgCardSetting(row);
+                            _dict[setting.id] = setting;
+                        }
+                        else 
+                        {
+                            if (throwWhenDuplicatePrimaryKey) throw new System.Exception(string.Format("DuplicateKey, Class: {0}, File: {1}, Key: {2}", this.GetType().Name, tabFilePath, pk));
+                            else setting.Reload(row);
+                        }
+                    }
+                }
+            }
+
+	        if (OnReload != null)
+	        {
+	            OnReload();
+	        }
+
+            ReloadCount++;
+            Log.Info("Reload settings: {0}, Row Count: {1}, Reload Count: {2}", GetType(), Count, ReloadCount);
+        }
+
+	    /// <summary>
+        /// foreachable enumerable: StgCard
+        /// </summary>
+        public static IEnumerable GetAll()
+        {
+            foreach (var row in GetInstance()._dict.Values)
+            {
+                yield return row;
+            }
+        }
+
+        /// <summary>
+        /// GetEnumerator for `MoveNext`: StgCard
+        /// </summary> 
+	    public static IEnumerator GetEnumerator()
+	    {
+	        return GetInstance()._dict.Values.GetEnumerator();
+	    }
+         
+	    /// <summary>
+        /// Get class by primary key: StgCard
+        /// </summary>
+        public static StgCardSetting Get(int primaryKey)
+        {
+            StgCardSetting setting;
+            if (GetInstance()._dict.TryGetValue(primaryKey, out setting)) return setting;
+            return null;
+        }
+
+        // ========= CustomExtraString begin ===========
+        
+        // ========= CustomExtraString end ===========
+    }
+
+	/// <summary>
+	/// Auto Generate for Tab File: "stg_card.bytes"
+    /// Singleton class for less memory use
+	/// </summary>
+	public partial class StgCardSetting : TableRowFieldParser
+	{
+		
+        /// <summary>
+        /// id
+        /// </summary>
+        public int id { get; private set;}
+        
+        /// <summary>
+        /// 名
+        /// </summary>
+        public string name { get; private set;}
+        
+        /// <summary>
+        /// 独特逻辑
+        /// </summary>
+        public string logic_res { get; private set;}
+        
+        /// <summary>
+        /// 贴图
+        /// </summary>
+        public string tex { get; private set;}
+        
+        /// <summary>
+        /// 费用
+        /// </summary>
+        public int cost { get; private set;}
+        
+        /// <summary>
+        /// model逻辑
+        /// </summary>
+        public string model_res { get; private set;}
+        
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string desc { get; private set;}
+        
+
+        internal StgCardSetting(TableFileRow row)
+        {
+            Reload(row);
+        }
+
+        internal void Reload(TableFileRow row)
+        { 
+            id = row.Get_int(row.Values[0], ""); 
+            name = row.Get_string(row.Values[1], ""); 
+            logic_res = row.Get_string(row.Values[2], ""); 
+            tex = row.Get_string(row.Values[3], ""); 
+            cost = row.Get_int(row.Values[4], ""); 
+            model_res = row.Get_string(row.Values[5], ""); 
+            desc = row.Get_string(row.Values[6], ""); 
+        }
+
+        /// <summary>
+        /// Get PrimaryKey from a table row
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
+        public static int ParsePrimaryKey(TableFileRow row)
+        {
+            var primaryKey = row.Get_int(row.Values[0], "");
+            return primaryKey;
+        }
+	}
+
+	/// <summary>
 	/// Auto Generate for Tab File: "Test.bytes"
     /// No use of generic and reflection, for better performance,  less IL code generating
 	/// </summary>>
@@ -359,6 +1414,27 @@ namespace AppSettings
 
 	        return _instance;
 	    }
+
+        public Dictionary<string, TestSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public string[] GetKeys()
+        {
+            var keys = DictKeys;
+            string[] result = new string[Count];
+            int count = 0;
+            foreach(string key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
         
         public int Count
         {
@@ -564,6 +1640,27 @@ namespace AppSettings
 
 	        return _instance;
 	    }
+
+        public Dictionary<string, GameConfigSetting>.KeyCollection DictKeys
+        {
+            get
+            {
+                return _dict.Keys;
+            }
+        }
+
+        public string[] GetKeys()
+        {
+            var keys = DictKeys;
+            string[] result = new string[Count];
+            int count = 0;
+            foreach(string key in DictKeys)
+            {
+                result[count] = key;
+                count++;
+            }
+            return result;
+        }
         
         public int Count
         {

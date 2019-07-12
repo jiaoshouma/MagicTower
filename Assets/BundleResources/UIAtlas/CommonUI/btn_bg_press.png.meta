@@ -119,7 +119,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4170e0ac44e84b544852f4e4cd9ca7a6
     vertices: []
     indices: 
     edges: []
@@ -128,5 +128,5 @@ TextureImporter:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: uiatlas/commonui/btn_bg_press.png.k
   assetBundleVariant: 

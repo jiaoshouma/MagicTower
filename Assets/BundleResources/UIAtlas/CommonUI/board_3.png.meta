@@ -119,7 +119,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 12ef72061d344214cbe1b85766af80c9
     vertices: []
     indices: 
     edges: []
@@ -128,5 +128,5 @@ TextureImporter:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: uiatlas/commonui/board_3.png.k
   assetBundleVariant: 

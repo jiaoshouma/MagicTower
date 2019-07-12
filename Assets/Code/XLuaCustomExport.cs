@@ -182,11 +182,16 @@ public static class XLuaCustomExport
         typeof(UnityEngine.Physics),
         typeof(CoroutineRunner),
         typeof(UIEventListener),
+        typeof(KEngine.LoaderMode),
 #if UNITY_2018_1_OR_NEWER
         typeof(UnityEngine.Profiling.Profiler),
 #else
         typeof(UnityEngine.Profiler),
 #endif 
+        typeof(KEngineExtensions),
+        // mine
+        typeof(SunUtils),
+        typeof(SunExtensions),
     };
 
     [LuaCallCSharp]

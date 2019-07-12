@@ -31,6 +31,12 @@ function UITitleWindow:OnOpen()
 
    	local titleTxt = self:GetUIText("start_label")
    	titleTxt.text = I18N.Str("START_GAME")
+   	UIEventListener.Get(titleTxt.gameObject).onClick = handler(self,self.onClickStartGame)
+end
+
+function UITitleWindow:onClickStartGame()
+	UIModule.Instance:DestroyWindow("TitleWindow")
+	sun.Game.get():enterScene(sun.SceneType.BATTLE)
 end
 
 return UITitleWindow

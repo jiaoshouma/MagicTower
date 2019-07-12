@@ -45,3 +45,31 @@ UGUI还是没有Tween系列组建，只能选择导入DoTween来做简单的动画了。
 6.23
 新增trace函数，新增print_r函数用于打印table
 稍微写了几句初始化代码。。。
+
+7.2
+翻译函数封装了一下 原来的太难记了 而且多语言collect总是尝试获取来源然后打印“旧的”然后尝试复写又没有复写成功不知道啥情况。翻译能正常使用，先不管了。
+新增了一些卡片的美术资源
+新增人物卡片的配置表
+着手准备做卡片预设叭。。。
+
+7.7
+新增了AssetsLoader模块
+制作了简单的卡片样式 并测试了加载逻辑。
+UGUI的Text很烂，感觉没有NGUI好用，抄了个ShrinkText的子类勉强着用吧。
+
+7.8
+新增事件收发机制 EventDispatcher/EventProxy 以对象为单位响应事件
+新增几个Transform的Extension（以及绑定） 写的方便些
+继续深化卡片base逻辑
+
+7.9
+这个xls配置方式虽然方便，但是太死板，生成的cs类甚至没有返回所有主键的方法，只有一个public count（这是默认id规律连续了吗...）
+于是在git下了TableML工程重新编译了一个TableMLComplier，改了一下模板DefaultTemplate，新增一个返回Keys数组的方法。
+同时新增泛型for ipairsArray方式方便遍历C#中的Array.
+完成了一张武将卡的加载。
+
+7.10
+搞了一下UI适配，决定在battlescene中搞个节点用来放战场元素，暂且定为横屏适配。
+
+7.13
+制作了主战场左上角部分阶段轮换UI 以及阶段循环的逻辑。

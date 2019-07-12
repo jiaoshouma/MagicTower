@@ -119,7 +119,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bc9458dd5ce774e42931fe6ee8527e5d
     vertices: []
     indices: 
     edges: []
@@ -128,5 +128,5 @@ TextureImporter:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: uiatlas/commonui/caution_info.png.k
   assetBundleVariant: 

@@ -119,7 +119,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 11f5796bd476a6c4a80854b176950726
     vertices: []
     indices: 
     edges: []
@@ -128,5 +128,5 @@ TextureImporter:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: uiatlas/commonui/close.png.k
   assetBundleVariant: 

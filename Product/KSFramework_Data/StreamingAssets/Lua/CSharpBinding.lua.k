@@ -1,4 +1,5 @@
 -------------------------UnityEngine--------------------------
+UnityEngine = CS.UnityEngine
 ---@type UnityEngine.Vector2
 Vector2         = CS.UnityEngine.Vector2
 ---@type UnityEngine.Vector3

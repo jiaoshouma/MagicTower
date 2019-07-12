@@ -119,7 +119,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: abb154dc099285242bb453c47a386cfe
     vertices: []
     indices: 
     edges: []
@@ -128,5 +128,5 @@ TextureImporter:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: uiatlas/commonui/btn_red_press.png.k
   assetBundleVariant: 
