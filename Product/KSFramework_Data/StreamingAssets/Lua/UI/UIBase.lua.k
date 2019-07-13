@@ -1,8 +1,11 @@
-UIBase = {}
-UIBase.__index = UIBase
+local UIBase = class("UIBase")
 
 function UIBase:ctor(...)
 
+end
+
+function UIBase:getWindow()
+    return self.Controller:GetWindow()
 end
 
 function UIBase:GetControl(typeName, uri,trans)

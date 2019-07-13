@@ -13,6 +13,11 @@ sun.CardType = {
 	SOLDIER = 4,
 }
 
+sun.CardDirection = {
+	FRONT = 1,
+	BACK = 2,
+}
+
 sun.CardShowForm = {
 	SIMPLE = 1,
 	SPECIFIC = 2,
@@ -28,4 +33,8 @@ sun.TurnStages = {
 	MAIN = 2,
 	BATTLE = 3,
 	TAIL = 4,
+}
+
+sun.ModelType = {
+	PLAYER = 1,
 }

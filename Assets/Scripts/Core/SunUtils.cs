@@ -9,6 +9,7 @@ public static class SunUtils
     	GameObject go = GameObject.Instantiate(res);
         go.transform.parent = parent.transform;
         go.transform.localPosition = new Vector3(0,0,0);
+        go.transform.localScale = new Vector3(1,1,1);
         return go;     
     }
 
@@ -17,6 +18,7 @@ public static class SunUtils
     	GameObject go = new GameObject(childName);
         go.transform.parent = parent.transform;
         go.transform.localPosition = new Vector3(0,0,0);
+        go.transform.localScale = new Vector3(1,1,1);
         return go;     
     }
 }

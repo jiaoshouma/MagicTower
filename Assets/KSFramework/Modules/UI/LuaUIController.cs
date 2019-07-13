@@ -328,5 +328,10 @@ namespace KSFramework
             Log.Warning("Reload Lua: {0}", UILuaPath);
         }
 
+        public Transform GetWindow()
+        {
+            return transform;
+        }
+
     }
 }

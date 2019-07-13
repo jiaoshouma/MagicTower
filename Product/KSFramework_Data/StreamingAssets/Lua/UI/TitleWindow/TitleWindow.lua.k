@@ -36,7 +36,8 @@ end
 
 function UITitleWindow:onClickStartGame()
 	UIModule.Instance:DestroyWindow("TitleWindow")
-	sun.Game.get():enterScene(sun.SceneType.BATTLE)
+  UIModule.Instance:OpenWindow("MainWindow")
+
 end
 
 return UITitleWindow

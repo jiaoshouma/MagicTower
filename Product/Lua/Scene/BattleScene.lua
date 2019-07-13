@@ -23,8 +23,10 @@ function BattleScene:initScene()
 	self:initBattleFieldInfo()
 
 	self:initBattleController()
-	-- local card = sun.CardManager.get():createCard(7,sun.CardType.ROLE)
-	-- SunUtils.AddChild(self.battleCanvasGo_,card.go_)
+	local card = sun.CardManager.get():createCard(7,sun.CardType.ROLE)
+	self.tmpCard_ = card
+	card.go_.transform.parent = self.battleCanvasGo_.transform
+	card.go_.transform.localPosition = Vector3(0,0,0)
 end
 
 function BattleScene:initBattleFieldInfo()
@@ -32,6 +34,7 @@ function BattleScene:initBattleFieldInfo()
 	local transLeftTop = transBattleField:Find("left_top")
 	local transStageInfo = transLeftTop:Find("stage_info")
 	self.battleStageInfo_ = import("Scene/BattleStageInfo").new(self,transStageInfo)
+
 
 
 	local transRightBottom = transBattleField:Find("right_bottom")

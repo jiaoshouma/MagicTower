@@ -25,7 +25,22 @@ local BattleStageInfo = class("BattleStageInfo")
 function BattleStageInfo:ctor(parent,trans)
 	self.parent_ = parent
 	self.trans_ = trans
+	self.eventProxy_ = sun.EventDispatcher.inner():newProxy(self)
+	self:registerEvents()
 	self:initSelfComponents()
+end
+
+function BattleStageInfo:registerEvents()
+	self.eventProxy_:addEventListener(sun.Event.STAGE_CHANGE,handler(self,self.onStageChange))
+end
+
+function BattleStageInfo:onStageChange(event)
+	local params = event.params or {}
+	local turn  = params.turn 
+	local stage = params.stage 
+	if turn and stage and turn > 0 and stage > 0 then
+		self:setTurnStageInfo(turn,stage)
+	end
 end
 
 function BattleStageInfo:initSelfComponents()
@@ -56,7 +71,6 @@ function BattleStageInfo:initSelfComponents()
 		table.insert(self.txtByTurn_[turn],descTxt)
 	end
 
-	self:setTurnStageInfo(2,3)
 end
 
 function BattleStageInfo:setTurnStageInfo(turnType,stage)
@@ -70,6 +84,10 @@ function BattleStageInfo:setTurnStageInfo(turnType,stage)
 			end
 		end
 	end
+end
+
+function BattleStageInfo:dispose()
+	sun.EventDispatcher.inner():disposeProxy(self)
 end
 
 return BattleStageInfo

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3036252648
+CRC: 443699223
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e42910d153128c4d911028dfe35e8e0e
+    Hash: d37acdbda54c7fca6bf2903d22a5e02e
   TypeTreeHash:
     serializedVersion: 2
     Hash: f9c59b4dee68413d2bffb76b3eec3ec6
@@ -45,3 +45,5 @@ Dependencies:
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/ball_4.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/heart.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/heart_bg.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/cards/common/base_back.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/base_back.png.k

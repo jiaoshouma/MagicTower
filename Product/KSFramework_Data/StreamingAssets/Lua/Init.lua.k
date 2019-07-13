@@ -190,13 +190,18 @@ import("Coroutine")
 import("UpdateBeat")
 import("Timer")
 import("CSharpBinding")
+import("LuaConfig")
 print("Init.lua script finish!Start lua logic----")
 --set lang here
 --Tools model:
 sun.lang = PlayerPrefs.GetString("GameLang","zh_CN")
 CS.KSFramework.I18NModule.SetLang(sun.lang)
+sun.GameOperator = import("Behaviour/GameOperator")
+sun.Backend = import("Backend/Backend")
 sun.AssetsLoader = import("AssetsLoader")
 sun.EventDispatcher = import("EventDispatcher")
+sun.KeyboardListener = import("KeyboardListener")
+sun.KeyboardListener.get()
 
 print("RunForLang:"..sun.lang)
 

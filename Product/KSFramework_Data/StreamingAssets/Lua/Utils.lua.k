@@ -11,3 +11,10 @@ sun.setSprite = function(sprite,path)
 		end
 	end)
 end
+
+function sun.getGameController()
+	local openScene = sun.Game.get():getOpeningScene()
+	if openScene and openScene:getType() == sun.SceneType.BATTLE then
+		return openScene:getBattleController()
+	end
+end
