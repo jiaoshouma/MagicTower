@@ -49,8 +49,8 @@ namespace KSFramework
         {
             base.OnInit();
 
-            if (!CheckInitScript(true))
-                return;
+            // if (!CheckInitScript(true))
+            //     return;
         }
 
         /// <summary>
@@ -86,8 +86,8 @@ namespace KSFramework
         public override void OnClose()
         {
             base.OnClose();
-            if (!CheckInitScript())
-                return;
+            // if (!CheckInitScript())
+            //     return;
             var closeFunc = _luaTable["OnClose"];
             if (closeFunc != null)
             {
@@ -125,7 +125,7 @@ namespace KSFramework
 
             _luaTable = scriptResult as LuaTable;
 
-            var newFuncObj = _luaTable.Get<LuaFunction>("new"); // if a New function exist, new a table!
+            var newFuncObj = _luaTable.Get<LuaFunction>("New"); // if a New function exist, new a table!
             if (newFuncObj != null)
             {
 #if SLUA
@@ -145,7 +145,7 @@ namespace KSFramework
             _luaTable["Controller"] = this;
 
 #if SLUA
-                (luaInitObj as LuaFunction).call(_luaTable, this);
+            (luaInitObj as LuaFunction).call(_luaTable, this);
 #else
             (luaInitObj as LuaFunction).Call(_luaTable, this);
 #endif

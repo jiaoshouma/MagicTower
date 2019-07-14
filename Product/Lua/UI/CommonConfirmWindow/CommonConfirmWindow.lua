@@ -5,7 +5,7 @@ local UICommonConfirmWindow = class("UICommonConfirmWindow", UIBase)
 
 -- create a ui instance
 function UICommonConfirmWindow.New(controller)
-    local newUI = new(UICommonConfirmWindow)
+    local newUI = UICommonConfirmWindow.new()
     newUI.Controller = controller
     return newUI
 end
@@ -19,6 +19,7 @@ function UICommonConfirmWindow:OnInit(controller)
 end
 
 function UICommonConfirmWindow:OnOpen(params)
+	UICommonConfirmWindow.super.OnOpen(self,params)
     Log.Info('UICommonConfirmWindow OnOpen, do your logic')
 	params = params or {}
 	self.params_ = params
@@ -37,6 +38,11 @@ function UICommonConfirmWindow:OnOpen(params)
 	UIEventListener.Get(self.closeBtn_.gameObject).onClick = function()
 		self:closeWindow()
 	end
+end
+
+function UICommonConfirmWindow:OnClose()
+	UICommonConfirmWindow.super.OnClose(self)
+	
 end
 
 function UICommonConfirmWindow:closeWindow()

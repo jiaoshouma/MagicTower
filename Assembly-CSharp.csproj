@@ -130,6 +130,7 @@
      <Compile Include="Assets\KSFramework\Modules\UI\UILuaOutlet.cs" />
      <Compile Include="Assets\KSFramework\Modules\UI\UILuaOutletCollection.cs" />
      <Compile Include="Assets\Scripts\Core\CoroutineRunner.cs" />
+     <Compile Include="Assets\Scripts\Core\DragScrollView.cs" />
      <Compile Include="Assets\Scripts\Core\ShrinkText.cs" />
      <Compile Include="Assets\Scripts\Core\SunExtensions.cs" />
      <Compile Include="Assets\Scripts\Core\SunUtils.cs" />

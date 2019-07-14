@@ -150,7 +150,7 @@ namespace KSFramework
         {
             Debuger.Assert(HasScript(scriptRelativePath), "Not exist Lua: " + scriptRelativePath);
 
-            var scriptPath = GetScriptPath(scriptRelativePath);
+            var scriptPath = GetScriptPath(scriptRelativePath); 
             byte[] script;
             if (Log.IsUnityEditor)
             {

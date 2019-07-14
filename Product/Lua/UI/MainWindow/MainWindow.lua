@@ -4,13 +4,9 @@ local UIMainWindow = class("UIMainWindow", UIBase)
 
 -- create a ui instance
 function UIMainWindow.New(controller)
-    local newUI = new(UIMainWindow)
+    local newUI = UIMainWindow.new()
     newUI.Controller = controller
     return newUI
-end
-
-function UIMainWindow:ctor(...)
-    --init params here.
 end
 
 function UIMainWindow:OnInit(controller)
@@ -18,6 +14,7 @@ function UIMainWindow:OnInit(controller)
 end
 
 function UIMainWindow:OnOpen()
+	UIMainWindow.super.OnOpen(self)
     Log.Info('UIMainWindow OnOpen, do your logic')
 	local MenuConf = {
 		{desc = __("START_GAME"),click = handler(self,self.onClickStartGame)},
@@ -42,9 +39,8 @@ function UIMainWindow:OnOpen()
 end
 
 function UIMainWindow:onClickStartGame()
-	UIModule.Instance:CloseAllWindows()
-	
-	sun.Game.get():enterScene(sun.SceneType.BATTLE)
+	-- UIModule.Instance:OpenWindow("BattleLoadingWindow")
+	UIModule.Instance:OpenWindow("OpponentSelectWindow")
 end
 
 function UIMainWindow:onClickEditDeck()
@@ -67,6 +63,11 @@ function UIMainWindow:onClickQuit()
 		UnityEngine.Application.Quit();
 	end
 	UIModule.Instance:OpenWindow("CommonConfirmWindow",params)
+end
+
+function UIMainWindow:OnClose()
+	UIMainWindow.super.OnClose(self)
+	
 end
 
 return UIMainWindow

@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
  
 public class UIEventListener:EventTrigger
 {
@@ -48,12 +49,34 @@ public class UIEventListener:EventTrigger
             onHover(gameObject, false);
     }
     public override void OnBeginDrag(PointerEventData eventData)
-    {
-        onDragStart(gameObject);
+    {	
+    	if (onDragStart != null){
+        	onDragStart(gameObject);
+    	}
+    	DragScrollView dragScroll = this.gameObject.GetComponent<DragScrollView>();
+    	if (dragScroll != null)
+    	{
+    		ScrollRect scroll = dragScroll.scrollView;
+    		if (scroll!=null)
+    		{
+    			scroll.OnBeginDrag(eventData);
+    		}
+    	}
     }
     public override void OnEndDrag(PointerEventData eventData)
     {
-        onDragEnd(gameObject);
+    	if (onDragEnd != null){
+        	onDragEnd(gameObject);
+    	}
+    	DragScrollView dragScroll = this.gameObject.GetComponent<DragScrollView>();
+    	if (dragScroll != null)
+    	{
+    		ScrollRect scroll = dragScroll.scrollView;
+    		if (scroll != null)
+    		{
+    			scroll.OnEndDrag(eventData);
+    		}
+    	}
     }
     public override void OnDrag(PointerEventData eventData)
     {
@@ -64,8 +87,20 @@ public class UIEventListener:EventTrigger
             onScrollbarChanged(gameObject, gameObject.GetComponent<Scrollbar>().value);
         }
         else{
-        	onDrag(gameObject,eventData.delta);
+        	if (onDrag!= null)
+        	{
+        		onDrag(gameObject,eventData.delta);
+        	}
         }
+
+        DragScrollView dragScroll = this.gameObject.GetComponent<DragScrollView>();
+    	if (dragScroll != null)
+    	{
+    		ScrollRect scroll = dragScroll.scrollView;
+    		if (scroll != null){
+    			scroll.OnDrag(eventData);
+    		}
+    	}
  
     }
     public override void OnSelect(BaseEventData eventData)

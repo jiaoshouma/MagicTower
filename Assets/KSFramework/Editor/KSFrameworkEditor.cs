@@ -149,7 +149,7 @@ function $UI_NAME.New(controller)
 end
 
 function $UI_NAME:ctor(...)
-    --init params here.
+
 end
 
 function $UI_NAME:OnInit(controller)
@@ -157,8 +157,16 @@ function $UI_NAME:OnInit(controller)
 end
 
 function $UI_NAME:OnOpen()
+    $UI_NAME.super.OnOpen(self)
     Log.Info('$UI_NAME OnOpen, do your logic')
 end
+
+function $UI_NAME:OnClose()
+    $UI_NAME.super.OnClose(self)
+    --Do not delete this function cause it's call from C#.It won't trigger metatable
+    Log.Info('$UI_NAME OnClose )
+end
+
 
 return $UI_NAME
 ";
@@ -173,13 +181,13 @@ local $UI_NAME = class(""$UI_NAME"", UIBase)
 
 -- create a ui instance
 function $UI_NAME.New(controller)
-    local newUI = new($UI_NAME)
+    local newUI = $UI_NAME.new()
     newUI.Controller = controller
     return newUI
 end
 
 function $UI_NAME:ctor(...)
-    --init params here.
+    
 end
 
 function $UI_NAME:OnInit(controller)
@@ -187,8 +195,16 @@ function $UI_NAME:OnInit(controller)
 end
 
 function $UI_NAME:OnOpen()
+    $UI_NAME.super.OnOpen(self)
     Log.Info('$UI_NAME OnOpen, do your logic')
 end
+
+function $UI_NAME:OnClose()
+    $UI_NAME.super.OnClose(self)
+    --Do not delete this function cause it's call from C#.It won't trigger metatable
+    Log.Info('$UI_NAME OnClose )
+end
+
 
 return $UI_NAME
 ";

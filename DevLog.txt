@@ -76,3 +76,11 @@ UGUI的Text很烂，感觉没有NGUI好用，抄了个ShrinkText的子类勉强着用吧。
 
 7.14
 继续扩展基础逻辑。标题界面显示逻辑。
+
+7.15
+重新整理了window UI 生命周期，OnInit会执行2次先不管，UIWindow统一使用class风格，register卸载OnOpen（只执行一次），修改LuaUITempalteCode（在KSFrameworkEditor下）
+预拆分Backend逻辑 方便后续做玩家对战
+ScrollRect 和 UIEventlistener 点击逻辑有冲突 使用DragScrollView传递EventData解决了一下
+把UIModule中OnInit和OnClose中重新New LuaTable的奇葩逻辑注释了，只留OnOpen，这玩意导致在lua上的操作一团糟，一个窗口在OnOpen OnInit OnClose中拿到self是三个表，真的奇葩。
+完善了进战斗猜拳逻辑
+规划了战斗AI模块，通过事件触发AI行为，继承制定不同AI策略。顺便用这套实践了猜拳AI。

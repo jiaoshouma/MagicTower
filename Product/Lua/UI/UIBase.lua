@@ -1,11 +1,24 @@
 local UIBase = class("UIBase")
 
 function UIBase:ctor(...)
+end
+
+function UIBase:OnOpen()
+    self.eventProxy_ = sun.EventDispatcher.inner():newProxy(self)
+    self:registerEvents()
+end
+
+function UIBase:registerEvents()
 
 end
 
 function UIBase:getWindow()
     return self.Controller:GetWindow()
+end
+
+function UIBase:getUICanvas()
+    local window = self:getWindow()
+    return window:GetComponent("UnityEngine.UI.Canvas")
 end
 
 function UIBase:GetControl(typeName, uri,trans)
@@ -30,6 +43,10 @@ end
 function UIBase:GetUIImage(uri)
     local img = self:GetControl("UnityEngine.UI.Image", uri)
     return img
+end
+
+function UIBase:OnClose()
+    sun.EventDispatcher.inner():disposeProxy(self)
 end
 
 return UIBase

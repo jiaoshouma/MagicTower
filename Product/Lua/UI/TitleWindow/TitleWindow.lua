@@ -4,14 +4,14 @@ local UITitleWindow = class("UITitleWindow", UIBase)
 
 -- create a ui instance
 function UITitleWindow.New(controller)
-    local newUI = new(UITitleWindow)
+    local newUI = UITitleWindow.new()
     newUI.Controller = controller
     return newUI
 end
 
 function UITitleWindow:ctor(...)
+  UITitleWindow.super.ctor(self,...)
     --init params here.
-    
 end
 
 function UITitleWindow:OnInit(controller)
@@ -20,6 +20,7 @@ function UITitleWindow:OnInit(controller)
 end
 
 function UITitleWindow:OnOpen()
+    UITitleWindow.super.OnOpen(self)
     Log.Info('UITitleWindow OnOpen, do your logic')
     -- local titleImg = self:GetUIImage("title_img")
    	local ring1 = self:GetUIImage("ring_1")
@@ -35,9 +36,13 @@ function UITitleWindow:OnOpen()
 end
 
 function UITitleWindow:onClickStartGame()
-	UIModule.Instance:DestroyWindow("TitleWindow")
+	UIModule.Instance:CloseWindow("TitleWindow")
   UIModule.Instance:OpenWindow("MainWindow")
 
+end
+
+function UITitleWindow:OnClose()
+  UITitleWindow.super.OnClose(self)
 end
 
 return UITitleWindow
