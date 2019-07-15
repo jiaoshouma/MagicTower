@@ -31,14 +31,14 @@ end
 
 function BattleScene:initBattleFieldInfo()
 	local transBattleField = self.battleFieldGo_.transform
-	local transLeftTop = transBattleField:Find("left_top")
-	local transStageInfo = transLeftTop:Find("stage_info")
+	-- local transLeftTop = transBattleField:Find("left_top")
+	local transStageInfo = transBattleField:Find("stage_info")
 	self.battleStageInfo_ = import("Scene/BattleStageInfo").new(self,transStageInfo)
 
 
 
-	local transRightBottom = transBattleField:Find("right_bottom")
-	local stageBtnImg = transRightBottom:ComponentByName("stage_btn","UnityEngine.UI.Image")
+	-- local transRightBottom = transBattleField:Find("right_bottom")
+	local stageBtnImg = transBattleField:ComponentByName("stage_btn","UnityEngine.UI.Image")
 	UIEventListener.Get(stageBtnImg.gameObject).onClick = handler(self,self.onClickStageBtn)
 end
 
@@ -47,7 +47,7 @@ function BattleScene:onClickStageBtn()
 
 		return
 	end
-	sun.GameOperator.get():passStage()
+	sun.myOperator():passStage()
 end
 
 function BattleScene:initBattleController()

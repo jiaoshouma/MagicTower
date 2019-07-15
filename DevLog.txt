@@ -84,3 +84,7 @@ ScrollRect 和 UIEventlistener 点击逻辑有冲突 使用DragScrollView传递EventData解决
 把UIModule中OnInit和OnClose中重新New LuaTable的奇葩逻辑注释了，只留OnOpen，这玩意导致在lua上的操作一团糟，一个窗口在OnOpen OnInit OnClose中拿到self是三个表，真的奇葩。
 完善了进战斗猜拳逻辑
 规划了战斗AI模块，通过事件触发AI行为，继承制定不同AI策略。顺便用这套实践了猜拳AI。
+
+7.16
+拆分GameOperator变为对应行为人持有一个单例，以此为基础可以统一玩家和AI的操作逻辑，还能方便做挂机功能。
+完成了猜拳逻辑。可以进战场了。

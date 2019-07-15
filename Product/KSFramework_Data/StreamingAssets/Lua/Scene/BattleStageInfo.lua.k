@@ -16,8 +16,8 @@ local StageConf = {
 }
 
 local TurnConf = {
-	[sun.TurnType.PLAYER] = {disableColor = Color(170/255,194/255,1,1),enableColor = Color(0,75/255,1,1)},
-	[sun.TurnType.ENEMY] = {disableColor = Color(255/255,155/255,135/255,1),enableColor = Color(1,3/255,0,1)},
+	[sun.TurnType.BLUE] = {disableColor = Color(170/255,194/255,1,1),enableColor = Color(0,75/255,1,1)},
+	[sun.TurnType.RED] = {disableColor = Color(255/255,155/255,135/255,1),enableColor = Color(1,3/255,0,1)},
 }
 
 local BattleStageInfo = class("BattleStageInfo")

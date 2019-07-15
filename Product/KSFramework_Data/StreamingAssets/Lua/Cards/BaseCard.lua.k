@@ -107,9 +107,7 @@ end
 function BaseCard:switchShow(showForm)
 	self.nowForm_ = showForm
 	for form,content in pairs(self.cardContents_) do
-		__TRACE(showForm,form,"11111111111")
 		if showForm == form then
-			print(content.gameObject.name,"nameeeee")
 			content:SetActive(true)
 			if not self.cardInits_[form] then
 				local initFunc = self.cardInitFuncs_[form]
@@ -153,7 +151,7 @@ end
 -------------------------------------
 
 function BaseCard:onDispose()
-	sun.EventDispatcher.inner():diposeProxy(self:getName())
+	sun.EventDispatcher.inner():disposeProxy(self:getName())
 end
 
 return BaseCard

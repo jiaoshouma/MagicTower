@@ -24,8 +24,9 @@ sun.CardShowForm = {
 }
 
 sun.TurnType = {
-	PLAYER = 1,
-	ENEMY = 2,
+	BLUE = 1,
+	RED = 2,
+	PREPARE = 3,
 }
 
 sun.TurnStages = {
@@ -38,3 +39,9 @@ sun.TurnStages = {
 sun.ModelType = {
 	PLAYER = 1,
 }
+
+sun.PlayMode = {
+	NPC = 1, --单机
+	PLAYE = 2, --对战
+}
+

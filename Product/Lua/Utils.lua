@@ -20,6 +20,10 @@ function sun.getPlayer()
 	return sun.ModelManager.get():loadModel(sun.ModelType.PLAYER)
 end
 
+function sun.myOperator()
+	return sun.GameOperator.get(sun.Global.playerID)
+end
+
 
 ------------------------backend include
 

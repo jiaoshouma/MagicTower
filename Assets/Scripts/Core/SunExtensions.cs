@@ -11,12 +11,18 @@ public static class SunExtensions
     public static object ComponentByName(this Transform t, string relaPath, string type)
     {
     	Transform trans = t.Find(relaPath);
+    	if (trans == null){
+    		Debug.Log("ComponentByName invalide path:"+relaPath);	
+    	}
     	return trans.GetComponent(type);
     }
 
     public static object ComponentByName(this GameObject g, string relaPath, string type)
     {
     	Transform trans = g.transform.Find(relaPath);
+    	if (trans == null){
+    		Debug.Log("ComponentByName invalide path:"+relaPath);	
+    	}
     	return trans.GetComponent(type);
     }
 

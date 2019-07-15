@@ -51,6 +51,7 @@ function Game:enterScene(sceneType)
 		local sceneClass = import(conf.class)
 		if self.openingScene_ then
 			self.openingScene_:dispose()
+			self.openingScene_ = nil
 		end
 		self.openingScene_ = sceneClass.new(sceneType)
 		self.openingSceneType_ = sceneType

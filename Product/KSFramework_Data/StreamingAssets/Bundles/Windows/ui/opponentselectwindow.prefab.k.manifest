@@ -1,0 +1,62 @@
+ManifestFileVersion: 0
+CRC: 1772173410
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: deb3c25412ef1489ef7753a517dd88ff
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e4b245e667ef49e00d723ef122aaf53
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0c01f3f0b88b4448ab1ccfa117a1d57e, type: 3}
+- Class: 114
+  Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -1200242548, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 1367256648, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 41f643c9e81de9342a69642431231dce, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 938311ed4b5a34590af2bad889d53090, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6d09e38e1ac6ad14d911e0d4c01027f4, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UI/OpponentSelectWindow.prefab
+Dependencies:
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/white.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/board_2.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/btn_bg.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/close.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/border.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/headicon/default_icon.png.k

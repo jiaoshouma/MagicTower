@@ -15,7 +15,7 @@ function BaseScene:registerEvents()
 end
 
 function BaseScene:dispose()
-	sun.EventDispatcher.inner():diposeProxy(self)
+	sun.EventDispatcher.inner():disposeProxy(self)
 end
 
 return BaseScene

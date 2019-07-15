@@ -23,6 +23,8 @@ end
 function EventDispatcher:dispatchEvent(eventName,params)
 	for _,proxy in pairs(self.eventProxy_) do
 		local callback = proxy:getCallback(eventName)
+		-- print_r(_)
+		-- print(_,proxy,callback,eventName,"---------------------")
 		if callback then
 			local event = {}
 			event.params = params
@@ -39,7 +41,7 @@ function EventDispatcher:newProxy(name)
 	return p
 end
 
--- function EventDispatcher:diposeProxy(para)
+-- function EventDispatcher:disposeProxy(para)
 -- 	if type(para) == "string" then
 -- 		local p = self.eventProxy_[para]
 -- 		if p then
@@ -57,7 +59,7 @@ end
 -- 	end
 -- end
 
-function EventDispatcher:diposeProxy(para)
+function EventDispatcher:disposeProxy(para)
 	local p = self.eventProxy_[para]
 	if p then
 		p:dispose()

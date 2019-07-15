@@ -52,7 +52,7 @@ function BaseCardModel:registerEvent(eventName,callback)
 end
 
 function BaseCardModel:onDispose()
-	sun.EventDispatcher.outer():diposeProxy(self:getName())
+	sun.EventDispatcher.outer():disposeProxy(self:getName())
 end
 
 return BaseCardModel

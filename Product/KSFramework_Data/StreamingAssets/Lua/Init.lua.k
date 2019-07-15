@@ -95,13 +95,15 @@ function print_r ( t )
             if (type(t)=="table") then
                 for pos,val in pairs(t) do
                     if (type(val)=="table") then
-                        printStrAdd(indent.."["..pos.."] => "..tostring(t).." {")
-                        sub_print_r(val,indent..string.rep(" ",string.len(pos)+8))
-                        printStrAdd(indent..string.rep(" ",string.len(pos)+6).."}")
+                        printStrAdd(indent.."["..tostring(pos).."] => "..tostring(t).." {")
+                        if type(pos) == "string" then
+                            sub_print_r(val,indent..string.rep(" ",string.len(pos)+8))
+                            printStrAdd(indent..string.rep(" ",string.len(pos)+6).."}")
+                        end
                     elseif (type(val)=="string") then
-                        printStrAdd(indent.."["..pos..'] => "'..val..'"')
+                        printStrAdd(indent.."["..tostring(pos)..'] => "'..val..'"')
                     else
-                        printStrAdd(indent.."["..pos.."] => "..tostring(val))
+                        printStrAdd(indent.."["..tostring(pos).."] => "..tostring(val))
                     end
                 end
             else
@@ -184,6 +186,7 @@ import("Enums")
 import("Const")
 import("Event")
 import("Utils")
+import("Global")
 UIBase = import("UI/UIBase")
 Tools 		= import("Tools")
 import("Coroutine")
@@ -196,8 +199,13 @@ print("Init.lua script finish!Start lua logic----")
 --Tools model:
 sun.lang = PlayerPrefs.GetString("GameLang","zh_CN")
 CS.KSFramework.I18NModule.SetLang(sun.lang)
-sun.GameOperator = import("Behaviour/GameOperator")
+-->>local logic module
+sun.GameLogic = import("Backend/GameLogic")
+sun.GameMatcher = import("Backend/GameMatcher")
+--<<
 sun.Backend = import("Backend/Backend")
+sun.GameOperator = import("Behaviour/GameOperator")
+sun.ModelManager = import("ModelManager")
 sun.AssetsLoader = import("AssetsLoader")
 sun.EventDispatcher = import("EventDispatcher")
 sun.KeyboardListener = import("KeyboardListener")

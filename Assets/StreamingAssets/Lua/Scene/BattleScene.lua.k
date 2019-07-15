@@ -39,29 +39,29 @@ function BattleScene:initBattleFieldInfo()
 
 	local transRightBottom = transBattleField:Find("right_bottom")
 	local stageBtnImg = transRightBottom:ComponentByName("stage_btn","UnityEngine.UI.Image")
-	UIEventListener.Get(stageBtnImg.gameObject).onClick = handler(self,self.onClickStateBtn)
+	UIEventListener.Get(stageBtnImg.gameObject).onClick = handler(self,self.onClickStageBtn)
 end
 
-function BattleScene:onClickStateBtn()
-	if not self.battleController_ then
+function BattleScene:onClickStageBtn()
+	if not self.battleController_:isMyTurn() then
+
 		return
 	end
-	self.battleController_:nextStage()
+	sun.myOperator():passStage()
 end
 
 function BattleScene:initBattleController()
-	self.battleController_ = import("Behaviour/BattleController").new()
-
+	self.battleController_ = sun.getPlayer():getBattleController()
 end
 
 function BattleScene:getBattleController()
-	return self.battleController_
+	return sun.getPlayer():getBattleController()
 end
 
 function BattleScene:dispose()
 	BattleScene.super.dispose()
+	sun.getPlayer():disposeBattleController()
 	self.battleStageInfo_:dispose()
-	self.battleController_:dispose()
 end
 
 return BattleScene
