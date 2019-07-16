@@ -3,6 +3,7 @@ local Player = class("Player",import("Model/BasePlayer"))
 function Player:ctor(...)
 	Player.super.ctor(self,...)
 
+	self.playerInfos_ = {}
 end
 
 function Player:initDecks()
@@ -29,11 +30,23 @@ function Player:onMatchSuccess(event)
 	local params = event.params or {}
 	local playerInfo = params.player_info
 	self.opPlayerID_ = playerInfo.player_id
-	self.opName_ = playerInfo.player_name
+	local classPath
+	if sun.myOperator():getPlayMode() == sun.PlayMode.NPC then
+		classPath = "Model/NPCPlayer"
+	else
+		classPath = "Model/OnlinePlayer"
+	end
+	local otherPlayer = import(classPath).new()
+	otherPlayer:populate(params.player_info)
+	self.playerInfos_[playerInfo.player_id] = otherPlayer
 	if playerInfo.player_ai then
 		local aiName = playerInfo.player_ai
 		self.opAI_ = import(aiName).new(playerInfo)
 	end
+end
+
+function Player:getOtherPlayerInfo(playerID)
+	return self.playerInfos_[playerID]
 end
 
 function Player:getBattleController()

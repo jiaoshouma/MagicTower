@@ -41,6 +41,16 @@ function GameOperator:matchPlayer(params)
 	end
 end
 
+function GameOperator:sendDeckData(params)
+	if self.playMode_ == sun.PlayMode.NPC then
+		params = self:wrapParams(params)
+		sun.GameLogic.get():recieveDeckData(params)
+	else
+		
+	end
+end
+
+
 function GameOperator:sendGuess(params)
 	if self.playMode_ == sun.PlayMode.NPC then
 		params = self:wrapParams(params)

@@ -88,3 +88,7 @@ ScrollRect 和 UIEventlistener 点击逻辑有冲突 使用DragScrollView传递EventData解决
 7.16
 拆分GameOperator变为对应行为人持有一个单例，以此为基础可以统一玩家和AI的操作逻辑，还能方便做挂机功能。
 完成了猜拳逻辑。可以进战场了。
+
+7.17
+完成双方洗牌逻辑
+修复print_r无法打全数字key表的bug

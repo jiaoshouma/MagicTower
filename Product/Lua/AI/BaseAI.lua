@@ -10,6 +10,10 @@ function BaseAI:ctor(playerInfo,mode)
 	self.gameOperator_:setPlayMode(mode)
     self:registerEvents()
     print("CreateBaseAI---------------")
+
+    self.info_ = sun.getPlayer():getOtherPlayerInfo(self.id_)
+    local deckData = self.info_:getUsingDeck()
+    self:getOperator():sendDeckData({deck_info = deckData.cards})
 end
 
 function BaseAI:getOperator()

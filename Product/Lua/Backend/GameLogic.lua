@@ -16,6 +16,7 @@ function GameLogic:reset()
 	self.turn_ = 0
 	self.stage_ = 0
 	self.turnTypeByPlayerID_ = {}
+	self.deckInfoByPlayerID_ = {}
 end
 
 function GameLogic:getTurnType()
@@ -29,6 +30,29 @@ end
 function GameLogic:pushEvent(eventName,eventParams)
 	sun.EventDispatcher.outer():dispatchEvent(eventName,eventParams)
 	sun.EventDispatcher.inner():dispatchEvent(eventName,eventParams)
+end
+
+function GameLogic:recieveDeckData(params)
+	params = params or {}
+	local deckInfo = params.deck_info or {}
+	local info = clone(deckInfo)
+	self:randomizeDeck(info,params.player_id)
+	self.deckInfoByPlayerID_[params.player_id] = info
+	--直接洗牌
+end
+
+function GameLogic:randomizeDeck(deckInfo,playerID)
+	for i = #deckInfo,1,-1 do
+		if i == 1 then
+			break
+		end
+		local randomIdx = math.random(1,i-1)
+		local infoAtRandomIdx = deckInfo[randomIdx]
+		deckInfo[randomIdx] = deckInfo[i]
+		deckInfo[i] = infoAtRandomIdx
+	end
+	print("Wash deck info finished!player_id:",playerID)
+	print_r(deckInfo)
 end
 
 function GameLogic:recieveChoose(params)
