@@ -92,3 +92,7 @@ ScrollRect 和 UIEventlistener 点击逻辑有冲突 使用DragScrollView传递EventData解决
 7.17
 完成双方洗牌逻辑
 修复print_r无法打全数字key表的bug
+
+7.21
+将卡背的显示逻辑去了。改为再UI上做好正反面（开启背面剔除），直接旋转就能看到正反面，更自然和易于控制。
+完成抽卡逻辑，卡片在手牌上的表现。

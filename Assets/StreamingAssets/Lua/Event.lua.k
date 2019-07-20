@@ -8,6 +8,7 @@ sun.Event = {
 	STAGE_CHANGE = "_stage_change_",
 	GUESS_RESULT_PUSH = "_guess_result_push_",
 	COLOR_CHOOSE_RESULT = "_color_choose_result_",
+	PREPARE_DRAW = "_prepare_draw_",
 
 	--robot event
 	START_GUESS = "_start_guess_",

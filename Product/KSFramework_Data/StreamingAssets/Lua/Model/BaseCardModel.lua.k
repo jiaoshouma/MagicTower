@@ -1,9 +1,9 @@
 local BaseCardModel = class("BaseCardModel")
 
-function BaseCardModel:ctor(cardNumber,cardType,idx)
+function BaseCardModel:ctor(cardNumber,cardType,id)
 	self.cardID_ = cardNumber
 	self.cardType_ = cardType
-	self.idx_ = idx
+	self.id_ = id
 
 	self:initAttributes()
 end
@@ -20,6 +20,9 @@ function BaseCardModel:getNameKey()
 end
 
 function BaseCardModel:getTexRes()
+	if not self.texRes_ or self.texRes_ == "" then
+		return "Images/cards/Common/Unknown.png"
+	end
 	return self:getMainTexPrefix() ..  self.texRes_ .. ".png"
 end
 
@@ -40,7 +43,7 @@ function BaseCardModel:getSetting()
 end
 
 function BaseCardModel:getName()
-	local name = string.format("%s_%s_%s",self.cardID_,self.cardType_,self.idx_)
+	local name = string.format("%s_%s_%s",self.cardID_,self.cardType_,self.id_)
 	return name
 end
 

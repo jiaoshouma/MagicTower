@@ -69,7 +69,7 @@ function UIBattleLoadingWindow:waitBattleScene()
 			local battleController = sun.getBattleController()
 			if self.chooseOver_ and scene:getType() == sun.SceneType.BATTLE then
 				UIModule.Instance:CloseWindow("BattleLoadingWindow")
-				local eventName = sun.Event.BATTLE_START
+				local eventName = sun.Event.START_BATTLE
 				sun.EventDispatcher.outer():dispatchEvent(eventName,{})
 				sun.EventDispatcher.inner():dispatchEvent(eventName,{})
 				break

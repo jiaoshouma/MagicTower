@@ -1,8 +1,8 @@
 local RoleCardModel = class("RoleCardModel",import("Model/BaseCardModel"))
 
-function RoleCardModel:ctor(cardNumber,cardType,idx)
-	RoleCardModel.super.ctor(self,cardNumber,cardType,idx)
-
+function RoleCardModel:ctor(cardNumber,cardType,id)
+	RoleCardModel.super.ctor(self,cardNumber,cardType,id)
+	
 end
 
 function RoleCardModel:initAttributes()

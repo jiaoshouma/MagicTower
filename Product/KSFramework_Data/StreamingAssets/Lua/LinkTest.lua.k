@@ -8,7 +8,9 @@ end
 function LinkTest:onUpdate()
 	if Input.GetKeyDown(KeyCode.Keypad0) then
 		print("Keypad0")
-
+		local battleScene = sun.Game.get():getOpeningScene()
+		local card = battleScene.card_
+		card:switchDirection(sun.CardDirection.FRONT,1)
 	end  
 	if Input.GetKeyDown(KeyCode.Keypad1) then
 		print("Keypad1")

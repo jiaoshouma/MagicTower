@@ -161,6 +161,7 @@
      <Compile Include="Assets\XLua\Src\TypeExtensions.cs" />
      <Compile Include="Assets\XLua\Src\Utils.cs" />
      <None Include="Assets\StreamingAssets\Setting\JustCopy.txt" />
+     <None Include="Assets\Resources\Shaders\CardDefaultShader.shader" />
      <None Include="Assets\XLua\CHANGELOG.txt" />
      <None Include="Assets\XLua\Resources\xlua\util.lua.txt" />
      <None Include="Assets\StreamingAssets\Setting\Tmp\JustCopy.txt" />

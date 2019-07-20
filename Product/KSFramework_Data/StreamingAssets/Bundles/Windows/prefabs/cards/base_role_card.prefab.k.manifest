@@ -1,17 +1,15 @@
 ManifestFileVersion: 0
-CRC: 443699223
+CRC: 2919074335
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d37acdbda54c7fca6bf2903d22a5e02e
+    Hash: 3d6a42c369296da68da76a1ad586ed85
   TypeTreeHash:
     serializedVersion: 2
-    Hash: f9c59b4dee68413d2bffb76b3eec3ec6
+    Hash: 454c97d060750847bdd7f9702ccb0000
 HashAppended: 0
 ClassTypes:
 - Class: 1
-  Script: {instanceID: 0}
-- Class: 4
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
@@ -40,10 +38,11 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/Prefabs/Cards/base_role_card.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/cards/rolecards/base.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/cards/stgcards/beishui.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/ball_4.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/heart.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/heart_bg.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/cards/common/base_back.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/base_back.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/cards/rolecards/base_role.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/materials/card_default_mtrl.mat.k

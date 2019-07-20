@@ -1,17 +1,25 @@
 local BaseCard = class("BaseCard")
 
-function BaseCard:ctor(cardNumber,cardType,idx)
+function BaseCard:ctor(cardNumber,cardType,id)
+	params = params or {}
 	self.cardID_ = cardNumber
 	self.cardType_ = cardType
-	self.idx_ = idx
+	self.id_ = id
 	self.backImgs_ = {}
 	self:instantiate()
 	self:initInfo()
 	self:initCommonComponents()
 	self:initComponents()
 
+	--低性能模式使用SIMPLE作卡面
+	--卡背从程序切改为靠UI正反面区分
 	self:switchShow(sun.CardShowForm.SPECIFIC)
-	self:switchDirection(sun.CardDirection.FRONT)
+	-- self:switchDirection(sun.CardDirection.FRONT,0)
+end
+
+function BaseCard:setFinger(fingerGo)
+	self.finger_ = fingerGo
+	self.go_.transform.parent = fingerGo.transform
 end
 
 function BaseCard:getSetting()
@@ -23,13 +31,13 @@ function BaseCard:getSetting()
 end
 
 function BaseCard:getName()
-	local name = string.format("%s_%s_%s",self.cardID_,self.cardType_,self.idx_)
+	local name = string.format("%s_%s_%s",self.cardID_,self.cardType_,self.id_)
 	return name
 end
 
 function BaseCard:registerEvent(eventName,callback)
 	if not self.eventProxy_ then
-		local name = string.format("%s_%s_%s",self.cardID_,self.cardType_,self.idx_)
+		local name = string.format("%s_%s_%s",self.cardID_,self.cardType_,self.id_)
 		self.eventProxy_ = sun.EventDispatcher.inner():newProxy(self:getName())
 	end
 	self.eventProxy_:addEventListener(eventName,callback)
@@ -46,14 +54,15 @@ end
 
 
 function BaseCard:instantiate()
-	local prefab = sun.CardManager.get():loadCard(self.cardType_,self:getCardPrefabPath())
+	local prefabPath = self:getCardPrefabPath()
+	local prefab = sun.CardManager.get():loadCard(self.cardType_,prefabPath)
 	self.go_ = CS.UnityEngine.GameObject.Instantiate(prefab)
 end
 
 function BaseCard:initInfo()
 	if not self.info_ then
 		local class = sun.CardManager.get():getCardModelClass(self.cardID_,self.cardType_)
-		self.info_ = class.new(self.cardID_,self.cardType_,self.idx_)
+		self.info_ = class.new(self.cardID_,self.cardType_,self.id_)
 	end
 end
 
@@ -71,27 +80,30 @@ function BaseCard:initCommonComponents()
 	}
 	self.cardInits_ = {}
 
+	self.rect_ = transGo:GetComponent("RectTransform")
 end
 
 function BaseCard:initSimple()
-	local content = self.cardContents_[sun.CardShowForm.SIMPLE]
+	local form = sun.CardShowForm.SIMPLE
+	local content = self.cardContents_[form]
 	local simpleBaseImg = content:ComponentByName("base","UnityEngine.UI.Image")
 
 	local backImg = content:ComponentByName("back","UnityEngine.UI.Image")
-	self.backImgs_[sun.CardShowForm.SIMPLE] = backImg
+	self.backImgs_[form] = backImg
 
 	sun.setSprite(simpleBaseImg,self:getCardBaseImg(true))
 
 end
 
 function BaseCard:initSpecific()
-	local content = self.cardContents_[sun.CardShowForm.SPECIFIC]
+	local form = sun.CardShowForm.SPECIFIC
+	local content = self.cardContents_[form]
 	local base = content:Find("base")
 	local specificBaseImg = content:ComponentByName("base","UnityEngine.UI.Image")
 	sun.setSprite(specificBaseImg,self:getCardBaseImg(false))
 
 	local backImg = content:ComponentByName("back","UnityEngine.UI.Image")
-	self.backImgs_[sun.CardShowForm.SPECIFIC] = backImg
+	self.backImgs_[form] = backImg
 
 	self.mainTex_ = content:ComponentByName("main_tex","UnityEngine.UI.Image")
 	sun.setSprite(self.mainTex_,self.info_:getTexRes())
@@ -118,25 +130,42 @@ function BaseCard:switchShow(showForm)
 			content:SetActive(false)
 		end
 	end
-	self:refreshDirection()
 end
 
-function BaseCard:switchDirection(direction)
-	self.showDirection_ = direction
-	self:refreshDirection()
+function BaseCard:getRectSize()
+	return self.rect_.sizeDelta 
 end
 
-function BaseCard:refreshDirection()
-	if not self.showDirection_ then
+function BaseCard:getPivot()
+	return self.rect_.pivot 
+end
+
+function BaseCard:getDirection()
+	return self.showDirection_
+end
+
+function BaseCard:switchDirection(direction,duration)
+	if self.showDirection_ == direction then
 		return
 	end
-	local backImg = self.backImgs_[self.nowForm_]
-	if backImg then
-		if self.showDirection_ == sun.CardDirection.FRONT  then
-			backImg:SetActive(false)
-		else
-			backImg:SetActive(true)
-		end
+	self.showDirection_ = direction
+	local targetRotation = direction == sun.CardDirection.FRONT and Vector3(0,0,0) or Vector3(0,180,0)
+	if not duration or duration == 0 then
+		self.go_.transform.localEulerAngles = targetRotation
+	else
+		self.go_.transform:DOLocalRotate(targetRotation,duration)
+	end
+end
+
+function BaseCard:setPosition(pos)
+	self.go_.transform.position = pos
+end
+
+function BaseCard:localMove(localPos,duration)
+	if duration == 0 then
+		self.go_.transform.localPosition = localPos
+	else
+		self.go_.transform:DOLocalMove(localPos,duration)
 	end
 end
 

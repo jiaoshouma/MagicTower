@@ -20,8 +20,15 @@ function BasePlayer:initDecks()
 	deckInfo.cards = {}
 	for i = 1,50 do
 		local cardInfo = {}
-		cardInfo.id = math.random(1,10)
-		cardInfo.type = math.random(1,4)
+		local randomType = math.random(1,4)
+		local randomID
+		if randomType == sun.CardType.ROLE then
+			randomID = math.random(1,16)
+		else 
+			randomID = math.random(1,1)
+		end
+		cardInfo.id = randomID
+		cardInfo.type = randomType
 		table.insert(deckInfo.cards,cardInfo)
 	end
 	self.decks_[1] = deckInfo	

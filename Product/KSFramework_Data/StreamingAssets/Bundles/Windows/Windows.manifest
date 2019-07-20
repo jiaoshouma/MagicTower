@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2061106306
+CRC: 408197106
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -103,96 +103,86 @@ AssetBundleManifest:
       Name: uiatlas/commonui/title_bg.png.k
       Dependencies: {}
     Info_31:
-      Name: images/cards/foodcards/base.png.k
-      Dependencies: {}
-    Info_32:
-      Name: images/cards/rolecards/base.png.k
-      Dependencies: {}
-    Info_33:
       Name: images/cards/rolecards/caocao.png.k
       Dependencies: {}
-    Info_34:
-      Name: images/cards/soldiercards/base.png.k
-      Dependencies: {}
-    Info_35:
-      Name: images/cards/stgcards/base.png.k
-      Dependencies: {}
-    Info_36:
+    Info_32:
       Name: images/cards/stgcards/beishui.png.k
       Dependencies: {}
-    Info_37:
+    Info_33:
       Name: prefabs/cards/base_role_card.prefab.k
       Dependencies:
-        Dependency_0: images/cards/rolecards/base.png.k
-        Dependency_1: images/cards/stgcards/beishui.png.k
-        Dependency_2: uiatlas/cardcommonui/ball_4.png.k
-        Dependency_3: uiatlas/cardcommonui/heart.png.k
-        Dependency_4: uiatlas/cardcommonui/heart_bg.png.k
-        Dependency_5: images/cards/common/base_back.png.k
-        Dependency_6: uiatlas/cardcommonui/base_back.png.k
-    Info_38:
+        Dependency_0: images/cards/stgcards/beishui.png.k
+        Dependency_1: uiatlas/cardcommonui/ball_4.png.k
+        Dependency_2: uiatlas/cardcommonui/heart.png.k
+        Dependency_3: uiatlas/cardcommonui/heart_bg.png.k
+        Dependency_4: images/cards/common/base_back.png.k
+        Dependency_5: uiatlas/cardcommonui/base_back.png.k
+        Dependency_6: images/cards/rolecards/base_role.png.k
+        Dependency_7: materials/card_default_mtrl.mat.k
+    Info_34:
       Name: uiatlas/cardcommonui/ball_1.png.k
       Dependencies: {}
-    Info_39:
+    Info_35:
       Name: uiatlas/cardcommonui/ball_2.png.k
       Dependencies: {}
-    Info_40:
+    Info_36:
       Name: uiatlas/cardcommonui/ball_3.png.k
       Dependencies: {}
-    Info_41:
+    Info_37:
       Name: uiatlas/cardcommonui/ball_4.png.k
       Dependencies: {}
-    Info_42:
+    Info_38:
       Name: uiatlas/cardcommonui/base_simple_food.png.k
       Dependencies: {}
-    Info_43:
+    Info_39:
       Name: uiatlas/cardcommonui/base_simple_role.png.k
       Dependencies: {}
-    Info_44:
+    Info_40:
       Name: uiatlas/cardcommonui/base_simple_soldier.png.k
       Dependencies: {}
-    Info_45:
+    Info_41:
       Name: uiatlas/cardcommonui/base_simple_stg.png.k
       Dependencies: {}
-    Info_46:
+    Info_42:
       Name: uiatlas/cardcommonui/heart.png.k
       Dependencies: {}
-    Info_47:
+    Info_43:
       Name: uiatlas/cardcommonui/heart_bg.png.k
       Dependencies: {}
-    Info_48:
+    Info_44:
       Name: prefabs/battle/battlefield.prefab.k
       Dependencies:
         Dependency_0: uiatlas/commonui/board_1.png.k
-        Dependency_1: uiatlas/commonui/stage_btn.png.k
-    Info_49:
+        Dependency_1: uiatlas/cardcommonui/base_back.png.k
+        Dependency_2: uiatlas/commonui/stage_btn.png.k
+    Info_45:
       Name: images/cards/common/base_back.png.k
       Dependencies: {}
-    Info_50:
+    Info_46:
       Name: ui/commonconfirmwindow.prefab.k
       Dependencies:
         Dependency_0: uiatlas/commonui/white.png.k
         Dependency_1: uiatlas/commonui/board_2.png.k
         Dependency_2: uiatlas/commonui/btn_bg.png.k
         Dependency_3: uiatlas/commonui/close.png.k
-    Info_51:
+    Info_47:
       Name: ui/mainwindow.prefab.k
       Dependencies:
         Dependency_0: uiatlas/commonui/btn_bg.png.k
-    Info_52:
+    Info_48:
       Name: uiatlas/cardcommonui/base_back.png.k
       Dependencies: {}
-    Info_53:
+    Info_49:
       Name: uiatlas/commonui/stage_btn.png.k
       Dependencies: {}
-    Info_54:
+    Info_50:
       Name: ui/battleloadingwindow.prefab.k
       Dependencies:
         Dependency_0: uiatlas/commonui/btn_bg.png.k
         Dependency_1: uiatlas/misc/guess_1.png.k
         Dependency_2: uiatlas/misc/guess_2.png.k
         Dependency_3: uiatlas/misc/guess_3.png.k
-    Info_55:
+    Info_51:
       Name: ui/opponentselectwindow.prefab.k
       Dependencies:
         Dependency_0: uiatlas/commonui/white.png.k
@@ -201,18 +191,114 @@ AssetBundleManifest:
         Dependency_3: uiatlas/commonui/close.png.k
         Dependency_4: uiatlas/commonui/border.png.k
         Dependency_5: uiatlas/headicon/default_icon.png.k
-    Info_56:
+    Info_52:
       Name: uiatlas/commonui/border.png.k
       Dependencies: {}
-    Info_57:
+    Info_53:
       Name: uiatlas/headicon/default_icon.png.k
       Dependencies: {}
-    Info_58:
+    Info_54:
       Name: uiatlas/misc/guess_1.png.k
       Dependencies: {}
-    Info_59:
+    Info_55:
       Name: uiatlas/misc/guess_2.png.k
       Dependencies: {}
-    Info_60:
+    Info_56:
       Name: uiatlas/misc/guess_3.png.k
+      Dependencies: {}
+    Info_57:
+      Name: images/cards/common/unknown.png.k
+      Dependencies: {}
+    Info_58:
+      Name: images/cards/foodcards/base_food.png.k
+      Dependencies: {}
+    Info_59:
+      Name: images/cards/rolecards/base_role.png.k
+      Dependencies: {}
+    Info_60:
+      Name: images/cards/rolecards/dianwei.png.k
+      Dependencies: {}
+    Info_61:
+      Name: images/cards/rolecards/diaochan.png.k
+      Dependencies: {}
+    Info_62:
+      Name: images/cards/rolecards/ganning.png.k
+      Dependencies: {}
+    Info_63:
+      Name: images/cards/rolecards/guanyu.png.k
+      Dependencies: {}
+    Info_64:
+      Name: images/cards/rolecards/huanggai.png.k
+      Dependencies: {}
+    Info_65:
+      Name: images/cards/rolecards/lvbu.png.k
+      Dependencies: {}
+    Info_66:
+      Name: images/cards/rolecards/shangxiang.png.k
+      Dependencies: {}
+    Info_67:
+      Name: images/cards/rolecards/simayi.png.k
+      Dependencies: {}
+    Info_68:
+      Name: images/cards/rolecards/xiahoudun.png.k
+      Dependencies: {}
+    Info_69:
+      Name: images/cards/rolecards/yueying.png.k
+      Dependencies: {}
+    Info_70:
+      Name: images/cards/rolecards/zhangfei.png.k
+      Dependencies: {}
+    Info_71:
+      Name: images/cards/rolecards/zhanghe.png.k
+      Dependencies: {}
+    Info_72:
+      Name: images/cards/rolecards/zhaoyun.png.k
+      Dependencies: {}
+    Info_73:
+      Name: images/cards/rolecards/zhoutai.png.k
+      Dependencies: {}
+    Info_74:
+      Name: images/cards/rolecards/zhouyu.png.k
+      Dependencies: {}
+    Info_75:
+      Name: images/cards/rolecards/zhugeliang.png.k
+      Dependencies: {}
+    Info_76:
+      Name: images/cards/soldiercards/base_soldier.png.k
+      Dependencies: {}
+    Info_77:
+      Name: images/cards/stgcards/base_stg.png.k
+      Dependencies: {}
+    Info_78:
+      Name: materials/card_default_mtrl.mat.k
+      Dependencies: {}
+    Info_79:
+      Name: prefabs/cards/base_food_card.prefab.k
+      Dependencies:
+        Dependency_0: images/cards/stgcards/beishui.png.k
+        Dependency_1: images/cards/common/base_back.png.k
+        Dependency_2: uiatlas/cardcommonui/base_back.png.k
+        Dependency_3: images/cards/foodcards/base_food.png.k
+        Dependency_4: materials/card_default_mtrl.mat.k
+    Info_80:
+      Name: prefabs/cards/base_soldier_card.prefab.k
+      Dependencies:
+        Dependency_0: images/cards/stgcards/beishui.png.k
+        Dependency_1: images/cards/common/base_back.png.k
+        Dependency_2: uiatlas/cardcommonui/base_back.png.k
+        Dependency_3: images/cards/stgcards/base_stg.png.k
+        Dependency_4: materials/card_default_mtrl.mat.k
+    Info_81:
+      Name: prefabs/cards/base_stg_card.prefab.k
+      Dependencies:
+        Dependency_0: images/cards/stgcards/beishui.png.k
+        Dependency_1: images/cards/common/base_back.png.k
+        Dependency_2: uiatlas/cardcommonui/base_back.png.k
+        Dependency_3: images/cards/foodcards/base_food.png.k
+        Dependency_4: materials/card_default_mtrl.mat.k
+    Info_82:
+      Name: uiatlas/headicon/my_default.png.k
+      Dependencies: {}
+    Info_83:
+      Name: prefabs/cards/finger.prefab.k
       Dependencies: {}

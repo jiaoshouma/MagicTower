@@ -1,7 +1,7 @@
 local BaseFoodCard = class("BaseFoodCard",import("Cards/BaseCard"))
 
-function BaseFoodCard:ctor(cardNumber,cardType,idx)
-	BaseFoodCard.super.ctor(self,cardNumber,cardType,idx)
+function BaseFoodCard:ctor(cardNumber,cardType,id)
+	BaseFoodCard.super.ctor(self,cardNumber,cardType,id)
 	
 end
 
@@ -11,6 +11,14 @@ end
 
 function BaseFoodCard:initComponents()
 	
+end
+
+function BaseFoodCard:getCardBaseImg(isSimple)
+	if isSimple then
+		return "UIAtlas/CardCommonUI/base_simple_food.png"
+	else
+		return "Images/cards/FoodCards/base_food.png"
+	end
 end
 
 return BaseFoodCard

@@ -69,6 +69,15 @@ function GameOperator:chooseSide(params)
 	end
 end
 
+function GameOperator:prepareDraw(params)
+	if self.playMode_ == sun.PlayMode.NPC then
+		params = self:wrapParams(params)
+		sun.GameLogic.get():revievePrepareDraw(params)
+	else
+		
+	end
+end
+
 function GameOperator:passStage(params)
 	if self.playMode_ == sun.PlayMode.NPC then
 		params = self:wrapParams(params)

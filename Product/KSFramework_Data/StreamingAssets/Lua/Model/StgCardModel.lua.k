@@ -1,7 +1,7 @@
 local StgCardModel = class("StgCardModel",import("Model/BaseCardModel"))
 
-function StgCardModel:ctor(cardNumber,cardType,idx)
-	StgCardModel.super.ctor(self,cardNumber,cardType,idx)
+function StgCardModel:ctor(cardNumber,cardType,id)
+	StgCardModel.super.ctor(self,cardNumber,cardType,id)
 end
 
 function StgCardModel:getMainTexPrefix()

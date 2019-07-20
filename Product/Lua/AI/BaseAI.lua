@@ -23,6 +23,7 @@ end
 function BaseAI:registerEvents()
 	self.eventProxy_:addEventListener(sun.Event.START_GUESS,handler(self,self.onStartGuess))
 	self.eventProxy_:addEventListener(sun.Event.GUESS_RESULT_PUSH,handler(self,self.onGuessResultPush))
+	self.eventProxy_:addEventListener(sun.Event.START_BATTLE,handler(self,self.onBattleStart))
 end
 
 function BaseAI:onStartGuess()
@@ -46,6 +47,10 @@ function BaseAI:onGuessResultPush(event)
 			self:getOperator():chooseSide({side = math.random(1,2)})
 		end
 	end)
+end
+
+function BaseAI:onBattleStart(event)
+	self:getOperator():prepareDraw({})
 end
 
 function BaseAI:dispose()

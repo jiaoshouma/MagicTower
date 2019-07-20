@@ -1,15 +1,19 @@
 id	name	belong	force	command	moral	logic_res	tex	model_res	desc
 int	string	int	int	int	int	string	string	string	string
-1	ZHAOYUN	2	7	4	5				
-2	LVBU	4							
-3	DIAOCHAN	4							
-4	GUANYU	2							
-5	ZHANGFEI	2							
-6	LIUBEI	2							
+1	ZHAOYUN	2	7	4	5		zhaoyun		ZHAOYUN_DESC
+2	LVBU	4	9	3	1		lvbu		LVBU_DESC
+3	DIAOCHAN	4	4	2	5		diaochan		DIAOCHAN_DESC
+4	GUANYU	2	7	5	5		guanyu		GUANYU_DESC
+5	ZHANGFEI	2	8	3	4		zhangfei		ZHANGFEI_DESC
+6	SIMAYI	1	4	7	4		simayi		SIMAYI_DESC
 7	CAOCAO	1	5	6	5		caocao		CAOCAO_DESC
-8	XIAOHOUDUN	1							
-9	GUOJIA	1							
-10	ZHUGELIANG	2							
-11	SUNCE	3							
-12	SHANGXIANG	3							
-13	HUANGGAI	3							
+8	XIAOHOUDUN	1	6	4	5		xiahoudun		XIAHOUDUN_DESC
+9	YUEYING	2	4	6	6		yueying		YUEYING_DESC
+10	ZHUGELIANG	2	4	7	6		zhugeliang		ZHUGELIANG
+11	GANNING	3	7	4	3		ganning		GANNING_DESC
+12	SHANGXIANG	3	5	3	5		shangxiang		SHANGXIANG_DESC
+13	HUANGGAI	3	6	4	5		huanggai		HUANGGAI_DESC
+14	DIANWEI	1	8	3	4		dianwei		DIANWEI_DESC
+15	ZHANGHE	1	6	4	4		zhanghe		ZHANGHE_DESC
+16	ZHOUTAI	3	6	3	5		zhoutai		ZHOUTAI_DESC
+17	ZHOUYU	3	5	6	5		zhouyu		ZHOUYU_DESC

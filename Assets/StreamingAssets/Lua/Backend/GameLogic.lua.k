@@ -1,5 +1,6 @@
 --local game logic
 local GameLogic = class("GameLogic")
+local PrepareDrawNum = 5
 
 function GameLogic:ctor( ... )
 	self:reset()
@@ -16,6 +17,10 @@ function GameLogic:reset()
 	self.turn_ = 0
 	self.stage_ = 0
 	self.turnTypeByPlayerID_ = {}
+	self.deckInfoByPlayerID_ = {}
+	self.prepareDrawed_ = {}
+	self.handInfos_ = {}
+	self.drawCount_ = 0
 end
 
 function GameLogic:getTurnType()
@@ -29,6 +34,29 @@ end
 function GameLogic:pushEvent(eventName,eventParams)
 	sun.EventDispatcher.outer():dispatchEvent(eventName,eventParams)
 	sun.EventDispatcher.inner():dispatchEvent(eventName,eventParams)
+end
+
+function GameLogic:recieveDeckData(params)
+	params = params or {}
+	local deckInfo = params.deck_info or {}
+	local info = clone(deckInfo)
+	self:randomizeDeck(info,params.player_id)
+	self.deckInfoByPlayerID_[params.player_id] = info
+	--直接洗牌
+end
+
+function GameLogic:randomizeDeck(deckInfo,playerID)
+	for i = #deckInfo,1,-1 do
+		if i == 1 then
+			break
+		end
+		local randomIdx = math.random(1,i-1)
+		local infoAtRandomIdx = deckInfo[randomIdx]
+		deckInfo[randomIdx] = deckInfo[i]
+		deckInfo[i] = infoAtRandomIdx
+	end
+	print("Wash deck info finished!player_id:",playerID)
+	print_r(deckInfo)
 end
 
 function GameLogic:recieveChoose(params)
@@ -49,6 +77,43 @@ function GameLogic:recieveChoose(params)
 		{player_id = guessLoaseID,choose = otherChoose},
 	}
 	self:pushEvent(eventName,eventParams)
+end
+
+function GameLogic:revievePrepareDraw(params)
+	params = params or {}
+	local playerID = params.player_id
+	if self.prepareDrawed_[playerID] then
+		return
+	end
+	self.prepareDrawed_[playerID] = true
+	local deckInfo = self.deckInfoByPlayerID_[playerID] or {}
+	local drawCardInfos = {}
+	for i=1,PrepareDrawNum do
+		local cardInfo = self:drawCard(playerID)
+		if not cardInfo then
+			break
+		end
+		table.insert(drawCardInfos,cardInfo)
+	end
+
+	local eventName = sun.Event.PREPARE_DRAW
+	local eventParams = {}
+	eventParams.cards_info = drawCardInfos
+	eventParams.player_id = playerID
+	self:pushEvent(eventName,eventParams)
+end
+
+function GameLogic:drawCard(playerID)
+	local deckInfo = self.deckInfoByPlayerID_[playerID] or {}
+	if #deckInfo <= 0 then
+		return nil
+	end
+	local cardInfo = table.remove(deckInfo,#deckInfo)
+	self.drawCount_ = self.drawCount_ + 1
+	cardInfo.identity = self.drawCount_
+	self.handInfos_[playerID] = self.handInfos_[playerID] or {}
+	table.insert(self.handInfos_[playerID],cardInfo)
+	return cardInfo
 end
 
 function GameLogic:nextStage(params)

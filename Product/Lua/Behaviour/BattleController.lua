@@ -10,6 +10,11 @@ function BattleController:ctor(...)
 	-- self:decideTurn()
 
 	-- self:battleStart()
+	-- transform.SetAsLastSibling
+
+	-- transform.SetAsFirstSibling
+
+	-- transform.SetSiblingIndex
 end
 
 function BattleController:registerEvents()

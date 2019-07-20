@@ -39,6 +39,10 @@ function UIOpponentSelectWindow:onClickConfirm()
 	playerModel:setTmpOpponentIndex(self.selectIndex_)
 
 	sun.myOperator():setPlayMode(sun.PlayMode.NPC)
+
+	local deckData = sun.getPlayer():getUsingDeck()
+	sun.myOperator():sendDeckData({deck_info = deckData.cards})
+
 	sun.Game.get():enterScene(sun.SceneType.BATTLE)
 
 	UIModule.Instance:CloseAllWindows()

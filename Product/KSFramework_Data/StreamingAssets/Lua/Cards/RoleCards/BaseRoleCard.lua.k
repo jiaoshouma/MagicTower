@@ -1,7 +1,7 @@
 local BaseRoleCard = class("BaseRoleCard",import("Cards/BaseCard"))
 
-function BaseRoleCard:ctor(cardNumber,cardType,idx)
-	BaseRoleCard.super.ctor(self,cardNumber,cardType,idx)
+function BaseRoleCard:ctor(cardNumber,cardType,id)
+	BaseRoleCard.super.ctor(self,cardNumber,cardType,id)
 	
 end
 
@@ -13,7 +13,7 @@ function BaseRoleCard:getCardBaseImg(isSimple)
 	if isSimple then
 		return "UIAtlas/CardCommonUI/base_simple_role.png"
 	else
-		return "Images/cards/RoleCards/base.png"
+		return "Images/cards/RoleCards/base_role.png"
 	end
 end
 

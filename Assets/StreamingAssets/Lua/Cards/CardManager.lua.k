@@ -3,7 +3,6 @@ local BaseCard = import("Cards/BaseCard")
 
 function CardManager:ctor(...)
 	self.cardPrefabsByTypes_ = {}
-	self.cardIdxs_ = {}
 end
 
 function CardManager.get()
@@ -89,17 +88,10 @@ function CardManager:getCardModelClass(cardNumber,cardType)
 	return import(path)
 end
 
-function CardManager:createCard(cardNumber,cardType)
-	local cardCount = self.cardIdxs_[cardType] or 0
-	cardCount = cardCount + 1
-	self.cardIdxs_[cardType] = cardCount
+function CardManager:createCard(cardNumber,cardType,cardID)
 	local class = self:getCardClass(cardNumber,cardType)
-	local card = class.new(cardNumber,cardType,cardCount)
+	local card = class.new(cardNumber,cardType,cardID)
 	return card
-end
-
-function CardManager:createCardFor(cardNumber,cardType,player)
-
 end
 
 return CardManager

@@ -6,6 +6,13 @@ function BasePlayer:ctor(...)
 	self:initDecks()
 end
 
+function BasePlayer:populate(params)
+	params = params or {}
+	self.id_ = params.player_id
+	self.playerName_ = params.player_name
+
+end
+
 function BasePlayer:initDecks()
 	self.decks_ = {}
 	local deckInfo = {}
@@ -13,24 +20,32 @@ function BasePlayer:initDecks()
 	deckInfo.cards = {}
 	for i = 1,50 do
 		local cardInfo = {}
-		cardInfo.id = 7
-		cardInfo.type = 1
+		local randomType = math.random(1,4)
+		local randomID
+		if randomType == sun.CardType.ROLE then
+			randomID = math.random(1,16)
+		else 
+			randomID = math.random(1,1)
+		end
+		cardInfo.id = randomID
+		cardInfo.type = randomType
 		table.insert(deckInfo.cards,cardInfo)
 	end
 	self.decks_[1] = deckInfo	
-	self.usingDeck_ = deckInfo
+
+	self:setUsingDeck(self.decks_[1])
 end
 
 function BasePlayer:registerEvents()
-
+	BasePlayer.super.registerEvents(self)
 end
 
-function BasePlayer:setUsingDesc(deckData)
+function BasePlayer:setUsingDeck(deckData)
 	self.usingDeck_ = deckData
 end
 
 function BasePlayer:getUsingDeck()
-	return self.usingDeck_
+	return clone(self.usingDeck_)
 end
 
 function BasePlayer:dispose()
