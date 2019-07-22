@@ -48,6 +48,7 @@ namespace KEngine
 
         public static SpriteLoader Load(string path, CSpriteLoaderDelegate callback = null)
         {
+            Debug.Log(path+"=================");
             LoaderDelgate newCallback = null;
             if (callback != null)
             {

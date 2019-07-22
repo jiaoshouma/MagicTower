@@ -22,8 +22,21 @@ function AssetsLoader:loadAssetAsync(path,callback)
 	end,CS.KEngine.LoaderMode.Async)
 end
 
-function AssetsLoader:loadSprite(path,callback)
+--single image
+--return the loader 
+--use sun.setImage recommended
+function AssetsLoader:loadImage(path,callback)
 	return CS.KEngine.SpriteLoader.Load(path,callback)
+end
+
+--atlas cache
+--use sun.setSprite recommended
+function AssetsLoader:setSprite(img,atlasName,iconName)
+	local uiAtlas = img.transform:GetComponent("UIAtlas")
+	local atlasPath = string.format("UIAtlas/%s/%s.prefab",atlasName,string.lower(atlasName))
+	local atlasPrefab = self:loadAsset(atlasPath)
+	uiAtlas.atlas = atlasPrefab
+	uiAtlas.spriteName = iconName
 end
 
 return AssetsLoader

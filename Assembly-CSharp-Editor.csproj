@@ -88,6 +88,7 @@
      <Compile Include="Assets\KSFramework\Modules\LuaModule\Editor\LuaModuleEditor.cs" />
      <Compile Include="Assets\KSFramework\Modules\UI\Editor\KSUIEditor.cs" />
      <Compile Include="Assets\KSFramework\Modules\UI\Editor\UILuaOutletEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\AtlasPackerEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\AutoProcessEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\PictureImporter.cs" />
      <Compile Include="Assets\XLua\Editor\ExampleConfig.cs" />
@@ -97,6 +98,7 @@
      <Compile Include="Assets\XLua\Src\Editor\TemplateRef.cs" />
      <None Include="Assets\KSFramework\KEngine\Editor\KEngine.Editor\UnityLock\ReadMe.txt" />
      <None Include="Assets\XLua\Src\Editor\LinkXmlGen\LinkXmlGen.tpl.txt" />
+     <None Include="Assets\codeandweb.com\Editor\SettingsTexturePackerImporter.txt" />
      <None Include="Assets\XLua\Src\Editor\Template\LuaClassWrapGCM.tpl.txt" />
      <None Include="Assets\XLua\Src\Editor\Template\LuaWrapPusher.tpl.txt" />
      <None Include="Assets\XLua\Src\Editor\Template\LuaDelegateBridge.tpl.txt" />
@@ -353,8 +355,20 @@
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/U3D2018/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>D:/U3D2018/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>D:/U3D2018/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.AppleTV.Extensions">
+ <HintPath>D:/U3D2018/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>D:/U3D2018/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="TexturePackerImporter">
+ <HintPath>C:/Users/jiaoshouma/Desktop/MagicTower/Assets/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
  <HintPath>C:/Users/jiaoshouma/Desktop/MagicTower/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
@@ -400,6 +414,12 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>C:/Users/jiaoshouma/Desktop/MagicTower/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>D:/U3D2018/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>D:/U3D2018/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>D:/U3D2018/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>

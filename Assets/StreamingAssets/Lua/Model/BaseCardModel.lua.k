@@ -13,10 +13,29 @@ function BaseCardModel:initAttributes()
 	self.nameKey_ = setting.name
 	self.descKey_ = setting.desc
 	self.texRes_ = setting.tex
+	self.simpleTexAtlas_ = setting.simple_atlas ~= "" and setting.simple_atlas or "CardSimple"
+	self.simpleTexRes_ = setting.simple_tex ~= "" and setting.simple_tex or "base_simple_"..self:getPostFix()
+end
+
+function BaseCardModel:getPostFix()
+	local cardType = self.cardType_
+	if cardType == sun.CardType.ROLE then
+		return "role"
+	elseif cardType == sun.CardType.STG then
+		return "stg"
+	elseif cardType == sun.CardType.SOLDIER then
+		return "soldier"
+	elseif cardType == sun.CardType.FOOD then
+		return "food"
+	end
 end
 
 function BaseCardModel:getNameKey()
 	return self.nameKey_ or ""
+end
+
+function BaseCardModel:getSimpleTexRes()
+	return self.simpleTexRes_
 end
 
 function BaseCardModel:getTexRes()

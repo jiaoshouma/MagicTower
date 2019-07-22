@@ -13,7 +13,7 @@ function BaseCard:ctor(cardNumber,cardType,id)
 
 	--低性能模式使用SIMPLE作卡面
 	--卡背从程序切改为靠UI正反面区分
-	self:switchShow(sun.CardShowForm.SPECIFIC)
+	self:switchShow(sun.CardShowForm.SIMPLE)
 	-- self:switchDirection(sun.CardDirection.FRONT,0)
 end
 
@@ -54,9 +54,7 @@ end
 
 
 function BaseCard:instantiate()
-	local prefabPath = self:getCardPrefabPath()
-	local prefab = sun.CardManager.get():loadCard(self.cardType_,prefabPath)
-	self.go_ = CS.UnityEngine.GameObject.Instantiate(prefab)
+	self.go_ = sun.CardManager.get():getCardInstance(self.cardType_)
 end
 
 function BaseCard:initInfo()
@@ -91,8 +89,7 @@ function BaseCard:initSimple()
 	local backImg = content:ComponentByName("back","UnityEngine.UI.Image")
 	self.backImgs_[form] = backImg
 
-	sun.setSprite(simpleBaseImg,self:getCardBaseImg(true))
-
+	sun.setSprite(simpleBaseImg,"CardSimple",self.info_:getSimpleTexRes())
 end
 
 function BaseCard:initSpecific()
@@ -100,13 +97,13 @@ function BaseCard:initSpecific()
 	local content = self.cardContents_[form]
 	local base = content:Find("base")
 	local specificBaseImg = content:ComponentByName("base","UnityEngine.UI.Image")
-	sun.setSprite(specificBaseImg,self:getCardBaseImg(false))
+	sun.setImage(specificBaseImg,self:getCardBaseImg(false))
 
 	local backImg = content:ComponentByName("back","UnityEngine.UI.Image")
 	self.backImgs_[form] = backImg
 
 	self.mainTex_ = content:ComponentByName("main_tex","UnityEngine.UI.Image")
-	sun.setSprite(self.mainTex_,self.info_:getTexRes())
+	sun.setImage(self.mainTex_,self.info_:getTexRes())
 
 	local name = content:ComponentByName("name","UnityEngine.UI.Text")
 	name.text = __(self.info_:getNameKey())
@@ -170,10 +167,6 @@ function BaseCard:localMove(localPos,duration)
 end
 
 --virtual,override in child(s)
-function BaseCard:getCardPrefabPath()
-
-end
-
 function BaseCard:initComponents()
 
 end

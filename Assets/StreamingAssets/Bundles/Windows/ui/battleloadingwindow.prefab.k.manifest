@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3581299757
+CRC: 3663460734
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 98d3986b07b044ca8f8a041e42c19db0
+    Hash: efab824675beb2a0db53255d87e8e099
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 6245f7ae76440449acb28735826dcf5e
+    Hash: 6996309db2d5d7389b99ff71cac395df
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,6 +17,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0c01f3f0b88b4448ab1ccfa117a1d57e, type: 3}
 - Class: 114
@@ -47,6 +49,5 @@ Assets:
 - Assets/BundleResources/UI/BattleLoadingWindow.prefab
 Dependencies:
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/btn_bg.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/misc/guess_1.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/misc/guess_2.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/misc/guess_3.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/misc/misc.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/misc/misc.prefab.k

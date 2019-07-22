@@ -544,6 +544,16 @@ namespace AppSettings
         /// </summary>
         public string desc { get; private set;}
         
+        /// <summary>
+        /// 缩略图集
+        /// </summary>
+        public string simple_atlas { get; private set;}
+        
+        /// <summary>
+        /// 缩略图
+        /// </summary>
+        public string simple_tex { get; private set;}
+        
 
         internal FoodCardSetting(TableFileRow row)
         {
@@ -558,6 +568,8 @@ namespace AppSettings
             tex = row.Get_string(row.Values[3], ""); 
             heal = row.Get_int(row.Values[4], ""); 
             desc = row.Get_string(row.Values[5], ""); 
+            simple_atlas = row.Get_string(row.Values[6], ""); 
+            simple_tex = row.Get_string(row.Values[7], ""); 
         }
 
         /// <summary>
@@ -814,6 +826,16 @@ namespace AppSettings
         /// </summary>
         public string desc { get; private set;}
         
+        /// <summary>
+        /// 缩略图集
+        /// </summary>
+        public string simple_atlas { get; private set;}
+        
+        /// <summary>
+        /// 缩略图
+        /// </summary>
+        public string simple_tex { get; private set;}
+        
 
         internal RoleCardSetting(TableFileRow row)
         {
@@ -832,6 +854,8 @@ namespace AppSettings
             tex = row.Get_string(row.Values[7], ""); 
             model_res = row.Get_string(row.Values[8], ""); 
             desc = row.Get_string(row.Values[9], ""); 
+            simple_atlas = row.Get_string(row.Values[10], ""); 
+            simple_tex = row.Get_string(row.Values[11], ""); 
         }
 
         /// <summary>
@@ -1068,6 +1092,16 @@ namespace AppSettings
         /// </summary>
         public string desc { get; private set;}
         
+        /// <summary>
+        /// 缩略图集
+        /// </summary>
+        public string simple_atlas { get; private set;}
+        
+        /// <summary>
+        /// 缩略图
+        /// </summary>
+        public string simple_tex { get; private set;}
+        
 
         internal SoldierCardSetting(TableFileRow row)
         {
@@ -1082,6 +1116,8 @@ namespace AppSettings
             tex = row.Get_string(row.Values[3], ""); 
             heal = row.Get_int(row.Values[4], ""); 
             desc = row.Get_string(row.Values[5], ""); 
+            simple_atlas = row.Get_string(row.Values[6], ""); 
+            simple_tex = row.Get_string(row.Values[7], ""); 
         }
 
         /// <summary>
@@ -1323,6 +1359,16 @@ namespace AppSettings
         /// </summary>
         public string desc { get; private set;}
         
+        /// <summary>
+        /// 缩略图集
+        /// </summary>
+        public string simple_atlas { get; private set;}
+        
+        /// <summary>
+        /// 缩略图
+        /// </summary>
+        public string simple_tex { get; private set;}
+        
 
         internal StgCardSetting(TableFileRow row)
         {
@@ -1338,6 +1384,8 @@ namespace AppSettings
             cost = row.Get_int(row.Values[4], ""); 
             model_res = row.Get_string(row.Values[5], ""); 
             desc = row.Get_string(row.Values[6], ""); 
+            simple_atlas = row.Get_string(row.Values[7], ""); 
+            simple_tex = row.Get_string(row.Values[8], ""); 
         }
 
         /// <summary>

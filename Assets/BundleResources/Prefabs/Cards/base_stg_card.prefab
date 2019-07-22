@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 5226381895216639646}
   - component: {fileID: 1153839718476926714}
   - component: {fileID: 2722708385432585632}
+  - component: {fileID: 7928856733883992527}
   m_Layer: 0
   m_Name: back
   m_TagString: Untagged
@@ -460,6 +461,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &7928856733883992527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607593337662759588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: base_back
+  atlas: {fileID: 3742592969076147963, guid: df2be09bd0e71b246bf24f1b9129c0ea, type: 3}
 --- !u!1 &5944691586011610184
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +601,7 @@ GameObject:
   - component: {fileID: 5218596507741020985}
   - component: {fileID: 5660323288587810406}
   - component: {fileID: 4255465316195117531}
+  - component: {fileID: 2576798974468038085}
   m_Layer: 0
   m_Name: base
   m_TagString: Untagged
@@ -649,6 +665,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &2576798974468038085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6519280520025602404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: 
+  atlas: {fileID: 0}
 --- !u!1 &8908804920258413596
 GameObject:
   m_ObjectHideFlags: 0

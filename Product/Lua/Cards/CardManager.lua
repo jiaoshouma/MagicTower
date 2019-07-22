@@ -3,6 +3,9 @@ local BaseCard = import("Cards/BaseCard")
 
 function CardManager:ctor(...)
 	self.cardPrefabsByTypes_ = {}
+	self.cardPool_ = {}
+	self.cardPoolRoot_ = SunUtils.newGameObject("CardPool")
+	self.cardPoolRoot_:SetActive(false)
 end
 
 function CardManager.get()
@@ -13,13 +16,51 @@ function CardManager.get()
 	return CardManager.instance_
 end
 
+function CardManager:prewarm()
+	if not next(self.cardPrefabsByTypes_) then
+		for _,cardType in pairs(sun.CardType) do
+			self.cardPool_[cardType] = self.cardPool_[cardType] or {}
+			local prefab = self:loadCard(cardType)
+			for i = 1,10 do
+				local prefab = self:loadCard(cardType)
+				-- resultGo = CS.UnityEngine.GameObject.Instantiate(prefab)
+				resultGo = SunUtils.AddChild(self.cardPoolRoot_,prefab)
+				table.insert(self.cardPool_[cardType],resultGo)
+			end
+		end
+	end
+end
+
 function CardManager:loadCard(cardType,path)
+	if not path then
+		if cardType == sun.CardType.ROLE then
+			path = "Prefabs/Cards/base_role_card"
+		elseif cardType == sun.CardType.STG then
+			path = "Prefabs/Cards/base_stg_card"
+		elseif cardType == sun.CardType.SOLDIER then
+			path = "Prefabs/Cards/base_soldier_card"
+		elseif cardType == sun.CardType.FOOD then
+			path = "Prefabs/Cards/base_food_card"
+		end
+	end
 	local cardPrefab = self.cardPrefabsByTypes_[cardType]
 	if not cardPrefab then
 		path = path..".prefab"
 		cardPrefab = sun.AssetsLoader.get():loadAsset(path)
 	end
 	return cardPrefab
+end
+
+function CardManager:getCardInstance(cardType)
+	self.cardPool_[cardType] = self.cardPool_[cardType] or {}
+	local resultGo
+	if #self.cardPool_[cardType]<=0 then
+		local prefab = self:loadCard(cardType)
+		resultGo = CS.UnityEngine.GameObject.Instantiate(prefab)
+	else
+		resultGo = table.remove(self.cardPool_[cardType],#self.cardPool_[cardType])
+	end
+	return resultGo
 end
 
 -- recommand use setting like below:

@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 2167273189907844957}
   - component: {fileID: 2738551719452560173}
   - component: {fileID: 435363301587864230}
+  - component: {fileID: 6474375048634303175}
   m_Layer: 0
   m_Name: heart
   m_TagString: Untagged
@@ -339,6 +340,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &6474375048634303175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161429790219556508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: 
+  atlas: {fileID: 0}
 --- !u!1 &1406738123724405314
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +462,7 @@ GameObject:
   - component: {fileID: 3881712614520488493}
   - component: {fileID: 5709163600997311946}
   - component: {fileID: 3710720249484765376}
+  - component: {fileID: 8500027166478986857}
   m_Layer: 0
   m_Name: back
   m_TagString: Untagged
@@ -501,7 +517,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3fb301ab7cf656a4fbbe368f83839924, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 863fa7c5ec53dec4499c7c7732dc3536, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -510,6 +526,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &8500027166478986857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097228216311243986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: base_back
+  atlas: {fileID: 3742592969076147963, guid: df2be09bd0e71b246bf24f1b9129c0ea, type: 3}
 --- !u!1 &2106176064287530808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1185,7 @@ GameObject:
   - component: {fileID: 9046062233135159241}
   - component: {fileID: 6877755671429708980}
   - component: {fileID: 8274398424342554442}
+  - component: {fileID: 2853703952058097734}
   m_Layer: 0
   m_Name: belong_img
   m_TagString: Untagged
@@ -1218,6 +1249,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &2853703952058097734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443249970574981460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: 
+  atlas: {fileID: 5015353184466444710, guid: 2ed94783068e50c4fb9d37d5df0e76a9, type: 3}
 --- !u!1 &7258254425806441226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,6 +1353,7 @@ GameObject:
   - component: {fileID: 3249511761947160173}
   - component: {fileID: 877884763737864920}
   - component: {fileID: 8182566789821393534}
+  - component: {fileID: 1097085575628285263}
   m_Layer: 0
   m_Name: heart_item
   m_TagString: Untagged
@@ -1372,6 +1418,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &1097085575628285263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7741670946369324235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: 
+  atlas: {fileID: 5015353184466444710, guid: 2ed94783068e50c4fb9d37d5df0e76a9, type: 3}
 --- !u!1 &7793588770289304526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,6 +1522,7 @@ GameObject:
   - component: {fileID: 2860584803264244968}
   - component: {fileID: 8112628473379464023}
   - component: {fileID: 2285215249651649883}
+  - component: {fileID: 8165994067558581984}
   m_Layer: 0
   m_Name: base
   m_TagString: Untagged
@@ -1524,4 +1585,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
+--- !u!114 &8165994067558581984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002048260828569206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: 
+  atlas: {fileID: 3742592969076147963, guid: df2be09bd0e71b246bf24f1b9129c0ea, type: 3}

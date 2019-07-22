@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 4486866044843755354}
   - component: {fileID: 790685330810662727}
   - component: {fileID: 1922324575797557852}
+  - component: {fileID: 2535899849455836219}
   m_Layer: 0
   m_Name: guess_3
   m_TagString: Untagged
@@ -433,10 +434,10 @@ RectTransform:
   m_Father: {fileID: 3055437032018569963}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205, y: -5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &790685330810662727
 CanvasRenderer:
@@ -466,7 +467,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a04c8c88fe71b1046ac28c51f82bbd31, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 822fb684882fa6e489c23e77565d0484, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -475,6 +476,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &2535899849455836219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123102261519537419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: guess_3
+  atlas: {fileID: 6999708206296152870, guid: 8e1330cf1c8fe1c4cae4cf28833b141b, type: 3}
 --- !u!1 &1378014196220841073
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +501,7 @@ GameObject:
   - component: {fileID: 4091058184485672516}
   - component: {fileID: 4561257742133118947}
   - component: {fileID: 8235369502185610198}
+  - component: {fileID: 4975832463576420381}
   m_Layer: 0
   m_Name: guess_2
   m_TagString: Untagged
@@ -507,10 +523,10 @@ RectTransform:
   m_Father: {fileID: 6855752890624143116}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5, y: -5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4561257742133118947
 CanvasRenderer:
@@ -540,7 +556,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 437d875feda209a429d434f329654517, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 822fb684882fa6e489c23e77565d0484, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -549,6 +565,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &4975832463576420381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378014196220841073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: guess_2
+  atlas: {fileID: 6999708206296152870, guid: 8e1330cf1c8fe1c4cae4cf28833b141b, type: 3}
 --- !u!1 &1684415716959957684
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +732,7 @@ GameObject:
   - component: {fileID: 8118243554742386863}
   - component: {fileID: 4490977992611668822}
   - component: {fileID: 1836353655599374675}
+  - component: {fileID: 445276715459416622}
   m_Layer: 0
   m_Name: guess_1
   m_TagString: Untagged
@@ -723,10 +754,10 @@ RectTransform:
   m_Father: {fileID: 3055437032018569963}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -195, y: -5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4490977992611668822
 CanvasRenderer:
@@ -756,7 +787,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0a3984b7dbf6abe4daa7c1c059bae256, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 822fb684882fa6e489c23e77565d0484, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -765,6 +796,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &445276715459416622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833780037807213005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: guess_1
+  atlas: {fileID: 6999708206296152870, guid: 8e1330cf1c8fe1c4cae4cf28833b141b, type: 3}
 --- !u!1 &2291554472684351655
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +900,7 @@ GameObject:
   - component: {fileID: 3863289923468349881}
   - component: {fileID: 3041340839978647590}
   - component: {fileID: 818683141917389745}
+  - component: {fileID: 4708028003308339406}
   m_Layer: 0
   m_Name: guess_3
   m_TagString: Untagged
@@ -876,10 +922,10 @@ RectTransform:
   m_Father: {fileID: 6855752890624143116}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205, y: -5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3041340839978647590
 CanvasRenderer:
@@ -909,7 +955,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a04c8c88fe71b1046ac28c51f82bbd31, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 822fb684882fa6e489c23e77565d0484, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -918,6 +964,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &4708028003308339406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3635275976783345359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: guess_3
+  atlas: {fileID: 6999708206296152870, guid: 8e1330cf1c8fe1c4cae4cf28833b141b, type: 3}
 --- !u!1 &3694523381098200116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1124,7 @@ GameObject:
   - component: {fileID: 6572251167906367121}
   - component: {fileID: 8198120046452190602}
   - component: {fileID: 6562513169847893768}
+  - component: {fileID: 1989380197093940729}
   m_Layer: 0
   m_Name: guess_2
   m_TagString: Untagged
@@ -1085,10 +1146,10 @@ RectTransform:
   m_Father: {fileID: 3055437032018569963}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5, y: -5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8198120046452190602
 CanvasRenderer:
@@ -1118,7 +1179,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 437d875feda209a429d434f329654517, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 822fb684882fa6e489c23e77565d0484, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1127,6 +1188,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &1989380197093940729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4380889957728724328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: guess_2
+  atlas: {fileID: 6999708206296152870, guid: 8e1330cf1c8fe1c4cae4cf28833b141b, type: 3}
 --- !u!1 &5768086094401021116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,6 +1213,7 @@ GameObject:
   - component: {fileID: 7202429498153788968}
   - component: {fileID: 6891353598429880217}
   - component: {fileID: 4244920264014937134}
+  - component: {fileID: 8502900377946849595}
   m_Layer: 0
   m_Name: guess_1
   m_TagString: Untagged
@@ -1159,10 +1235,10 @@ RectTransform:
   m_Father: {fileID: 6855752890624143116}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -195, y: -5}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6891353598429880217
 CanvasRenderer:
@@ -1192,7 +1268,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0a3984b7dbf6abe4daa7c1c059bae256, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 822fb684882fa6e489c23e77565d0484, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1201,6 +1277,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &8502900377946849595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5768086094401021116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: guess_1
+  atlas: {fileID: 6999708206296152870, guid: 8e1330cf1c8fe1c4cae4cf28833b141b, type: 3}
 --- !u!1 &6451177920433176630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,7 +1445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1125244474621559885
 RectTransform:
   m_ObjectHideFlags: 0

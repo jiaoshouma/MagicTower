@@ -35,19 +35,22 @@ function UIOpponentSelectWindow:onClickConfirm()
 	if not self.selectIndex_ then
 		return
 	end
-	local playerModel = sun.ModelManager.get():loadModel(sun.ModelType.PLAYER)
-	playerModel:setTmpOpponentIndex(self.selectIndex_)
-
-	sun.myOperator():setPlayMode(sun.PlayMode.NPC)
-
-	local deckData = sun.getPlayer():getUsingDeck()
-	sun.myOperator():sendDeckData({deck_info = deckData.cards})
-
-	sun.Game.get():enterScene(sun.SceneType.BATTLE)
-
 	UIModule.Instance:CloseAllWindows()
+	local cb = function()
+		local playerModel = sun.ModelManager.get():loadModel(sun.ModelType.PLAYER)
+		playerModel:setTmpOpponentIndex(self.selectIndex_)
+
+		sun.myOperator():setPlayMode(sun.PlayMode.NPC)
+
+		local deckData = sun.getPlayer():getUsingDeck()
+		sun.myOperator():sendDeckData({deck_info = deckData.cards})
+
+		sun.Game.get():enterScene(sun.SceneType.BATTLE)
+		sun.CardManager.get():prewarm()
+
+	end
 	-- UIModule.Instance:CloseWindow("OpponentSelectWindow")
-	UIModule.Instance:OpenWindow("BattleLoadingWindow")
+	UIModule.Instance:OpenWindow("BattleLoadingWindow",{callback = cb})
 end
 
 function UIOpponentSelectWindow:layoutOpponents()

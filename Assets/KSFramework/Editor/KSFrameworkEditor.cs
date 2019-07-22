@@ -156,8 +156,8 @@ function $UI_NAME:OnInit(controller)
     Log.Info('$UI_NAME OnInit, do controls binding')
 end
 
-function $UI_NAME:OnOpen()
-    $UI_NAME.super.OnOpen(self)
+function $UI_NAME:OnOpen(params)
+    $UI_NAME.super.OnOpen(self,params)
     Log.Info('$UI_NAME OnOpen, do your logic')
 end
 
@@ -194,8 +194,8 @@ function $UI_NAME:OnInit(controller)
     Log.Info('$UI_NAME OnInit, do controls binding')
 end
 
-function $UI_NAME:OnOpen()
-    $UI_NAME.super.OnOpen(self)
+function $UI_NAME:OnOpen(params)
+    $UI_NAME.super.OnOpen(self,params)
     Log.Info('$UI_NAME OnOpen, do your logic')
 end
 

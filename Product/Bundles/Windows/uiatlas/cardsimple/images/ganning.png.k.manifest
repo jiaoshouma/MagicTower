@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1574638585
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ad40f40f8c78a0fabc988e198b78526f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UIAtlas/CardSimple/images/ganning.png
+Dependencies: []

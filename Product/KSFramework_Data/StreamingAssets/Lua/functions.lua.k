@@ -89,11 +89,16 @@ function new(table, ctorFunc)
 end
 
 function __TRACE(...)
-    print(...)
-    print(debug.traceback())
+    if sun.IsDebug() then
+        print(...)
+        print(debug.traceback())
+    end
 end
 
 function print_r ( t )  
+    if not sun.IsDebug() then
+        return
+    end
     local printStr = ""
     function printStrAdd(str)
         printStr = printStr .. str .. "\n"

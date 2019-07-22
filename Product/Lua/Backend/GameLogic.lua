@@ -14,7 +14,7 @@ function GameLogic.get()
 end
 
 function GameLogic:reset()
-	self.turn_ = 0
+	self.turn_ = sun.TurnType.BLUE
 	self.stage_ = 0
 	self.turnTypeByPlayerID_ = {}
 	self.deckInfoByPlayerID_ = {}
@@ -24,7 +24,7 @@ function GameLogic:reset()
 end
 
 function GameLogic:getTurnType()
-	return sun.getTurnType(self.turn_)
+	return self.turn_
 end
 
 function GameLogic:getTurnTypeByPlayerID(playerID)
@@ -55,7 +55,7 @@ function GameLogic:randomizeDeck(deckInfo,playerID)
 		deckInfo[randomIdx] = deckInfo[i]
 		deckInfo[i] = infoAtRandomIdx
 	end
-	print("Wash deck info finished!player_id:",playerID)
+	sun.print("Wash deck info finished!player_id:",playerID)
 	print_r(deckInfo)
 end
 
@@ -101,6 +101,8 @@ function GameLogic:revievePrepareDraw(params)
 	eventParams.cards_info = drawCardInfos
 	eventParams.player_id = playerID
 	self:pushEvent(eventName,eventParams)
+
+	self:checkStartStage()
 end
 
 function GameLogic:drawCard(playerID)
@@ -116,7 +118,19 @@ function GameLogic:drawCard(playerID)
 	return cardInfo
 end
 
-function GameLogic:nextStage(params)
+function GameLogic:checkStartStage()
+	local count = 0
+	for playerID,drawed in pairs(self.prepareDrawed_) do
+		if drawed then
+			count = count + 1
+		end
+	end
+	if count >= 2 then
+		self:nextStage()
+	end
+end
+
+function GameLogic:tryNextStage(params)
 	params = params or {}
 	local playerID = params.player_id
 	local nowTurn = self:getTurnType()
@@ -124,13 +138,16 @@ function GameLogic:nextStage(params)
 	if playerBelongTurn ~= nowTurn then
 		return
 	end
+	self:nextStage()
+end
 
+function GameLogic:nextStage(params)
 	self.stage_ = self.stage_ + 1
 	if self.stage_ > sun.StageNum then
 		self:nextTurn()
 		self.stage_ = self.stage_ - sun.StageNum
 	end
-
+	sun.print("----------StageChange-----------",self.turn_,self.stage_)
 	local eventName = sun.Event.STAGE_CHANGE
 	local eventParams = {}
 	eventParams.turn = self.turn_

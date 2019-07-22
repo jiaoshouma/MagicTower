@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3019931248
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e1f15a82d0243da0363266c2a8ca71cb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UIAtlas/CardSimple/images/diaochan.png
+Dependencies: []

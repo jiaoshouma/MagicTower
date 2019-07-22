@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2251169691
+CRC: 473264372
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0a11bb6d83b319cdfe47ee835e3a99fe
+    Hash: e0044286677c4281e0287139b099da03
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 97c600805700c3f995dcf6c5a1ebce9c
+    Hash: 98b505f9cbed6508a5e0562c8d28f4f2
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,6 +17,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
 - Class: 114
   Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
@@ -36,8 +38,7 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/Prefabs/Cards/base_food_card.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/cards/stgcards/beishui.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/cards/common/base_back.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/base_back.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/cards/foodcards/base_food.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/materials/card_default_mtrl.mat.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardsimple/cardsimple.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardsimple/cardsimple.prefab.k

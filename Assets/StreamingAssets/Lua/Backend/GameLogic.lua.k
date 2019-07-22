@@ -55,7 +55,7 @@ function GameLogic:randomizeDeck(deckInfo,playerID)
 		deckInfo[randomIdx] = deckInfo[i]
 		deckInfo[i] = infoAtRandomIdx
 	end
-	print("Wash deck info finished!player_id:",playerID)
+	sun.print("Wash deck info finished!player_id:",playerID)
 	print_r(deckInfo)
 end
 

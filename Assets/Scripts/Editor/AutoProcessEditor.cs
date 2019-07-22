@@ -15,7 +15,10 @@ public class AutoProcessEditor : AssetPostprocessor
 
             //自动设置打包tag;  
             string folderStr = Path.GetFileName(dirName);
-            textureImporter.spritePackingTag = folderStr;
+            if (!folderStr.Contains("images"))
+            {
+                textureImporter.spritePackingTag = folderStr;
+            }
         }
         else if (dirName.Contains("Images")) 
         {

@@ -21,4 +21,9 @@ public static class SunUtils
         go.transform.localScale = new Vector3(1,1,1);
         return go;     
     }
+
+    public static GameObject newGameObject(string name)
+    {
+    	return new GameObject(name);
+    }
 }

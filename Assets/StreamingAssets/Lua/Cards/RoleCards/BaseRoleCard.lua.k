@@ -5,10 +5,6 @@ function BaseRoleCard:ctor(cardNumber,cardType,id)
 	
 end
 
-function BaseRoleCard:getCardPrefabPath()
-	return "Prefabs/Cards/base_role_card"
-end
-
 function BaseRoleCard:getCardBaseImg(isSimple)
 	if isSimple then
 		return "UIAtlas/CardCommonUI/base_simple_role.png"
@@ -28,7 +24,7 @@ function BaseRoleCard:initSpecific()
 
 	local belong = content:Find("belong")
 	local belongImg = belong:ComponentByName("belong_img","UnityEngine.UI.Image")
-	sun.setSprite(belongImg,"UIAtlas/CardCommonUI/ball_"..self.info_:getBelong()..".png")
+	sun.setSprite(belongImg,"CardCommonUI","ball_"..self.info_:getBelong())
 	local belongTxt = belong:ComponentByName("belong_txt","UnityEngine.UI.Text")
 	belongTxt.text = __("BELONG_"..self.info_:getBelong())
 

@@ -96,3 +96,14 @@ ScrollRect 和 UIEventlistener 点击逻辑有冲突 使用DragScrollView传递EventData解决
 7.21
 将卡背的显示逻辑去了。改为再UI上做好正反面（开启背面剔除），直接旋转就能看到正反面，更自然和易于控制。
 完成抽卡逻辑，卡片在手牌上的表现。
+
+7.23
+坑爹的SpritePacker 本以为代码动态Bundle load出来的image引擎会自动使用图集中的资源，结果发现居然是用的单图。。。真的服了。batch完全失败，引擎还把打出来的图集藏在Cache不让代码访问，真的牛批，。
+最后不得不还是采用TexturePacker显式地打出图集，从prefab引用sprite.新增一个UIAtlas组件用于显示图集中sprite.（方便从代码加载sprite）
+并增加GenAtlas指令一键打图集 PackAtlas一键生成prefab
+这样一来基本只剩3个比较大的问题，
+1.Excel配表太死板，迟早得改成导出lua表形式。
+2.完善KEngine资源通过www加载逻辑，这个等到游戏后期考虑（将后续内容作为补丁更新）
+3.游戏GameLogic转移到后端。这个优先级最低吧。
+先开始搞主逻辑吧。
+完成了回合逻辑循环。

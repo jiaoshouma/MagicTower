@@ -192,6 +192,7 @@ public static class XLuaCustomExport
         // mine
         typeof(SunUtils),
         typeof(SunExtensions),
+        typeof(UIAtlas),
     };
 
     [LuaCallCSharp]

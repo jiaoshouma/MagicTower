@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2919074335
+CRC: 366252317
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3d6a42c369296da68da76a1ad586ed85
+    Hash: ce68b09ce922b7f2e39aa6aeaaf74c57
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 454c97d060750847bdd7f9702ccb0000
+    Hash: 73d58fcf6532f65f6f46fa6fb671d06b
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,6 +17,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
 - Class: 114
   Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
@@ -38,11 +40,11 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/Prefabs/Cards/base_role_card.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/cards/stgcards/beishui.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/ball_4.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/heart.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/heart_bg.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/cards/common/base_back.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/base_back.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/images/cards/rolecards/base_role.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/materials/card_default_mtrl.mat.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/cardcommonui.prefab.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/images/ball_4.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/images/heart.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/images/heart_bg.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardsimple/cardsimple.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardsimple/cardsimple.prefab.k

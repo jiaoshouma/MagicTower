@@ -5,10 +5,6 @@ function BaseFoodCard:ctor(cardNumber,cardType,id)
 	
 end
 
-function BaseFoodCard:getCardPrefabPath()
-	return "Prefabs/Cards/base_food_card"
-end
-
 function BaseFoodCard:initComponents()
 	
 end

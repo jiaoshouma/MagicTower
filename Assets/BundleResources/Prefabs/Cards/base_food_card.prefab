@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3038224838268326613}
   - component: {fileID: 5822145386859328818}
   - component: {fileID: 3208898306898294840}
+  - component: {fileID: 8619177415347884831}
   m_Layer: 0
   m_Name: back
   m_TagString: Untagged
@@ -65,7 +66,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6fc71eeff3399bd418d86db234144c47, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -74,6 +75,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &8619177415347884831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211024427671712810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: base_back
+  atlas: {fileID: 3742592969076147963, guid: df2be09bd0e71b246bf24f1b9129c0ea, type: 3}
 --- !u!1 &897008751086840506
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2.0000305}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 80, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1216176084092313933
@@ -213,7 +228,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300002, guid: 863fa7c5ec53dec4499c7c7732dc3536, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -502,6 +517,7 @@ GameObject:
   - component: {fileID: 4054852454181190672}
   - component: {fileID: 8026176458926175151}
   - component: {fileID: 18536955816959395}
+  - component: {fileID: 2201722819513838285}
   m_Layer: 0
   m_Name: base
   m_TagString: Untagged
@@ -565,6 +581,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &2201722819513838285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8141259172115975822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: 
+  atlas: {fileID: 0}
 --- !u!1 &8349409671449432886
 GameObject:
   m_ObjectHideFlags: 0

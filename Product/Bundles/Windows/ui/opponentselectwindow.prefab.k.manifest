@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3101034892
+CRC: 755638734
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b06de9b7a2d1f6e88b70d88694c6fa0b
+    Hash: 4eaa3d95b03bbcae9a544c042a618ad0
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 9e4b245e667ef49e00d723ef122aaf53
+    Hash: 8813f6d887a84be135add4bbad20e011
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,6 +17,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0c01f3f0b88b4448ab1ccfa117a1d57e, type: 3}
 - Class: 114
@@ -59,4 +61,5 @@ Dependencies:
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/btn_bg.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/close.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/border.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/headicon/default_icon.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/headicon/headicon.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/headicon/headicon.prefab.k

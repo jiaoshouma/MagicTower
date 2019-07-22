@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 4075145247
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7fc42c753fe5430cbd5c9149a20c5cfc
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UIAtlas/CardSimple/images/zhouyu.png
+Dependencies: []

@@ -26,7 +26,10 @@ function BattleScene:onPrepareDraw(event)
 			local cardID = info.id
 			local cardType = info.type
 			local identity = info.identity
+			-- local time1 = os.clock()
 			local card = sun.CardManager.get():createCard(cardID,cardType,identity)
+			-- local time2 = os.clock()
+			-- print(time2-time1,"===================")
 			self:sendCard(isSelf,card)
 		end
 	end)

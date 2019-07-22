@@ -3,9 +3,13 @@ local UIBase = class("UIBase")
 function UIBase:ctor(...)
 end
 
-function UIBase:OnOpen()
+function UIBase:OnOpen(params)
+    params = params or {}
     self.eventProxy_ = sun.EventDispatcher.inner():newProxy(self)
     self:registerEvents()
+    if params.callback then
+        params.callback()
+    end
 end
 
 function UIBase:registerEvents()

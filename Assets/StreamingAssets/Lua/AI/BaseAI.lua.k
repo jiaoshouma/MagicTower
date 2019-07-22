@@ -9,7 +9,7 @@ function BaseAI:ctor(playerInfo,mode)
 	self.gameOperator_ = sun.GameOperator.get(self.id_)
 	self.gameOperator_:setPlayMode(mode)
     self:registerEvents()
-    print("CreateBaseAI---------------")
+    sun.print("CreateBaseAI---------------")
 
     self.info_ = sun.getPlayer():getOtherPlayerInfo(self.id_)
     local deckData = self.info_:getUsingDeck()
@@ -28,10 +28,10 @@ end
 
 function BaseAI:onStartGuess()
 	local co = StartCoroutine(function()
-    	yield_return(WaitForSeconds(math.random(1,3)))
+    	yield_return(WaitForSeconds(math.random(1,2)))
     	local selection = math.random(1,3)
     	self:getOperator():sendGuess({selection = selection})
-		print(self.id_,"AIGuess--------------",selection)
+		sun.print(self.id_,"AIGuess--------------",selection)
 	end)
 end
 

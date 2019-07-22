@@ -5,10 +5,6 @@ function BaseSoldierCard:ctor(cardNumber,cardType,id)
 	
 end
 
-function BaseSoldierCard:getCardPrefabPath()
-	return "Prefabs/Cards/base_soldier_card"
-end
-
 function BaseSoldierCard:initComponents()
 	
 end

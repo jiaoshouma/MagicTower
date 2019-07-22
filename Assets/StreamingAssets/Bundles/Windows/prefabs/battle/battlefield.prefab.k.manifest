@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3738558014
+CRC: 2512054257
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ae9153e1d95fb7af24c69fee902661fd
+    Hash: c2b58d7a946e4080365247bd78dcd053
   TypeTreeHash:
     serializedVersion: 2
     Hash: 639b660b9ef8f042f7be49a7e51edc9c
@@ -47,5 +47,5 @@ Assets:
 - Assets/BundleResources/Prefabs/Battle/battlefield.prefab
 Dependencies:
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/board_1.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardcommonui/base_back.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/stage_btn.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardsimple/images/base_back.png.k

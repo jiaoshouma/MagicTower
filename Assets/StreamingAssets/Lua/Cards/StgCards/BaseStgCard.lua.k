@@ -5,10 +5,6 @@ function BaseStgCard:ctor(cardNumber,cardType,id)
 	
 end
 
-function BaseStgCard:getCardPrefabPath()
-	return "Prefabs/Cards/base_stg_card"
-end
-
 function BaseStgCard:initComponents()
 	
 end

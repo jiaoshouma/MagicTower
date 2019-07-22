@@ -83,8 +83,8 @@ function UIBattleLoadingWindow:OnInit(controller)
     Log.Info('UIBattleLoadingWindow OnInit, do controls binding')
 end
 
-function UIBattleLoadingWindow:OnOpen()
-	UIBattleLoadingWindow.super.OnOpen(self)
+function UIBattleLoadingWindow:OnOpen(params)
+	UIBattleLoadingWindow.super.OnOpen(self,params)
     Log.Info('UIBattleLoadingWindow OnOpen, do your logic')
 
     self.guessPart_:SetActive(false)
