@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1207194154
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 381e1c6e1497fa4f9ef3d57848c6f7f7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/Images/cards/RoleCards/ganning.png
+Dependencies: []

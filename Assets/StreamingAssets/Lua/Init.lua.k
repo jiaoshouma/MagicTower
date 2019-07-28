@@ -59,6 +59,7 @@ sun.AssetsLoader = import("AssetsLoader")
 sun.EventDispatcher = import("EventDispatcher")
 sun.KeyboardListener = import("KeyboardListener")
 sun.KeyboardListener.get()
+math.randomseed(os.time())
 
 print("RunForLang:"..sun.lang)
 

@@ -81,7 +81,7 @@ end
 function GameOperator:passStage(params)
 	if self.playMode_ == sun.PlayMode.NPC then
 		params = self:wrapParams(params)
-		sun.GameLogic.get():nextStage(params)
+		sun.GameLogic.get():tryNextStage(params)
 	else
 		
 	end

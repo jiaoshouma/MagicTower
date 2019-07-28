@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 2853969771
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1c34749a56125be7b015104ec7ff1467
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/Images/cards/RoleCards/guanyu.png
+Dependencies: []

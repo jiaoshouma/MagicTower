@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1659581651
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3574b3f918113d5a078d998e0f995ef4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UIAtlas/CommonUI/caution_mind.png
+Dependencies: []

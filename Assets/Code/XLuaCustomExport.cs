@@ -117,7 +117,7 @@ public static class XLuaCustomExport
         typeof(KEngine.TextureLoader.CTextureLoaderDelegate),
         typeof(Action<PointerEventData>),
 //        typeof(UnityEvent<Vector2>),
-        //typeof(TweenCallback),
+        // typeof(TweenCallback),
         typeof(UnityEngine.Events.UnityAction<UnityEngine.EventSystems.BaseEventData>),
         typeof(UnityEngine.Events.UnityAction<string>),
 
@@ -140,6 +140,12 @@ public static class XLuaCustomExport
         typeof(System.Action<KEngine.UI.UIController, object[]>),
         typeof(UnityAction<string,string>),
 
+        //UIEventListneer CSharpCallLua
+        typeof(UIEventListener.BoolDelegate),
+        typeof(UIEventListener.FloatDelegate),
+        typeof(UIEventListener.IntDelegate),
+        typeof(UIEventListener.StringDelegate),
+        typeof(UIEventListener.Vector2Delegate),
     };
 
     [ReflectionUse]

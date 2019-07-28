@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1430995980
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6edcb9eca4511fdcb5a30bec2a4be9e1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UIAtlas/Misc/images/guess_2.png
+Dependencies: []

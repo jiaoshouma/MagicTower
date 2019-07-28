@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 2575058672
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a4b8cdf5e37fea9db2e8baab46110490
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/Images/cards/FoodCards/base_food.png
+Dependencies: []

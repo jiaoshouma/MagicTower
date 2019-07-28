@@ -49,7 +49,7 @@ function BattleController:onStageChange(event)
 end
 
 function BattleController:getTurnType()
-	sun.getTurnType(self.turn_)
+	return self.turn_
 end
 
 function BattleController:getTurnTypeByPlayerID(playerID)
@@ -61,6 +61,7 @@ function BattleController:getMyTurnType()
 end
 
 function BattleController:isMyTurn()
+	-- print(self:getTurnType(),self:getMyTurnType(),self.turn_,self.stage_)
 	return self:getTurnType() == self:getMyTurnType()
 end
 

@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteName: base_back
-  atlas: {fileID: 3742592969076147963, guid: df2be09bd0e71b246bf24f1b9129c0ea, type: 3}
+  atlas: {fileID: 9116986629611008147, guid: df2be09bd0e71b246bf24f1b9129c0ea, type: 3}
 --- !u!1 &1801611439642153083
 GameObject:
   m_ObjectHideFlags: 0

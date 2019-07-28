@@ -24,6 +24,7 @@ function BaseAI:registerEvents()
 	self.eventProxy_:addEventListener(sun.Event.START_GUESS,handler(self,self.onStartGuess))
 	self.eventProxy_:addEventListener(sun.Event.GUESS_RESULT_PUSH,handler(self,self.onGuessResultPush))
 	self.eventProxy_:addEventListener(sun.Event.START_BATTLE,handler(self,self.onBattleStart))
+	self.eventProxy_:addEventListener(sun.Event.STAGE_CHANGE,handler(self,self.onStageChange))
 end
 
 function BaseAI:onStartGuess()
@@ -49,8 +50,25 @@ function BaseAI:onGuessResultPush(event)
 	end)
 end
 
+function BaseAI:isMyTurn(turnType)
+	local myTurnType = sun.getBattleController():getTurnTypeByPlayerID(self.id_)
+	return myTurnType == turnType
+end
+
 function BaseAI:onBattleStart(event)
 	self:getOperator():prepareDraw({})
+end
+
+function BaseAI:onStageChange(event)
+	local params = event.params or {}
+	local turn  = params.turn 
+	local stage = params.stage 
+	if self:isMyTurn(turn) then
+		local co = StartCoroutine(function()
+		    yield_return(WaitForSeconds(1))
+			self:getOperator():passStage({})
+		end)
+	end
 end
 
 function BaseAI:dispose()

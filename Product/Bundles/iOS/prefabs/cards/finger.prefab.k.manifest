@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 864835663
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ec6db2af6b47f4e4310148a8b13b4138
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2c741a59cff4c34c27e0ae4513a21d7f
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/Prefabs/Cards/finger.prefab
+Dependencies:
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/iOS/uiatlas/commonui/white.png.k

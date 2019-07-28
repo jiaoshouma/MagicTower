@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 2526687619
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1f6ab84ffa71fa75fa18f3efba32b8c2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UIAtlas/HeadIcon/images/default_icon.png
+Dependencies: []

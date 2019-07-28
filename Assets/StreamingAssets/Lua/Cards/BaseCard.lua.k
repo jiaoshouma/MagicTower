@@ -6,6 +6,7 @@ function BaseCard:ctor(cardNumber,cardType,id)
 	self.cardType_ = cardType
 	self.id_ = id
 	self.backImgs_ = {}
+	self.lastFormChangeTime_ = {}
 	self:instantiate()
 	self:initInfo()
 	self:initCommonComponents()
@@ -20,6 +21,10 @@ end
 function BaseCard:setFinger(fingerGo)
 	self.finger_ = fingerGo
 	self.go_.transform.parent = fingerGo.transform
+	UIEventListener.Get(self.finger_).onClick = handler(self,self.onClickCard)
+	UIEventListener.Get(self.finger_).onHover = function(go,enter)
+		self:onHoverCard(go,enter)
+	end
 end
 
 function BaseCard:getSetting()
@@ -55,6 +60,38 @@ end
 
 function BaseCard:instantiate()
 	self.go_ = sun.CardManager.get():getCardInstance(self.cardType_)
+
+end
+
+function BaseCard:onClickCard()
+	-- sun.print("click card:",self.cardID_,self.cardType_)
+	local specify = self.nowForm_ == sun.CardShowForm.SIMPLE
+	self:specifyCard(specify)
+end
+
+function BaseCard:onHoverCard(go,enter)
+	-- sun.print(go.name,enter)
+	self:specifyCard(enter)
+end
+
+function BaseCard:specifyCard(bool)
+	local specifyTweenTime = 0.15
+	local lastChangeTime = self.lastFormChangeTime_[bool] or 0
+	local currTime = Time.timeSinceLevelLoad
+	if bool and currTime - lastChangeTime <= specifyTweenTime then
+		return
+	end
+	self.lastFormChangeTime_[bool] = currTime
+	local tweener
+	if bool then
+		self.go_.transform:DOLocalMove(Vector3(0,100,0),specifyTweenTime)
+		tweener = self.go_.transform:DOScale(Vector3(3, 3, 3), specifyTweenTime)
+		self:switchShow(sun.CardShowForm.SPECIFIC)
+	else
+		self.go_.transform:DOLocalMove(Vector3(0,0,0),specifyTweenTime)
+		tweener = self.go_.transform:DOScale(Vector3(1, 1, 1), specifyTweenTime)
+		self:switchShow(sun.CardShowForm.SIMPLE)
+	end
 end
 
 function BaseCard:initInfo()

@@ -25,6 +25,7 @@ TextureImporter:
     21300040: zhoutai
     21300042: zhouyu
     21300044: zhugeliang
+    21300046: "base_simple_food - \u526F\u672C"
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -100,7 +101,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 391
+        y: 123
         width: 80
         height: 120
       alignment: 0
@@ -110,7 +111,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a34fc4d2a1a7b9e47ad5ced69eb1dcbb
+      spriteID: 1b32e1cd48f0a0b409efffbe4b752c3e
       vertices: []
       indices: 
       edges: []
@@ -120,7 +121,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 269
+        y: 1
         width: 80
         height: 120
       alignment: 0
@@ -130,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 24b155a5aad23fd4688ac6309726d523
+      spriteID: b69559ae67c12ef47ad3fc21dd286476
       vertices: []
       indices: 
       edges: []
@@ -139,8 +140,8 @@ TextureImporter:
       name: base_simple_role
       rect:
         serializedVersion: 2
-        x: 1
-        y: 147
+        x: 83
+        y: 123
         width: 80
         height: 120
       alignment: 0
@@ -150,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b12a76a4d605cd43baf0a9d73766d93
+      spriteID: 59b80999d3b40564780932f8bc2b8d3c
       vertices: []
       indices: 
       edges: []
@@ -159,8 +160,8 @@ TextureImporter:
       name: base_simple_soldier
       rect:
         serializedVersion: 2
-        x: 1
-        y: 25
+        x: 83
+        y: 1
         width: 80
         height: 120
       alignment: 0
@@ -170,7 +171,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 571790c1500bd6a44996d149e321a2c3
+      spriteID: e391954ee466fc14e92af1aac899e351
       vertices: []
       indices: 
       edges: []
@@ -179,8 +180,8 @@ TextureImporter:
       name: base_simple_stg
       rect:
         serializedVersion: 2
-        x: 83
-        y: 391
+        x: 165
+        y: 123
         width: 80
         height: 120
       alignment: 0
@@ -190,7 +191,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c25fbfd343c7694a807e2b0541efb08
+      spriteID: 73667f883b67e604a86757d1b0a47e46
       vertices: []
       indices: 
       edges: []
@@ -200,7 +201,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 391
+        y: 1
         width: 80
         height: 120
       alignment: 0
@@ -210,7 +211,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7e2e06d365d9c44db6da431c624c6c6
+      spriteID: 268dfa6265cb39d44bc7b4b708d5b7fd
       vertices: []
       indices: 
       edges: []
@@ -220,7 +221,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 247
-        y: 391
+        y: 123
         width: 80
         height: 120
       alignment: 0
@@ -230,7 +231,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 888b67ecd3ec91d498aafe02aea0b636
+      spriteID: 01ba0b46e07583f4ba23395cd509a868
       vertices: []
       indices: 
       edges: []
@@ -239,8 +240,8 @@ TextureImporter:
       name: diaochan
       rect:
         serializedVersion: 2
-        x: 329
-        y: 391
+        x: 247
+        y: 1
         width: 80
         height: 120
       alignment: 0
@@ -250,7 +251,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 818e69540710d5d48a22cf756f96e7c2
+      spriteID: 5ff96977e3f7d4c40a862f3fd3220cff
       vertices: []
       indices: 
       edges: []
@@ -259,8 +260,8 @@ TextureImporter:
       name: ganning
       rect:
         serializedVersion: 2
-        x: 411
-        y: 391
+        x: 329
+        y: 123
         width: 80
         height: 120
       alignment: 0
@@ -270,7 +271,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8252745f16367a40beedb82fae08b12
+      spriteID: e6314f01f1aa7ae44a1eaae2d12503ff
       vertices: []
       indices: 
       edges: []
@@ -279,8 +280,8 @@ TextureImporter:
       name: guanyu
       rect:
         serializedVersion: 2
-        x: 83
-        y: 269
+        x: 329
+        y: 1
         width: 80
         height: 120
       alignment: 0
@@ -290,7 +291,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3390c7677a962ee44895bcaa534c72a2
+      spriteID: 4ea6ab69ee0e71146b777374b0874bd2
       vertices: []
       indices: 
       edges: []
@@ -299,8 +300,8 @@ TextureImporter:
       name: huanggai
       rect:
         serializedVersion: 2
-        x: 83
-        y: 147
+        x: 411
+        y: 123
         width: 80
         height: 120
       alignment: 0
@@ -310,7 +311,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42f0d762db662184cab772314cf8da60
+      spriteID: 5636a1c9f8d637042a6b28df25b46faa
       vertices: []
       indices: 
       edges: []
@@ -319,8 +320,8 @@ TextureImporter:
       name: lvbu
       rect:
         serializedVersion: 2
-        x: 83
-        y: 25
+        x: 411
+        y: 1
         width: 80
         height: 120
       alignment: 0
@@ -330,7 +331,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3829a22c1dbdad042b674613e35b1fff
+      spriteID: 0c4ceaf582898204d8c1185e158e07f1
       vertices: []
       indices: 
       edges: []
@@ -339,8 +340,8 @@ TextureImporter:
       name: shangxiang
       rect:
         serializedVersion: 2
-        x: 165
-        y: 269
+        x: 493
+        y: 123
         width: 80
         height: 120
       alignment: 0
@@ -350,7 +351,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64907164a429ac7439d9c6eb0d806999
+      spriteID: 3676bf35d7dcfe14a925f851674f1027
       vertices: []
       indices: 
       edges: []
@@ -359,8 +360,8 @@ TextureImporter:
       name: simayi
       rect:
         serializedVersion: 2
-        x: 165
-        y: 147
+        x: 493
+        y: 1
         width: 80
         height: 120
       alignment: 0
@@ -370,7 +371,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86166f05130cf3b4aa0d0508928c96ad
+      spriteID: 89afe7059e9101440ba5cdd8ad270d3b
       vertices: []
       indices: 
       edges: []
@@ -379,8 +380,8 @@ TextureImporter:
       name: xiahoudun
       rect:
         serializedVersion: 2
-        x: 165
-        y: 25
+        x: 575
+        y: 123
         width: 80
         height: 120
       alignment: 0
@@ -390,7 +391,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 854feb7120db0bc47b3a4cc8b0bfeaf5
+      spriteID: 0fb81faa5fca4be42b7b9c07811eb06f
       vertices: []
       indices: 
       edges: []
@@ -399,8 +400,8 @@ TextureImporter:
       name: yueying
       rect:
         serializedVersion: 2
-        x: 247
-        y: 269
+        x: 575
+        y: 1
         width: 80
         height: 120
       alignment: 0
@@ -410,7 +411,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8ee528f657cf3047925d16b0f1fcb41
+      spriteID: f9c6bd2f5c246944686a40c4aba85538
       vertices: []
       indices: 
       edges: []
@@ -419,8 +420,8 @@ TextureImporter:
       name: zhangfei
       rect:
         serializedVersion: 2
-        x: 329
-        y: 269
+        x: 657
+        y: 123
         width: 80
         height: 120
       alignment: 0
@@ -430,7 +431,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4860e5d6a64db145b1b506d088ea252
+      spriteID: 0c1e7d83344744d429d2eb502752a67a
       vertices: []
       indices: 
       edges: []
@@ -439,8 +440,8 @@ TextureImporter:
       name: zhanghe
       rect:
         serializedVersion: 2
-        x: 411
-        y: 269
+        x: 657
+        y: 1
         width: 80
         height: 120
       alignment: 0
@@ -450,7 +451,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 943a2093d1ae26e49b759671f0141606
+      spriteID: a7cdf98ad1c35ac46b85b039eb2ca815
       vertices: []
       indices: 
       edges: []
@@ -459,8 +460,8 @@ TextureImporter:
       name: zhaoyun
       rect:
         serializedVersion: 2
-        x: 247
-        y: 147
+        x: 739
+        y: 123
         width: 80
         height: 120
       alignment: 0
@@ -470,7 +471,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23f8428cf86fc9d4097f521c7412fa47
+      spriteID: 31e04d7dcc5acb945996b4f8b66e9cb7
       vertices: []
       indices: 
       edges: []
@@ -479,8 +480,8 @@ TextureImporter:
       name: zhoutai
       rect:
         serializedVersion: 2
-        x: 247
-        y: 25
+        x: 739
+        y: 1
         width: 80
         height: 120
       alignment: 0
@@ -490,7 +491,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cdf704d048ba05d4880737588bf9edd2
+      spriteID: 36baf4fc40135ff4ba2bb60d3bf996c6
       vertices: []
       indices: 
       edges: []
@@ -499,8 +500,8 @@ TextureImporter:
       name: zhouyu
       rect:
         serializedVersion: 2
-        x: 329
-        y: 147
+        x: 821
+        y: 123
         width: 80
         height: 120
       alignment: 0
@@ -510,7 +511,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4cc89d56bb535d34893e3d87ebd61408
+      spriteID: 645301c5d002cee4da3fce5e64519e11
       vertices: []
       indices: 
       edges: []
@@ -519,8 +520,8 @@ TextureImporter:
       name: zhugeliang
       rect:
         serializedVersion: 2
-        x: 411
-        y: 147
+        x: 821
+        y: 1
         width: 80
         height: 120
       alignment: 0
@@ -530,7 +531,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c061bbb04f9bc7c499ed6c0ead52e73e
+      spriteID: 93abdba9377c03b4ca587ec29417b72c
       vertices: []
       indices: 
       edges: []

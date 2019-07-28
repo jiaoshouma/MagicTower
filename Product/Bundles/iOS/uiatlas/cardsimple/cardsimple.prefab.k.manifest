@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 1782250282
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2dec318fe2f58405842cae0d9e66785b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6c4746220415a450f1d2def5e0d5a5ca
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 485fa0c0721040e4aa78bb34ba9c29b0, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UIAtlas/CardSimple/cardsimple.prefab
+Dependencies:
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/iOS/uiatlas/cardsimple/cardsimple.png.k

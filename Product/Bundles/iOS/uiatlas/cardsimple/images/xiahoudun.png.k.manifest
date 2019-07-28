@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 2656306577
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5b445d6f7c6ffa3e5e8b038fd9863306
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UIAtlas/CardSimple/images/xiahoudun.png
+Dependencies: []

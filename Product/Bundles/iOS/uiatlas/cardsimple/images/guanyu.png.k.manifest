@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 2943654765
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: eccd2e971496c8d32a63204e3ed35c5d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UIAtlas/CardSimple/images/guanyu.png
+Dependencies: []

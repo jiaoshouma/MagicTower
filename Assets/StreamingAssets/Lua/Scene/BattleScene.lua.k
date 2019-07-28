@@ -66,7 +66,6 @@ end
 
 function BattleScene:onClickStageBtn()
 	if not self.battleController_:isMyTurn() then
-
 		return
 	end
 	sun.myOperator():passStage()

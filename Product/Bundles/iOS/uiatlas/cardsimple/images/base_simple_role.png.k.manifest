@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3218348666
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: afa84369113f89a9a65eaf44bf3991b8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UIAtlas/CardSimple/images/base_simple_role.png
+Dependencies: []

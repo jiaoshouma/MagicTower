@@ -122,12 +122,38 @@ public class AtlasPackerEditor: Editor
         }
         if (null != _texs)
         {
-            GameObject _go = new GameObject();
-            _go.name = atlasName;
-            SpriteData _spData = _go.AddComponent<SpriteData>();
-            _spData.SetSP = _texs.ToArray();
             string path1 = outputPath + "/" + atlasName + ".prefab";
-            GameObject temp = PrefabUtility.CreatePrefab(path1, _go);
+            GameObject _originGo = AssetDatabase.LoadAssetAtPath(path1, typeof(GameObject)) as GameObject;
+            GameObject _go;
+            SpriteData _spData;
+            if(_originGo!=null)
+            {
+                _go = PrefabUtility.InstantiatePrefab(_originGo) as GameObject;
+                _spData = _go.GetComponent<SpriteData>();
+            }
+            else
+            {
+                _go = new GameObject();
+                _spData = _go.AddComponent<SpriteData>();
+            }
+            _go.name = atlasName;
+            _spData.SetSP = _texs.ToArray();
+
+            
+            if (_originGo!=null) 
+            {
+                PrefabUtility.ReplacePrefab(_go, _originGo, ReplacePrefabOptions.ConnectToPrefab);
+                GameObject.DestroyImmediate(_go);
+                UnityEngine.Debug.Log("AtlasPrefabReplaced:"+path1);
+            }
+            else
+            {
+                GameObject temp = PrefabUtility.CreatePrefab(path1, _go);
+                UnityEngine.Debug.Log("AtlasPrefabCreated:"+path1);
+
+                GameObject.DestroyImmediate(_go);
+                EditorUtility.SetDirty(temp);
+            }
 
             // AssetImporter importer = AssetImporter.GetAtPath(path1);
             // if (importer == null || temp == null)
@@ -136,10 +162,6 @@ public class AtlasPackerEditor: Editor
             //     return;
             // }
             // importer.assetBundleName = "";
-            UnityEngine.Debug.Log("AtlasPrefabCreated:"+path1);
-
-            GameObject.DestroyImmediate(_go);
-            EditorUtility.SetDirty(temp);
             AssetDatabase.SaveAssets();
         }
         Resources.UnloadUnusedAssets();
