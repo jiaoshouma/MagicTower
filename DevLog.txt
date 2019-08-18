@@ -107,3 +107,10 @@ ScrollRect 和 UIEventlistener 点击逻辑有冲突 使用DragScrollView传递EventData解决
 3.游戏GameLogic转移到后端。这个优先级最低吧。
 先开始搞主逻辑吧。
 完成了回合逻辑循环。
+
+7.29
+GenPrefab逻辑有问题 每次都在create新的。改成了存在replace的逻辑。不然所有原来的引用丢失了。
+完成了卡片选中的表现。
+
+8.19
+增加lua读表模块（excel2lua） 所有小图改为spritepacker图集模式。

@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1302827897
+CRC: 751625376
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8dbad32e5ef348a13b54f9ba46b1adcc
+    Hash: abfce6980e3d6d3e883027d8453bf679
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 639b660b9ef8f042f7be49a7e51edc9c
+    Hash: 87fcfdc8c38f77a6a1bab8c36c3c615f
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,6 +17,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
 - Class: 114
   Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 - Class: 114
@@ -46,6 +48,7 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/Prefabs/Battle/battlefield.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/board_1.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/stage_btn.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardsimple/images/base_back.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardsimple/cardsimple.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/cardsimple/cardsimple.prefab.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/commonui.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/commonui.prefab.k

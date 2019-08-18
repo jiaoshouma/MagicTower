@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 1422045363}
   - component: {fileID: 2119540347551191381}
   - component: {fileID: 5977897528829517399}
+  - component: {fileID: 3209661411746946858}
   m_Layer: 0
   m_Name: first
   m_TagString: Untagged
@@ -292,7 +293,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7b82d53dd06a3784dbd3bdc506167539, type: 3}
+  m_Sprite: {fileID: 21300008, guid: adf6c92844d01564589d5ab245a0843f, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -301,6 +302,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &3209661411746946858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422045362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: btn_bg
+  atlas: {fileID: 313150645294966780, guid: 69904836eb932fa4d869e796109f98c7, type: 3}
 --- !u!1 &1448184153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1064,7 @@ GameObject:
   - component: {fileID: 7304100472442423610}
   - component: {fileID: 3723266662296003657}
   - component: {fileID: 8422685340910279758}
+  - component: {fileID: 5630740045626952520}
   m_Layer: 0
   m_Name: last
   m_TagString: Untagged
@@ -1104,7 +1120,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7b82d53dd06a3784dbd3bdc506167539, type: 3}
+  m_Sprite: {fileID: 21300008, guid: adf6c92844d01564589d5ab245a0843f, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1113,6 +1129,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &5630740045626952520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4307963336578235959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteName: btn_bg
+  atlas: {fileID: 313150645294966780, guid: 69904836eb932fa4d869e796109f98c7, type: 3}
 --- !u!1 &4380889957728724328
 GameObject:
   m_ObjectHideFlags: 0

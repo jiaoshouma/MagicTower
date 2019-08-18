@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 4266639482
+CRC: 3953926107
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -18,7 +18,7 @@ AssetBundleManifest:
     Info_4:
       Name: ui/login.prefab.k
       Dependencies:
-        Dependency_0: uiatlas/commonui/btn_bg.png.k
+        Dependency_0: uiatlas/commonui/images/btn_bg.png.k
     Info_5:
       Name: ui/titlewindow.prefab.k
       Dependencies:
@@ -29,70 +29,28 @@ AssetBundleManifest:
       Name: ui/navbar.prefab.k
       Dependencies: {}
     Info_7:
-      Name: uiatlas/commonui/white.png.k
-      Dependencies: {}
-    Info_8:
       Name: images/title/logo.png.k
       Dependencies: {}
-    Info_9:
+    Info_8:
       Name: images/title/logo_rin.png.k
       Dependencies: {}
-    Info_10:
+    Info_9:
       Name: images/title/logo_rin_2.png.k
       Dependencies: {}
-    Info_11:
+    Info_10:
       Name: images/title/title_background.jpg.k
       Dependencies: {}
-    Info_12:
+    Info_11:
       Name: scene/scenebattle/scene_battle.unity.k
       Dependencies:
-        Dependency_0: uiatlas/commonui/white.png.k
-    Info_13:
-      Name: uiatlas/commonui/board_1.png.k
-      Dependencies: {}
-    Info_14:
-      Name: uiatlas/commonui/board_2.png.k
-      Dependencies: {}
-    Info_15:
-      Name: uiatlas/commonui/board_3.png.k
-      Dependencies: {}
-    Info_16:
-      Name: uiatlas/commonui/btn_bg.png.k
-      Dependencies: {}
-    Info_17:
-      Name: uiatlas/commonui/btn_bg_press.png.k
-      Dependencies: {}
-    Info_18:
-      Name: uiatlas/commonui/btn_red.png.k
-      Dependencies: {}
-    Info_19:
-      Name: uiatlas/commonui/btn_red_press.png.k
-      Dependencies: {}
-    Info_20:
-      Name: uiatlas/commonui/caution_danger.png.k
-      Dependencies: {}
-    Info_21:
-      Name: uiatlas/commonui/caution_info.png.k
-      Dependencies: {}
-    Info_22:
-      Name: uiatlas/commonui/caution_mind.png.k
-      Dependencies: {}
-    Info_23:
-      Name: uiatlas/commonui/close.png.k
-      Dependencies: {}
-    Info_24:
-      Name: uiatlas/commonui/division line.png.k
-      Dependencies: {}
-    Info_25:
-      Name: uiatlas/commonui/title_bg.png.k
-      Dependencies: {}
-    Info_26:
+        Dependency_0: uiatlas/commonui/images/white.png.k
+    Info_12:
       Name: images/cards/rolecards/caocao.png.k
       Dependencies: {}
-    Info_27:
+    Info_13:
       Name: images/cards/stgcards/beishui.png.k
       Dependencies: {}
-    Info_28:
+    Info_14:
       Name: prefabs/cards/base_role_card.prefab.k
       Dependencies:
         Dependency_0: images/cards/common/base_back.png.k
@@ -103,263 +61,310 @@ AssetBundleManifest:
         Dependency_5: uiatlas/cardcommonui/images/heart_bg.png.k
         Dependency_6: uiatlas/cardsimple/cardsimple.png.k
         Dependency_7: uiatlas/cardsimple/cardsimple.prefab.k
-    Info_29:
+    Info_15:
       Name: prefabs/battle/battlefield.prefab.k
       Dependencies:
-        Dependency_0: uiatlas/commonui/board_1.png.k
-        Dependency_1: uiatlas/commonui/stage_btn.png.k
-        Dependency_2: uiatlas/cardsimple/images/base_back.png.k
-    Info_30:
+        Dependency_0: uiatlas/cardsimple/cardsimple.png.k
+        Dependency_1: uiatlas/cardsimple/cardsimple.prefab.k
+        Dependency_2: uiatlas/commonui/commonui.png.k
+        Dependency_3: uiatlas/commonui/commonui.prefab.k
+    Info_16:
       Name: images/cards/common/base_back.png.k
       Dependencies: {}
-    Info_31:
+    Info_17:
       Name: ui/commonconfirmwindow.prefab.k
       Dependencies:
-        Dependency_0: uiatlas/commonui/white.png.k
-        Dependency_1: uiatlas/commonui/board_2.png.k
-        Dependency_2: uiatlas/commonui/btn_bg.png.k
-        Dependency_3: uiatlas/commonui/close.png.k
-    Info_32:
+        Dependency_0: uiatlas/commonui/commonui.png.k
+        Dependency_1: uiatlas/commonui/commonui.prefab.k
+    Info_18:
       Name: ui/mainwindow.prefab.k
       Dependencies:
-        Dependency_0: uiatlas/commonui/btn_bg.png.k
-    Info_33:
-      Name: uiatlas/commonui/stage_btn.png.k
-      Dependencies: {}
-    Info_34:
+        Dependency_0: uiatlas/commonui/images/btn_bg.png.k
+    Info_19:
       Name: ui/battleloadingwindow.prefab.k
       Dependencies:
-        Dependency_0: uiatlas/commonui/btn_bg.png.k
-        Dependency_1: uiatlas/misc/misc.png.k
-        Dependency_2: uiatlas/misc/misc.prefab.k
-    Info_35:
+        Dependency_0: uiatlas/misc/misc.png.k
+        Dependency_1: uiatlas/misc/misc.prefab.k
+        Dependency_2: uiatlas/commonui/commonui.png.k
+        Dependency_3: uiatlas/commonui/commonui.prefab.k
+    Info_20:
       Name: ui/opponentselectwindow.prefab.k
       Dependencies:
-        Dependency_0: uiatlas/commonui/white.png.k
-        Dependency_1: uiatlas/commonui/board_2.png.k
-        Dependency_2: uiatlas/commonui/btn_bg.png.k
-        Dependency_3: uiatlas/commonui/close.png.k
-        Dependency_4: uiatlas/commonui/border.png.k
-        Dependency_5: uiatlas/headicon/headicon.png.k
-        Dependency_6: uiatlas/headicon/headicon.prefab.k
-    Info_36:
-      Name: uiatlas/commonui/border.png.k
-      Dependencies: {}
-    Info_37:
+        Dependency_0: uiatlas/headicon/headicon.png.k
+        Dependency_1: uiatlas/headicon/headicon.prefab.k
+        Dependency_2: uiatlas/commonui/commonui.png.k
+        Dependency_3: uiatlas/commonui/commonui.prefab.k
+        Dependency_4: uiatlas/commonui/images/border.png.k
+    Info_21:
       Name: images/cards/common/unknown.png.k
       Dependencies: {}
-    Info_38:
+    Info_22:
       Name: images/cards/foodcards/base_food.png.k
       Dependencies: {}
-    Info_39:
+    Info_23:
       Name: images/cards/rolecards/base_role.png.k
       Dependencies: {}
-    Info_40:
+    Info_24:
       Name: images/cards/rolecards/dianwei.png.k
       Dependencies: {}
-    Info_41:
+    Info_25:
       Name: images/cards/rolecards/diaochan.png.k
       Dependencies: {}
-    Info_42:
+    Info_26:
       Name: images/cards/rolecards/ganning.png.k
       Dependencies: {}
-    Info_43:
+    Info_27:
       Name: images/cards/rolecards/guanyu.png.k
       Dependencies: {}
-    Info_44:
+    Info_28:
       Name: images/cards/rolecards/huanggai.png.k
       Dependencies: {}
-    Info_45:
+    Info_29:
       Name: images/cards/rolecards/lvbu.png.k
       Dependencies: {}
-    Info_46:
+    Info_30:
       Name: images/cards/rolecards/shangxiang.png.k
       Dependencies: {}
-    Info_47:
+    Info_31:
       Name: images/cards/rolecards/simayi.png.k
       Dependencies: {}
-    Info_48:
+    Info_32:
       Name: images/cards/rolecards/xiahoudun.png.k
       Dependencies: {}
-    Info_49:
+    Info_33:
       Name: images/cards/rolecards/yueying.png.k
       Dependencies: {}
-    Info_50:
+    Info_34:
       Name: images/cards/rolecards/zhangfei.png.k
       Dependencies: {}
-    Info_51:
+    Info_35:
       Name: images/cards/rolecards/zhanghe.png.k
       Dependencies: {}
-    Info_52:
+    Info_36:
       Name: images/cards/rolecards/zhaoyun.png.k
       Dependencies: {}
-    Info_53:
+    Info_37:
       Name: images/cards/rolecards/zhoutai.png.k
       Dependencies: {}
-    Info_54:
+    Info_38:
       Name: images/cards/rolecards/zhouyu.png.k
       Dependencies: {}
-    Info_55:
+    Info_39:
       Name: images/cards/rolecards/zhugeliang.png.k
       Dependencies: {}
-    Info_56:
+    Info_40:
       Name: images/cards/soldiercards/base_soldier.png.k
       Dependencies: {}
-    Info_57:
+    Info_41:
       Name: images/cards/stgcards/base_stg.png.k
       Dependencies: {}
-    Info_58:
+    Info_42:
       Name: materials/card_default_mtrl.mat.k
       Dependencies: {}
-    Info_59:
+    Info_43:
       Name: prefabs/cards/base_food_card.prefab.k
       Dependencies:
         Dependency_0: images/cards/common/base_back.png.k
         Dependency_1: materials/card_default_mtrl.mat.k
         Dependency_2: uiatlas/cardsimple/cardsimple.png.k
         Dependency_3: uiatlas/cardsimple/cardsimple.prefab.k
-    Info_60:
+    Info_44:
       Name: prefabs/cards/base_soldier_card.prefab.k
       Dependencies:
         Dependency_0: images/cards/common/base_back.png.k
         Dependency_1: materials/card_default_mtrl.mat.k
         Dependency_2: uiatlas/cardsimple/cardsimple.prefab.k
         Dependency_3: uiatlas/cardsimple/images/base_back.png.k
-    Info_61:
+    Info_45:
       Name: prefabs/cards/base_stg_card.prefab.k
       Dependencies:
         Dependency_0: images/cards/common/base_back.png.k
         Dependency_1: materials/card_default_mtrl.mat.k
         Dependency_2: uiatlas/cardsimple/cardsimple.prefab.k
         Dependency_3: uiatlas/cardsimple/images/base_back.png.k
-    Info_62:
+    Info_46:
       Name: prefabs/cards/finger.prefab.k
       Dependencies:
-        Dependency_0: uiatlas/commonui/white.png.k
-    Info_63:
+        Dependency_0: uiatlas/commonui/images/white.png.k
+    Info_47:
       Name: uiatlas/cardcommonui/cardcommonui.png.k
       Dependencies: {}
-    Info_64:
+    Info_48:
       Name: uiatlas/cardcommonui/cardcommonui.prefab.k
       Dependencies:
         Dependency_0: uiatlas/cardcommonui/cardcommonui.png.k
-    Info_65:
+    Info_49:
       Name: uiatlas/cardcommonui/images/ball_1.png.k
       Dependencies: {}
-    Info_66:
+    Info_50:
       Name: uiatlas/cardcommonui/images/ball_2.png.k
       Dependencies: {}
-    Info_67:
+    Info_51:
       Name: uiatlas/cardcommonui/images/ball_3.png.k
       Dependencies: {}
-    Info_68:
+    Info_52:
       Name: uiatlas/cardcommonui/images/ball_4.png.k
       Dependencies: {}
-    Info_69:
+    Info_53:
       Name: uiatlas/cardcommonui/images/heart.png.k
       Dependencies: {}
-    Info_70:
+    Info_54:
       Name: uiatlas/cardcommonui/images/heart_bg.png.k
       Dependencies: {}
-    Info_71:
+    Info_55:
       Name: uiatlas/cardsimple/cardsimple.png.k
       Dependencies: {}
-    Info_72:
+    Info_56:
       Name: uiatlas/cardsimple/cardsimple.prefab.k
       Dependencies:
         Dependency_0: uiatlas/cardsimple/cardsimple.png.k
-    Info_73:
+    Info_57:
       Name: uiatlas/cardsimple/images/base_back.png.k
       Dependencies: {}
-    Info_74:
+    Info_58:
       Name: uiatlas/cardsimple/images/base_simple_food.png.k
       Dependencies: {}
-    Info_75:
+    Info_59:
       Name: uiatlas/cardsimple/images/base_simple_role.png.k
       Dependencies: {}
-    Info_76:
+    Info_60:
       Name: uiatlas/cardsimple/images/base_simple_soldier.png.k
       Dependencies: {}
-    Info_77:
+    Info_61:
       Name: uiatlas/cardsimple/images/base_simple_stg.png.k
       Dependencies: {}
-    Info_78:
+    Info_62:
       Name: uiatlas/cardsimple/images/caocao.png.k
       Dependencies: {}
-    Info_79:
+    Info_63:
       Name: uiatlas/cardsimple/images/dianwei.png.k
       Dependencies: {}
-    Info_80:
+    Info_64:
       Name: uiatlas/cardsimple/images/diaochan.png.k
       Dependencies: {}
-    Info_81:
+    Info_65:
       Name: uiatlas/cardsimple/images/ganning.png.k
       Dependencies: {}
-    Info_82:
+    Info_66:
       Name: uiatlas/cardsimple/images/guanyu.png.k
       Dependencies: {}
-    Info_83:
+    Info_67:
       Name: uiatlas/cardsimple/images/huanggai.png.k
       Dependencies: {}
-    Info_84:
+    Info_68:
       Name: uiatlas/cardsimple/images/lvbu.png.k
       Dependencies: {}
-    Info_85:
+    Info_69:
       Name: uiatlas/cardsimple/images/shangxiang.png.k
       Dependencies: {}
-    Info_86:
+    Info_70:
       Name: uiatlas/cardsimple/images/simayi.png.k
       Dependencies: {}
-    Info_87:
+    Info_71:
       Name: uiatlas/cardsimple/images/xiahoudun.png.k
       Dependencies: {}
-    Info_88:
+    Info_72:
       Name: uiatlas/cardsimple/images/yueying.png.k
       Dependencies: {}
-    Info_89:
+    Info_73:
       Name: uiatlas/cardsimple/images/zhangfei.png.k
       Dependencies: {}
-    Info_90:
+    Info_74:
       Name: uiatlas/cardsimple/images/zhanghe.png.k
       Dependencies: {}
-    Info_91:
+    Info_75:
       Name: uiatlas/cardsimple/images/zhaoyun.png.k
       Dependencies: {}
-    Info_92:
+    Info_76:
       Name: uiatlas/cardsimple/images/zhoutai.png.k
       Dependencies: {}
-    Info_93:
+    Info_77:
       Name: uiatlas/cardsimple/images/zhouyu.png.k
       Dependencies: {}
-    Info_94:
+    Info_78:
       Name: uiatlas/cardsimple/images/zhugeliang.png.k
       Dependencies: {}
-    Info_95:
+    Info_79:
       Name: uiatlas/headicon/headicon.png.k
       Dependencies: {}
-    Info_96:
+    Info_80:
       Name: uiatlas/headicon/headicon.prefab.k
       Dependencies:
         Dependency_0: uiatlas/headicon/headicon.png.k
-    Info_97:
+    Info_81:
       Name: uiatlas/headicon/images/default_icon.png.k
       Dependencies: {}
-    Info_98:
+    Info_82:
       Name: uiatlas/headicon/images/my_default.png.k
       Dependencies: {}
-    Info_99:
+    Info_83:
       Name: uiatlas/misc/misc.png.k
       Dependencies: {}
-    Info_100:
+    Info_84:
       Name: uiatlas/misc/misc.prefab.k
       Dependencies:
         Dependency_0: uiatlas/misc/misc.png.k
-    Info_101:
+    Info_85:
       Name: uiatlas/misc/images/guess_1.png.k
       Dependencies: {}
-    Info_102:
+    Info_86:
       Name: uiatlas/misc/images/guess_2.png.k
       Dependencies: {}
-    Info_103:
+    Info_87:
       Name: uiatlas/misc/images/guess_3.png.k
+      Dependencies: {}
+    Info_88:
+      Name: uiatlas/commonui/commonui.png.k
+      Dependencies: {}
+    Info_89:
+      Name: uiatlas/commonui/commonui.prefab.k
+      Dependencies:
+        Dependency_0: uiatlas/commonui/commonui.png.k
+    Info_90:
+      Name: uiatlas/commonui/images/board_1.png.k
+      Dependencies: {}
+    Info_91:
+      Name: uiatlas/commonui/images/board_2.png.k
+      Dependencies: {}
+    Info_92:
+      Name: uiatlas/commonui/images/board_3.png.k
+      Dependencies: {}
+    Info_93:
+      Name: uiatlas/commonui/images/border.png.k
+      Dependencies: {}
+    Info_94:
+      Name: uiatlas/commonui/images/btn_bg.png.k
+      Dependencies: {}
+    Info_95:
+      Name: uiatlas/commonui/images/btn_bg_press.png.k
+      Dependencies: {}
+    Info_96:
+      Name: uiatlas/commonui/images/btn_red.png.k
+      Dependencies: {}
+    Info_97:
+      Name: uiatlas/commonui/images/btn_red_press.png.k
+      Dependencies: {}
+    Info_98:
+      Name: uiatlas/commonui/images/caution_danger.png.k
+      Dependencies: {}
+    Info_99:
+      Name: uiatlas/commonui/images/caution_info.png.k
+      Dependencies: {}
+    Info_100:
+      Name: uiatlas/commonui/images/caution_mind.png.k
+      Dependencies: {}
+    Info_101:
+      Name: uiatlas/commonui/images/close.png.k
+      Dependencies: {}
+    Info_102:
+      Name: uiatlas/commonui/images/division line.png.k
+      Dependencies: {}
+    Info_103:
+      Name: uiatlas/commonui/images/stage_btn.png.k
+      Dependencies: {}
+    Info_104:
+      Name: uiatlas/commonui/images/title_bg.png.k
+      Dependencies: {}
+    Info_105:
+      Name: uiatlas/commonui/images/white.png.k
       Dependencies: {}

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1939416880
+CRC: 774746168
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4eaa3d95b03bbcae9a544c042a618ad0
+    Hash: 570706928d44ad5281fda8326f869d4f
   TypeTreeHash:
     serializedVersion: 2
     Hash: 8813f6d887a84be135add4bbad20e011
@@ -56,10 +56,8 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/UI/OpponentSelectWindow.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/white.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/board_2.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/btn_bg.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/close.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/border.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/headicon/headicon.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/headicon/headicon.prefab.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/commonui.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/commonui.prefab.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/images/border.png.k

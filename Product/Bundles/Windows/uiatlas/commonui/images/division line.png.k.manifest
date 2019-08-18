@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1676161660
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fb1171444d9ca5b4393d028fbf8cf81a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ea5a42e0fd8ea905efa7aa926a3b8944
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/BundleResources/UIAtlas/CommonUI/images/Division line.png
+Dependencies: []

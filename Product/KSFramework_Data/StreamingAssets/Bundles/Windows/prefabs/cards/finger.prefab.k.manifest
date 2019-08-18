@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3223029539
+CRC: 656596338
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 65f925b430a31d4e3aa7f816a7879f37
+    Hash: 13213a9b5b9d5042c03b53acdbe853af
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2c741a59cff4c34c27e0ae4513a21d7f
@@ -24,4 +24,4 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/Prefabs/Cards/finger.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/white.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/images/white.png.k

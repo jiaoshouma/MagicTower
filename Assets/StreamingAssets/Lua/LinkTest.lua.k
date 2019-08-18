@@ -8,12 +8,12 @@ end
 function LinkTest:onUpdate()
 	if Input.GetKeyDown(KeyCode.Keypad0) then
 		print("Keypad0")
-		local battleScene = sun.Game.get():getOpeningScene()
-		local cardID = 1
-		local cardType = 1
-		local identity = 0
-		local card = sun.CardManager.get():createCard(cardID,cardType,identity)
-		battleScene:sendCard(true,card)
+		-- local battleScene = sun.Game.get():getOpeningScene()
+		-- local cardID = 1
+		-- local cardType = 1
+		-- local identity = 0
+		-- local card = sun.CardManager.get():createCard(cardID,cardType,identity)
+		-- battleScene:sendCard(true,card)
 	end  
 	if Input.GetKeyDown(KeyCode.Keypad1) then
 		print("Keypad1")

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 841158656
+CRC: 616929228
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9c523c15b4626f44b8b92ff102bb1def
+    Hash: a29a216488e85faf811f77494d256ca3
   TypeTreeHash:
     serializedVersion: 2
     Hash: 02d1034a0203dcf52c174b431a50701d
@@ -52,4 +52,4 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/Scene/SceneBattle/scene_battle.unity
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/white.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/images/white.png.k

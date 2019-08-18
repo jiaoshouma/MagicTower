@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3403921512
+CRC: 3274645982
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 098fb1227460f1a912d53769d60f968e
+    Hash: 5b686c8617c53821d295f233b2b2f4e1
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2784f81e00e6c412139d2ce7e77f3981
+    Hash: 224721f8c418226fb4a63269314aff04
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,6 +17,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8c7cf0e0602e45348bd3bf66c097d603, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0c01f3f0b88b4448ab1ccfa117a1d57e, type: 3}
 - Class: 114
@@ -44,7 +46,5 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/UI/CommonConfirmWindow.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/white.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/board_2.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/btn_bg.png.k
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/close.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/commonui.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/commonui.prefab.k

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3240366015
+CRC: 3576595237
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f4ae9739f16dd8c5ebc7f6cbbf3f6470
+    Hash: e7d93d9dca61a425241258f3bd07c1f9
   TypeTreeHash:
     serializedVersion: 2
     Hash: 7f943cf9119928354f72b1e05947105c
@@ -60,4 +60,4 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/UI/Login.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/btn_bg.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/images/btn_bg.png.k

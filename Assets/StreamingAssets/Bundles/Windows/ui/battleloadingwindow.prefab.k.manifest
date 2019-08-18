@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3663460734
+CRC: 2726778823
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: efab824675beb2a0db53255d87e8e099
+    Hash: 7f35763beb50222319d45aa90f800b20
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6996309db2d5d7389b99ff71cac395df
@@ -48,6 +48,7 @@ ClassTypes:
 Assets:
 - Assets/BundleResources/UI/BattleLoadingWindow.prefab
 Dependencies:
-- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/btn_bg.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/misc/misc.png.k
 - C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/misc/misc.prefab.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/commonui.png.k
+- C:/Users/jiaoshouma/Desktop/MagicTower/Product/Bundles/Windows/uiatlas/commonui/commonui.prefab.k
