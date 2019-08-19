@@ -36,9 +36,100 @@ class LangConf:
 		self.directory = directory
 		self.colOffset = colOffset
 
-def convert(filename,name):
-	print("Converting file '{0}' ...".format(filename))
+def find_split_chars(chars):
+	result = []
+	charDict = {}
+	for char in chars:
+		# print(char,ord(char),"char_value-------")
+		if (ord(char) == 124 or ord(char) == 58 or ord(char) == 59) and not (char in charDict):
+			result.append(char)
+			charDict[char] = True
+	return result
 
+def is_number(s):
+	try:
+		float(s)
+		return True
+	except ValueError:
+		pass
+	return False
+
+def split_chars(chars,splitChars,totalResult):
+	# print(chars,splitChars,totalResult,"------split_chars----")
+	if len(splitChars) == 0:
+		formatStr = "{0}"
+		if not is_number(chars):
+			formatStr = "\"{0}\""	
+		totalResult.append(formatStr.format(chars))
+		# print(totalResult,chars,"==========")
+	else:
+		splitChar = splitChars.pop()
+		result = chars.split(splitChar)
+		for i,childChars in enumerate(result):
+			splitCharsCopy = splitChars[:]
+			if i == 0:
+				totalResult.append("{")
+			split_chars(childChars,splitCharsCopy,totalResult)
+			if i == len(result) - 1:
+				totalResult.append("}")
+			else:
+				totalResult.append(",")
+def convert_misc(filename,name):
+	print("Converting file(new) '{0}' ...".format(filename))
+	workbook = xlrd.open_workbook(filename)
+	sheetnames = workbook.sheet_names()
+	outputfile = ""
+	for sheetname in sheetnames:
+		print("Converting sheet '{0}'...".format(sheetname))
+		worksheet = workbook.sheet_by_name(sheetname)
+
+		if worksheet.nrows < 2:
+			print("Mailformed sheet '{0}',at least 2 rows.".format(sheetname))
+			return
+		outputfile = os.path.join(OUTPUT_PATH,name + ".lua")
+
+		with open(outputfile,"w",encoding="utf-8") as fout:
+			fout.write("local tables = {}\n")
+
+			fout.write("table.data = {\n")
+			for i in range(2,worksheet.nrows):
+				for j in range(0,worksheet.ncols):
+					celltype = worksheet.cell_type(i,j)
+					cellvalue = worksheet.cell_value(i,j)
+					if j == 0:
+						fout.write("{0} = ".format(cellvalue))
+						continue
+					else:
+						if j == 1:
+							fout.write("{")
+					if celltype == CELL_TYPE_EMPTY:
+						cellvalue = "\"\""
+					elif celltype == CELL_TYPE_TEXT:
+						# cellvalue = cellvalue.encode("utf-8")
+						splitChars = find_split_chars(cellvalue)
+						totalResult = []
+						split_chars(cellvalue,splitChars,totalResult)
+						totalResult = "".join(totalResult)
+						cellvalue = totalResult
+						# cellvalue = "\"{0}\"".format(totalResult)
+						# print(cellvalue,"----------------cellvalue-------------------")
+					elif celltype == CELL_TYPE_NUMBER:
+						num = int(cellvalue)
+						if num == cellvalue:
+							cellvalue = num
+					else:
+						print("Sheet {0} contains invalid cell at ({1} {2})".format(sheetname,i,j))
+						cellvalue = "\"\""
+					fout.write("{0},".format(cellvalue))
+				fout.write("},\n")
+			fout.write("}\n")
+
+			fout.write("return table\n")
+def convert(filename,name):
+	if name == "misc":
+		convert_misc(filename,name)
+		return
+	print("Converting file '{0}' ...".format(filename))
 	workbook = xlrd.open_workbook(filename)
 	sheetnames = workbook.sheet_names()
 	outputfile = ""
